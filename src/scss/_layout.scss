@@ -5,6 +5,26 @@ body {
 	display: flex;
 	flex-direction: column;
 }
+h1 {
+	font-size: 56px;
+	line-height: 67px;
+	letter-spacing: -3px;
+}
+h2 {
+	font-size: 24px;
+	line-height: 28px;
+	letter-spacing: -0.05px;
+}
+h3 {
+	font-size: 20px;
+	line-height: 24px;
+	letter-spacing: -0.05px;
+}
+h4{
+	font-size: 16px;
+	line-height: 19px;
+	font-weight: normal;
+}
 header {
 	width: $width;
 	height: 64px;
@@ -15,6 +35,7 @@ header {
 	color: $white;
 	h1 {
 		font-size: 24px;
+		letter-spacing: 0;
 		padding-top: 4px;
 	}
 	.date {
@@ -44,10 +65,23 @@ header {
 		@include blind;
 	}
 	.btn_noti{
-		@include setContent(16px, 20px);
+		@include setContent(16px, 20px, block, relative);
 		@include bg('common/btn_noti.png');
-		@include blind;
 		margin: 0 28px;
+		em {
+			@include setContent(auto, 16px, block, absolute);
+			min-width: 16px;
+			top:-4px;
+			left: 10px;
+			border-radius: 25px;
+			background: #FF6F06;
+			color:$white;
+			font-size: 12px;
+			line-height: 16px;
+			box-sizing: border-box;
+			padding: 2px 4px;
+			text-align: center;
+		}
 	}
 	.btn_profile{
 		overflow: hidden;
@@ -79,12 +113,6 @@ header {
 	@include bg('common/bg_summary.jpg', no-repeat, 0 50%, 100% 100%, #005ec0);
 	color: $white;
 	h2{
-		font-size: 56px;
-		line-height: 1.2;
-	}
-	h3{
-		font-size: 24px;
-		line-height: 1.2;
 		padding-left: 4px;
 	}
 	a {
