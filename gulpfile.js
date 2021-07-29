@@ -103,8 +103,7 @@ function watchFiles() {
 }
 
 // gulp.task('default', );
-gulp.task('deploy', function() {
-	console.log("deploy...");
+gulp.task('build', function() {
 	return gulp.src('./dist/**/*')
 	.pipe(ghPages());
 });

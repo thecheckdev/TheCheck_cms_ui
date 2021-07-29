@@ -7,11 +7,11 @@
   <meta name="theme-color" content="#ffffff">
   <!-- <link rel="shortcut icon" href="ico_url" type="image/x-icon"> -->
   <title>더체크 | 모듈 페이지</title> <!-- [페이지명 | 사이트명] -->
-  <link rel="stylesheet" type="text/css" href="/css/style.css">
+  <!-- <link rel="stylesheet" type="text/css" href="/css/style.css"> -->
   <!-- <script src="/js/jquery-1.12.4.min.js"></script>
   <script src="/js/ui.js"></script> -->
 
-  <!-- <link rel="stylesheet" type="text/css" href="/TheCheck_cms_ui/css/style.css"> -->
+  <link rel="stylesheet" type="text/css" href="/TheCheck_cms_ui/css/style.css">
   <!-- <script src="/TheCheck_cms_ui/js/jquery-1.12.4.min.js"></script> -->
   <!-- <script src="/TheCheck_cms_ui/js/ui.js"></script> -->
 
@@ -22,15 +22,23 @@
 <style>
 	body{
 		padding: 70px 0;
+		font-size: 14px;
 	}
 	h1,h2,h3 {
 		line-height: 1;
+		font-weight: normal;
 	}
 	h1 {
 		font-size: 24px;
 	}
 	h2 {
 		font-size: 20px;
+		margin-bottom: 30px;
+	}
+	h3 {
+		font-size: 18px;
+		margin-bottom: 10px;
+
 	}
 	.i_header, .i_container {
 		width: 1440px;
@@ -51,14 +59,16 @@
 		margin-right: 10px;
 	}
 	.i_cont {
-		margin: 20px 0;
+		margin: 0 0 50px;
+		padding: 0 16px;
+		box-sizing: border-box;
 	}
 
 </style>
 
 <body id="body">
 	<div class="i_header">
-		<h1>통합페이지 모듈</h1>
+		<h1>📝 통합페이지 모듈</h1>
 		<div class="i_menu">
 			<a href="#">스타일 가이드</a>
 			<a href="#">Components</a>
@@ -68,8 +78,26 @@
 	<section class="i_container">
 		<article>
 			<h2>🎯 스타일 가이드</h2>
+			<h3>1. margin</h3>
 			<div class="i_cont">
-				내용
+				5px 간격으로 5px ~ 50px 까지 클래스(m*5~50)가 있습니다<br>
+				margin-top : ex) .mt5 (margin-top 5px)<br>
+				margin-bottom : ex) .mb25 (margin-bottom 25px)<br>
+				margin-left : ex) .ml10 (margin-left 10px)<br>
+				margin-right : ex) .mr50 (margin-right 50px)<br>
+			</div>
+			<h3>2. padding</h3>
+			<div class="i_cont">
+				5px 간격으로 5px ~ 50px 까지 클래스(m*5~50)가 있습니다<br>
+				padding-top : ex) .mt5 (padding-top 5px)<br>
+				padding-bottom : ex) .mb25 (padding-bottom 25px)<br>
+				padding-left : ex) .ml10 (padding-left 10px)<br>
+				padding-right : ex) .mr50 (padding-right 50px)<br>
+			</div>
+			<h3>3. 글자 색상</h3>
+			<div class="i_cont">
+				흰색 : .txt_white<br>
+				검정 : .txt_black
 			</div>
 		</article>
 	</section>
