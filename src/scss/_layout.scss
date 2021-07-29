@@ -1,6 +1,9 @@
 body {
 	width: 100%;
+	min-height: 100%;
 	min-width: 1440px;
+	display: flex;
+	flex-direction: column;
 }
 header {
 	width: $width;
@@ -68,7 +71,7 @@ header {
 		align-items: center;
 	}
 }
-.summary{
+.summary {
 	width: $width;
 	height: 173px;
 	box-sizing: border-box;
@@ -77,16 +80,24 @@ header {
 	color: $white;
 	h2{
 		font-size: 56px;
+		line-height: 1.2;
+	}
+	h3{
+		font-size: 24px;
+		line-height: 1.2;
+		padding-left: 4px;
 	}
 	a {
 		color: $white;
 	}
 	.left{
-		padding: 73px 0 0 44px;
+		align-self: flex-end;
+		padding: 0 0 33px 44px;
 		box-sizing: border-box;
 	}
 	.right{
-		padding: 86px 48px 0 0;
+		padding: 0 48px 42px 0;
+		align-self: flex-end;
 		box-sizing: border-box;
 		display: inline-flex;
 		text-align: right;
@@ -105,6 +116,7 @@ header {
 		@include setContent(auto, 34px, inline-block, relative);
 		min-width: 128px;
 		padding: 0 20px 0 16px;
+		margin-bottom: 16px;
 		box-sizing: border-box;
 		&::before {
 			@include setContent(4px, 34px, inline-block, absolute, $white);
@@ -112,5 +124,56 @@ header {
 			top:0;
 			left: 0;
 		}
+	}
+	.step {
+		@include setContent(44px, 44px);
+		border: 2px solid #c8c8c8;
+		border-radius: 50%;
+		color: #c8c8c8;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		font-size: 24px;
+		margin-left: 30px;
+		box-sizing: border-box;
+		padding-top: 2px;
+		span{
+			margin-left: 8px;
+		}
+		&.on{
+			color: $black;
+			width: auto;
+			border-radius: 25px;
+			padding: 2px 25px 0;
+			box-sizing: border-box;
+			background: #FFFFFF;
+			border: none;
+			box-shadow: inset 0px 0px 6px rgba(0, 0, 0, 0.35);
+		}
+		&.done{
+			@include bg("/common/ico_check.png", no-repeat, 50% 50%);
+			@include blind;
+		}
+	}
+}
+.container {
+	padding: 30px 30px 70px;
+	box-sizing: border-box;
+	flex: 1;
+}
+footer{
+	height: 32px;
+	box-sizing: border-box;
+	background: #5F8189;
+	text-align: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	.copyright{
+		display: block;
+		font-size: 14px;
+		line-height: 1;
+		font-weight: 100;
+		padding-top: 4px;
 	}
 }

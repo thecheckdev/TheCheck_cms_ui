@@ -10,6 +10,7 @@ const autoprefixer = require('gulp-autoprefixer');
 const uglify = require('gulp-uglify');
 const imagemin = require('gulp-imagemin');
 const sourcemaps = require('gulp-sourcemaps');
+const ghPages = require('gulp-gh-pages');
 
 const paths = {
 	port: '3000',
@@ -28,8 +29,8 @@ const paths = {
 		output: './dist/img'
 	},
 	js: {
-		input: './src/ui_js/*.js',
-		output: './dist/ui_js/'
+		input: './src/js/*.js',
+		output: './dist/js/'
 	}
 };
 
@@ -79,7 +80,7 @@ function img() {
 	return gulp.src(paths.img.input)
 		.pipe(imagemin([
 			imagemin.gifsicle({ interlaced: true }),
-			imagemin.mozjpeg({ quality: 100 }), // 85 포토샵 퀄리티 60%정도와 비슷함
+			imagemin.mozjpeg({ quality: 85 }), // 85 포토샵 퀄리티 60%정도와 비슷함
 			imagemin.optipng({ optimizationLevel: 5 }),
 			imagemin.svgo({
 				plugins: [
@@ -100,6 +101,13 @@ function watchFiles() {
 	gulp.watch(paths.style.input, sassComp);
 	gulp.watch(paths.js.input, js);
 }
+
+// gulp.task('default', );
+gulp.task('deploy', function() {
+	console.log("deploy...");
+	return gulp.src('./dist/**/*')
+	.pipe(ghPages());
+});
 
 // export tasks
 exports.default = gulp.series(gulp.parallel(htmlComp, sassComp, img, js), browserSync, watchFiles);
