@@ -88,18 +88,27 @@
 .pb45{padding-bottom: 45px;}
 .pb50{padding-bottom: 50px;}
 
+.txt_white{ color:#ffffff;}
+.txt_black { color:#000000;}
+.txt_green{ color:#025454;}
+.txt_green_light{ color:#00a9c0;}
+.txt_green_dark{ color:#2f4d56;}
+.txt_bule_light{ color:#005ec0;}
+.txt_bule_dark{ color:#002470;}
+.txt_brown_light{ color:#9a8478;}
+.txt_brown_dark{ color:#1e130c;}
+.txt_purple_light{color:#c567d8;}
+.txt_yellow{ color:#fdef72;}
+.txt_purple_dark{ color:#361bb2;}
 
 .show{
-	display: block;
+	display: block !important;
+}
+.show_flex{
+	display: flex !important;
 }
 .hide{
-	display: none;
-}
-.txt_white{
-	color:#ffffff;
-}
-.txt_black {
-	color:#000000;
+	display: none !important;
 }
 .col{
 	display: flex;
