@@ -14,6 +14,12 @@
     background-size:$bgSize;
   }
 }
+@mixin bgSvg($fc:null, $repeat:no-repeat, $bgPos:0 0, $bgSize:null, $bgColor:null){
+  background:$bgColor $fc $repeat $bgPos;
+  @if $bgSize != null {
+    background-size:$bgSize;
+  }
+}
 @mixin ellipsis($type:null,$num:2) {
   overflow:hidden;
   text-overflow:ellipsis;

@@ -22,7 +22,13 @@
 		h3 {
 			font-size: 18px;
 			margin-bottom: 10px;
-	
+		}
+		h4 {
+			font-size: 16px;
+			margin: 20px auto 10px;
+		}
+		P{
+			margin-bottom: 20px;
 		}
 		.i_header, .i_container {
 			width: 1440px;
@@ -61,6 +67,19 @@
 			width: 50%;
 			padding-top: 50px;
 		}
+		.noti{
+			font-size: 13px;
+			padding-bottom: 5px;
+			color: #ff5656;
+		}
+		pre{
+			background: #fff;
+			padding: 5px 30px;
+		}
+		xmp{
+			display: inline-block;
+			color: #777;
+		}
 	</style>
 	<script>
 		$(function(){
@@ -79,7 +98,7 @@
 		<h1>📝 통합페이지 모듈</h1>
 		<div class="i_menu">
 			<a href="javascript:fnClickTab(0);">스타일 가이드</a>
-			<a href="javascript:fnClickTab(1);">Components</a>
+			<a href="javascript:fnClickTab(1);">입력폼</a>
 			<a href="#">버튼</a>
 		</div>
 	</div>
@@ -136,8 +155,44 @@
 				</div>
 			</div>
 		</article>
-		<article class="i_bx">
-			<div class="datepickers-container" id="datepickers-container" style="position: relative;display: block;"><div class="datepicker -bottom-left- -from-bottom- active" style="left: 0; top: 0;"><i class="datepicker--pointer"></i><nav class="datepicker--nav"><div class="datepicker--nav-action" data-action="prev"><svg><path d="M 17,12 l -5,5 l 5,5"></path></svg></div><div class="datepicker--nav-title"><span class="datepicker-year"><i>2021</i>년</span> <span class="datepicker-month">07월</span></div><div class="datepicker--nav-action" data-action="next"><svg><path d="M 14,12 l 5,5 l -5,5"></path></svg></div></nav><div class="datepicker--content"><div class="datepicker--days datepicker--body active"><div class="datepicker--days-names"><div class="datepicker--day-name -weekend-">일</div><div class="datepicker--day-name">월</div><div class="datepicker--day-name">화</div><div class="datepicker--day-name">수</div><div class="datepicker--day-name">목</div><div class="datepicker--day-name">금</div><div class="datepicker--day-name -weekend-">토</div></div><div class="datepicker--cells datepicker--cells-days"><div class="datepicker--cell datepicker--cell-day -weekend- -other-month-" data-date="27" data-month="5" data-year="2021">27</div><div class="datepicker--cell datepicker--cell-day -other-month-" data-date="28" data-month="5" data-year="2021">28</div><div class="datepicker--cell datepicker--cell-day -other-month-" data-date="29" data-month="5" data-year="2021">29</div><div class="datepicker--cell datepicker--cell-day -other-month-" data-date="30" data-month="5" data-year="2021">30</div><div class="datepicker--cell datepicker--cell-day" data-date="1" data-month="6" data-year="2021">1</div><div class="datepicker--cell datepicker--cell-day" data-date="2" data-month="6" data-year="2021">2</div><div class="datepicker--cell datepicker--cell-day -weekend-" data-date="3" data-month="6" data-year="2021">3</div><div class="datepicker--cell datepicker--cell-day -weekend-" data-date="4" data-month="6" data-year="2021">4</div><div class="datepicker--cell datepicker--cell-day" data-date="5" data-month="6" data-year="2021">5</div><div class="datepicker--cell datepicker--cell-day" data-date="6" data-month="6" data-year="2021">6</div><div class="datepicker--cell datepicker--cell-day" data-date="7" data-month="6" data-year="2021">7</div><div class="datepicker--cell datepicker--cell-day" data-date="8" data-month="6" data-year="2021">8</div><div class="datepicker--cell datepicker--cell-day" data-date="9" data-month="6" data-year="2021">9</div><div class="datepicker--cell datepicker--cell-day -weekend-" data-date="10" data-month="6" data-year="2021">10</div><div class="datepicker--cell datepicker--cell-day -weekend-" data-date="11" data-month="6" data-year="2021">11</div><div class="datepicker--cell datepicker--cell-day" data-date="12" data-month="6" data-year="2021">12</div><div class="datepicker--cell datepicker--cell-day" data-date="13" data-month="6" data-year="2021">13</div><div class="datepicker--cell datepicker--cell-day" data-date="14" data-month="6" data-year="2021">14</div><div class="datepicker--cell datepicker--cell-day" data-date="15" data-month="6" data-year="2021">15</div><div class="datepicker--cell datepicker--cell-day" data-date="16" data-month="6" data-year="2021">16</div><div class="datepicker--cell datepicker--cell-day -weekend-" data-date="17" data-month="6" data-year="2021">17</div><div class="datepicker--cell datepicker--cell-day -weekend-" data-date="18" data-month="6" data-year="2021">18</div><div class="datepicker--cell datepicker--cell-day" data-date="19" data-month="6" data-year="2021">19</div><div class="datepicker--cell datepicker--cell-day" data-date="20" data-month="6" data-year="2021">20</div><div class="datepicker--cell datepicker--cell-day" data-date="21" data-month="6" data-year="2021">21</div><div class="datepicker--cell datepicker--cell-day" data-date="22" data-month="6" data-year="2021">22</div><div class="datepicker--cell datepicker--cell-day" data-date="23" data-month="6" data-year="2021">23</div><div class="datepicker--cell datepicker--cell-day -weekend-" data-date="24" data-month="6" data-year="2021">24</div><div class="datepicker--cell datepicker--cell-day -weekend-" data-date="25" data-month="6" data-year="2021">25</div><div class="datepicker--cell datepicker--cell-day" data-date="26" data-month="6" data-year="2021">26</div><div class="datepicker--cell datepicker--cell-day" data-date="27" data-month="6" data-year="2021">27</div><div class="datepicker--cell datepicker--cell-day" data-date="28" data-month="6" data-year="2021">28</div><div class="datepicker--cell datepicker--cell-day" data-date="29" data-month="6" data-year="2021">29</div><div class="datepicker--cell datepicker--cell-day -current-" data-date="30" data-month="6" data-year="2021">30</div><div class="datepicker--cell datepicker--cell-day -weekend-" data-date="31" data-month="6" data-year="2021">31</div></div></div></div></div></div>
+		<article class="i_bx col">
+			<div class="left">
+				<h2>🎯 입력</h2>
+				<h3>🍉 input</h3>
+				<div class="i_cont">
+					<h4>기본</h4>
+					<span class="noti">- 가로 크기는 기본 100px입니다. 다른 크기를 원하시면 인라인 스타일로 지정해서 사용 가능 합니다.</span>
+					<input type="text" placeholder="입력해주세요!!" style="width: 200px;"><br>
+					<h4>추가 가능한 스타일</h4>
+					<p>.big : 높이 40px<br><input type="text" placeholder="입력해주세요!!" class="big"></p>
+					<p>.ico_search : 돋보기 아이콘 노출<br><input type="text" class="ico_search"> <input type="text" class="ico_search big"></p>
+					<h4>ex)</h4>
+<pre><xmp><input type="text" placeholder="입력해주세요!!" style="width: 200px;">
+<input type="text" class="big" placeholder="입력해주세요!!">
+<input type="text" class="ico_search" placeholder="입력해주세요!!">
+<input type="text" class="big ico_search" placeholder="입력해주세요!!">
+</xmp></pre>
+				</div>
+			</div>
+			<div class="right">
+				<h3>🍉 input - Date</h3>
+				<div class="i_cont">
+					<h4>input text 타입에 <strong>ipt_date</strong> 클래스를 추가해주세요.</h4>
+					<span class="noti">- 가로 크기는 기본 100px입니다. 다른 크기를 원하시면 인라인 스타일로 지정해서 사용 가능 합니다.</span>
+					<span class="noti">- 달력은 입력이 안되게 input readonly 추가 해주세요 </span>
+					<input type="text" autocomplete='off' readonly class="ipt_date"/> ~ <input type="text" autocomplete='off' readonly class="ipt_date"/>
+					<h4>추가 가능한 스타일</h4>
+					<p>.big : 높이 40px</p>
+					<p>.ico_calendar : 달력 아이콘 노출<br><input type="text" class="ipt_date ico_calendar"> <input type="text" class="ipt_date ico_calendar big"></p>
+					<p>.big_calendar : 큰 달력<br><input type="text" class="ipt_date big_calendar"></p>
+					<h4>ex)</h4>
+<pre><xmp><input type="text" autocomplete='off' readonly class="ipt_date"/>
+<input type="text" autocomplete='off' readonly class="ipt_date big_calendar"/>
+<input type="text" autocomplete='off' readonly 
+ class="ipt_date big_calendar ico_calendar big"/>
+</xmp></pre>
+				</div>
+			</div>
 		</article>
 	</section>
 </body>

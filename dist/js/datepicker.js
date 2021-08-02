@@ -1115,7 +1115,7 @@
 		},
 
 		_onShowEvent: function (e) {
-			if(e.currentTarget.className.indexOf('s_big') > -1){
+			if(e.currentTarget.className.indexOf('big_calendar') > -1){
 				// this.sizeType = 'big';
 			}
 			if (!this.visible) {

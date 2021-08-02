@@ -2,3 +2,4 @@ node_modules/
 dist/html/include
 .history/
 .publish/
+.DS_Store

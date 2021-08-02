@@ -4,6 +4,7 @@ body {
 	min-width: 1440px;
 	display: flex;
 	flex-direction: column;
+	background: #F5F6F6;
 }
 h1 {
 	font-size: 56px;
@@ -51,22 +52,23 @@ header {
 	.btn_menu{
 		margin-right: 26px;
 		@include setContent(21px, 13px);
-		@include bg('common/btn_menu.png');
+		// @include bg('common/btn_menu.png');
+		@include bgSvg(fnIcoMenu("rgb(255, 255, 255)"), no-repeat, null, 100%);
 		@include blind;
 	}
 	.btn_add{
 		@include setContent(24px, 24px);
-		@include bg('common/btn_add.png');
+		@include bgSvg(fnIcoAdd("rgb(255, 255, 255)"), no-repeat, null, 100%);
 		@include blind;
 	}
 	.btn_help{
 		@include setContent(24px, 24px);
-		@include bg('common/btn_help.png');
+		@include bgSvg(fnIcoHelp("rgb(255, 255, 255)"), no-repeat, null, 100%);
 		@include blind;
 	}
 	.btn_noti{
 		@include setContent(16px, 20px, block, relative);
-		@include bg('common/btn_noti.png');
+		@include bgSvg(fnIcoNoti("rgb(255, 255, 255)"), no-repeat, null, 100%);
 		margin: 0 28px;
 		em {
 			@include setContent(auto, 16px, block, absolute);
@@ -180,7 +182,7 @@ header {
 			box-shadow: inset 0px 0px 6px rgba(0, 0, 0, 0.35);
 		}
 		&.done{
-			@include bg("/common/ico_check.png", no-repeat, 50% 50%);
+			@include bgSvg(fnIcoCheck("rgb(200, 200, 200)"), no-repeat, 50% 50%, 16px);
 			@include blind;
 		}
 	}

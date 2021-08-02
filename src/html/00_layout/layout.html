@@ -36,6 +36,7 @@
 	<section class="container">
 		<article>
 			내용111
+			<p class="ico_arrow">111</p>
 			<select>
 				<option value="">1</option>
 				<option value="">14</option>
@@ -44,9 +45,36 @@
 				<option value="">134</option>
 				<option value="">15</option>
 			</select>
-			<!-- <input type="text" autocomplete='off' data-range="true" data-multiple-dates-separator=" - " data-="" data-language="ko" class="datepicker-here"/> -->
-			<input type="text" autocomplete='off' class="ipt_date"/>
-			<input type="text" autocomplete='off' class="ipt_date s_big"/>
+			<input type="text" class="big ico_search" placeholder="입력해주세요!!">
+			<input type="text" class="big" placeholder="입력해주세요!!">
+			<input type="text" autocomplete='off' readonly class="ipt_date"/><!--달력은 입력이 안되게 readonly 추가 해주세요~-->
+			<input type="text" autocomplete='off' readonly class="ipt_date"/>
+			<input type="text" autocomplete='off' readonly class="ipt_date big_calendar ico_calendar big"/>
+			<!-- slct_tit이 비워져 있으면 select값으로 세팅됨-->
+			<div class="slct" style="width: 100px;">
+				<div class="slct_tit">선택해주세요</div>
+				<ul class="slct_cont">
+					<li class="select">전체</li>
+					<li>옵션1</li>
+					<li>옵션2</li>
+					<li>옵션3</li>
+					<li>옵션4</li>
+					<li>옵션3</li>
+					<li>옵션4</li>
+				</ul>
+			</div>
+			<div class="slct" style="width: 150px;">
+				<div class="slct_tit"></div>
+				<ul class="slct_cont">
+					<li class="select">전체!</li>
+					<li>옵션1!</li>
+					<li>옵션2⁄</li>
+					<li>옵션3</li>
+					<li>옵션4</li>
+					<li>옵션3</li>
+					<li>옵션4</li>
+				</ul>
+			</div>
 		</article>
 		<article>
 			본문내용1

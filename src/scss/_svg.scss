@@ -1,0 +1,46 @@
+@function fnIcoSearch($color) {
+	$url: "data:image/svg+xml,%3Csvg width='18' height='18' viewBox='0 0 18 18' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M11.71 11H12.5L17.49 16L16 17.49L11 12.5V11.71L10.73 11.43C9.59 12.41 8.11 13 6.5 13C2.91 13 0 10.09 0 6.5C0 2.91 2.91 0 6.5 0C10.09 0 13 2.91 13 6.5C13 8.11 12.41 9.59 11.43 10.73L11.71 11ZM2 6.5C2 8.99 4.01 11 6.5 11C8.99 11 11 8.99 11 6.5C11 4.01 8.99 2 6.5 2C4.01 2 2 4.01 2 6.5Z' fill='#{$color}'/%3E%3C/svg%3E%0A";
+	@return url($url);
+}
+@function fnSlctDrop($color) {
+	$url: "data:image/svg+xml,%3Csvg width='7' height='5' viewBox='0 0 7 5' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M6.05943 0H0.665253C0.0627111 0 -0.224213 0.717311 0.206174 1.1477L2.93196 3.8161C3.19019 4.07433 3.62057 4.07433 3.87881 3.8161L6.51851 1.11901C6.9489 0.717312 6.63328 0 6.05943 0Z' fill='#{$color}'/%3E%3C/svg%3E%0A";
+	@return url($url);
+}
+
+@function fnIcoCalendar($color) {
+	$url: "data:image/svg+xml,%3Csvg width='16' height='17' viewBox='0 0 16 17' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12 9.3H8.00005V13.3H12V9.3ZM11.2 0.5V2.1H4.80005V0.5H3.20005V2.1H2.40005C2.19034 2.1001 1.98271 2.14162 1.78909 2.22216C1.59546 2.3027 1.41965 2.42069 1.27173 2.56935C1.12382 2.718 1.00672 2.89441 0.927145 3.08844C0.847574 3.28246 0.807101 3.49029 0.808049 3.7L0.800049 14.9C0.800049 15.3243 0.96862 15.7313 1.26868 16.0314C1.56874 16.3314 1.9757 16.5 2.40005 16.5H13.6C14.024 16.4987 14.4302 16.3298 14.73 16.03C15.0298 15.7302 15.1988 15.324 15.2 14.9V3.7C15.1988 3.27604 15.0298 2.86981 14.73 2.57003C14.4302 2.27024 14.024 2.10127 13.6 2.1H12.8V0.5H11.2ZM13.6 14.9H2.40005V6.1H13.6V14.9Z' fill='#{$color}'/%3E%3C/svg%3E%0A";
+	@return url($url);
+}
+@function fnIcoMenu($color) {
+	$url: "data:image/svg+xml,%3Csvg width='21' height='13' viewBox='0 0 21 13' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M0.375 2.8125V0.859375H20.625V2.8125H0.375ZM0.375 5.74219V7.69531H20.625V5.74219H0.375ZM0.375 10.625V12.5781H20.625V10.625H0.375Z' fill='#{$color}'/%3E%3C/svg%3E%0A";
+	@return url($url);
+}
+@function fnIcoAdd($color) {
+	$url: "data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M12 24C18.6274 24 24 18.6274 24 12C24 5.37258 18.6274 0 12 0C5.37258 0 0 5.37258 0 12C0 18.6274 5.37258 24 12 24ZM10 20V14H4V10H10V4H14V10L20 10V14H14V20H10Z' fill='#{$color}'/%3E%3C/svg%3E%0A";
+	@return url($url);
+}
+@function fnIcoHelp($color) {
+	$url: "data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M0 10C0 4.48 4.48 0 10 0C15.52 0 20 4.48 20 10C20 15.52 15.52 20 10 20C4.48 20 0 15.52 0 10ZM11 14V16H9V14H11ZM10 18C5.59 18 2 14.41 2 10C2 5.59 5.59 2 10 2C14.41 2 18 5.59 18 10C18 14.41 14.41 18 10 18ZM6 8C6 5.79 7.79 4 10 4C12.21 4 14 5.79 14 8C14 9.28292 13.21 9.97332 12.4408 10.6455C11.711 11.2833 11 11.9046 11 13H9C9 11.1787 9.94212 10.4566 10.7704 9.82168C11.4202 9.32361 12 8.87922 12 8C12 6.9 11.1 6 10 6C8.9 6 8 6.9 8 8H6Z' fill='#{$color}'/%3E%3C/svg%3E%0A";
+	@return url($url);
+}
+@function fnIcoNoti($color) {
+	$url: "data:image/svg+xml,%3Csvg width='16' height='20' viewBox='0 0 16 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M14 14V9C14 5.93 12.37 3.36 9.5 2.68V2C9.5 1.17 8.83 0.5 8 0.5C7.17 0.5 6.5 1.17 6.5 2V2.68C3.64 3.36 2 5.92 2 9V14L0 16V17H16V16L14 14ZM8 20C9.1 20 10 19.1 10 18H6C6 19.1 6.9 20 8 20ZM4 15H12V9C12 6.52 10.49 4.5 8 4.5C5.51 4.5 4 6.52 4 9V15Z' fill='#{$color}'/%3E%3C/svg%3E%0A";
+	@return url($url);
+}
+@function fnIcoCheckBox($color) {
+	$url: "data:image/svg+xml,%3Csvg width='16' height='14' viewBox='0 0 16 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M15.2072 3.57898L6.66796 13.2198C6.50419 13.3994 6.28365 13.5 6.0539 13.5C5.82415 13.5 5.6036 13.3994 5.43983 13.2198L0.751441 7.93341C0.590306 7.75089 0.5 7.5051 0.5 7.24905C0.5 6.99301 0.590306 6.74722 0.751441 6.5647L1.97957 5.196C2.14334 5.01642 2.36389 4.91578 2.59364 4.91578C2.82339 4.91578 3.04393 5.01642 3.2077 5.196L5.66265 7.99476C5.77552 8.11469 5.92548 8.18159 6.08142 8.18159C6.23737 8.18159 6.38733 8.11469 6.50019 7.99476L12.7509 0.780221C12.9147 0.600643 13.1353 0.5 13.365 0.5C13.5948 0.5 13.8153 0.600643 13.9791 0.780221L15.2072 2.14892C15.2991 2.23778 15.3728 2.3476 15.4233 2.47097C15.4739 2.59433 15.5 2.72835 15.5 2.86395C15.5 2.99955 15.4739 3.13357 15.4233 3.25693C15.3728 3.38029 15.2991 3.49012 15.2072 3.57898Z' fill='#{$color}'/%3E%3C/svg%3E%0A";
+	@return url($url);
+}
+@function fnIcoCheck($color) {
+	$url: "data:image/svg+xml,%3Csvg width='18' height='20' viewBox='0 0 18 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5.92593 20L18 1.06262L16.1852 0L5.77778 16.4706L1.51852 11.3852L0 12.9412L5.92593 20Z' fill='#{$color}'/%3E%3C/svg%3E%0A";
+	@return url($url);
+}
+@function fnIcoArrow($color) {
+	$url: "data:image/svg+xml,%3Csvg width='8' height='12' viewBox='0 0 8 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7.41 10.59L2.83 6L7.41 1.41L6 0L0 6L6 12L7.41 10.59Z' fill='#{$color}'/%3E%3C/svg%3E%0A";
+	@return url($url);
+}
+// @function fn($color) {
+// 	// $color: '%23'+$color;
+// 	$url: #{$color};
+// 	@return url($url);
+// }
