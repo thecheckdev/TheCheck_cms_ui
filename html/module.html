@@ -7,97 +7,208 @@
   <meta name="theme-color" content="#ffffff">
   <!-- <link rel="shortcut icon" href="ico_url" type="image/x-icon"> -->
   <title>더체크 | 모듈 페이지</title> <!-- [페이지명 | 사이트명] -->
-  <!-- <link rel="stylesheet" type="text/css" href="/css/style.css"> -->
-  <!-- <script src="/js/jquery-1.12.4.min.js"></script>
-  <script src="/js/ui.js"></script> -->
+  <link rel="stylesheet" type="text/css" href="/css/style.css"/>
+  <script src="/js/jquery-1.12.4.min.js"></script>
+  <script src="/js/datepicker.js"></script>
+  <script src="/js/ui.js"></script>
 
-  <link rel="stylesheet" type="text/css" href="/TheCheck_cms_ui/css/style.css">
+  <!-- <link rel="stylesheet" type="text/css" href="/TheCheck_cms_ui/css/style.css"> -->
   <!-- <script src="/TheCheck_cms_ui/js/jquery-1.12.4.min.js"></script> -->
   <!-- <script src="/TheCheck_cms_ui/js/ui.js"></script> -->
 
   
 	<!-- script or style -->
+	<style>
+		body{
+			padding: 70px 50px;
+			box-sizing: border-box;
+			font-size: 14px;
+		}
+		h1,h2,h3 {
+			line-height: 1;
+			font-weight: normal;
+		}
+		h1 {
+			font-size: 24px;
+		}
+		h2 {
+			font-size: 20px;
+			margin-bottom: 30px;
+		}
+		h3 {
+			font-size: 18px;
+			margin-bottom: 10px;
+		}
+		h4 {
+			font-size: 16px;
+			margin: 20px auto 10px;
+		}
+		P{
+			margin-bottom: 20px;
+		}
+		.i_header, .i_container {
+			width: 1440px;
+			margin: 0 auto;
+			box-sizing: border-box;
+		}
+		.i_menu {
+			margin: 20px 0 50px;
+			text-align: right;
+		}
+		.i_menu a{
+			font-size: 14px;
+			display: inline-block;
+			padding: 5px 20px;
+			background: #66c8c3;
+			color:#fff;
+			border-radius: 5px;
+			margin-right: 10px;
+		}
+		.i_cont {
+			margin: 0 0 50px;
+			padding: 0 16px;
+			box-sizing: border-box;
+		}
+		.i_cont span{
+			line-height: 1.6;
+			display: block;
+		}
+		.i_bx{
+			display: none;
+		}
+		.left{
+			width: 50%;
+		}
+		.right{
+			width: 50%;
+			padding-top: 50px;
+		}
+		.noti{
+			font-size: 13px;
+			padding-bottom: 5px;
+			color: #ff5656;
+		}
+		pre{
+			background: #fff;
+			padding: 5px 30px;
+		}
+		xmp{
+			display: inline-block;
+			color: #777;
+		}
+	</style>
+	<script>
+		$(function(){
+
+		});
+		function fnClickTab(i) {
+			console.log(i);
+			$(".i_bx").removeClass('show_flex');
+			$(".i_bx").eq(i).addClass('show_flex');
+		}
+	</script>
 
 </head>
-<style>
-	body{
-		padding: 70px 0;
-		font-size: 14px;
-	}
-	h1,h2,h3 {
-		line-height: 1;
-		font-weight: normal;
-	}
-	h1 {
-		font-size: 24px;
-	}
-	h2 {
-		font-size: 20px;
-		margin-bottom: 30px;
-	}
-	h3 {
-		font-size: 18px;
-		margin-bottom: 10px;
-
-	}
-	.i_header, .i_container {
-		width: 1440px;
-		margin: 0 auto;
-		box-sizing: border-box;
-	}
-	.i_menu {
-		margin: 20px 0 50px;
-		text-align: right;
-	}
-	.i_menu a{
-		font-size: 14px;
-		display: inline-block;
-		padding: 5px 20px;
-		background: #66c8c3;
-		color:#fff;
-		border-radius: 5px;
-		margin-right: 10px;
-	}
-	.i_cont {
-		margin: 0 0 50px;
-		padding: 0 16px;
-		box-sizing: border-box;
-	}
-
-</style>
 
 <body id="body">
 	<div class="i_header">
 		<h1>📝 통합페이지 모듈</h1>
 		<div class="i_menu">
-			<a href="#">스타일 가이드</a>
-			<a href="#">Components</a>
+			<a href="javascript:fnClickTab(0);">스타일 가이드</a>
+			<a href="javascript:fnClickTab(1);">입력폼</a>
 			<a href="#">버튼</a>
 		</div>
 	</div>
 	<section class="i_container">
-		<article>
-			<h2>🎯 스타일 가이드</h2>
-			<h3>1. margin</h3>
-			<div class="i_cont">
-				5px 간격으로 5px ~ 50px 까지 클래스(m*5~50)가 있습니다<br>
-				margin-top : ex) .mt5 (margin-top 5px)<br>
-				margin-bottom : ex) .mb25 (margin-bottom 25px)<br>
-				margin-left : ex) .ml10 (margin-left 10px)<br>
-				margin-right : ex) .mr50 (margin-right 50px)<br>
+		<article class="i_bx show_flex col">
+			<div class="left">
+				<h2>🎯 스타일 가이드</h2>
+				<h3>🍉 margin</h3>
+				<div class="i_cont">
+					5px 간격으로 5px ~ 50px 까지 클래스(m*5~50)가 있습니다<br>
+					margin-top : ex) .mt5 (margin-top 5px)<br>
+					margin-bottom : ex) .mb25 (margin-bottom 25px)<br>
+					margin-left : ex) .ml10 (margin-left 10px)<br>
+					margin-right : ex) .mr50 (margin-right 50px)<br>
+				</div>
+				<h3>🍉 padding</h3>
+				<div class="i_cont">
+					5px 간격으로 5px ~ 50px 까지 클래스(m*5~50)가 있습니다<br>
+					padding-top : ex) .mt5 (padding-top 5px)<br>
+					padding-bottom : ex) .mb25 (padding-bottom 25px)<br>
+					padding-left : ex) .ml10 (padding-left 10px)<br>
+					padding-right : ex) .mr50 (padding-right 50px)<br>
+				</div>
+				<h3>🍉 제목 크기</h3>
+				<div class="i_cont">
+					<span style="font-size: 56px;">h1 : 56px</span>
+					<span style="font-size: 24px;">h2 : 24px</span>
+					<span style="font-size: 20px;">h3 : 20px</span>
+					<span style="font-size: 16px;">h4 : 16px</span>
+				</div>
+				<h3>🍉 글자 색상</h3>
+				<div class="i_cont">
+					<span style="color: #fff;"><em style="background:#777;">#ffffff : .txt_white</em></span>
+					<span style="color: #000000;">.txt_black : #000000</span>
+					<span style="color: #025454;">.txt_green : #025454</span>
+					<span style="color: #00a9c0;">.txt_green_light : #00a9c0</span>
+					<span style="color: #2f4d56;">.txt_green_dark : #2f4d56</span>
+					<span style="color: #005ec0;">.txt_bule_light : #005ec0</span>
+					<span style="color: #002470;">.txt_bule_dark : #002470</span>
+					<span style="color: #9a8478;">.txt_brown_light : #9a8478</span>
+					<span style="color: #1e130c;">.txt_brown_dark : #1e130c</span>
+					<span style="color: #c567d8;">.txt_purple_light : #c567d8</span>
+					<span style="color: #361bb2;">.txt_purple_dark : #361bb2</span>
+					<span style="color: #fdef72;">.txt_yellow : #fdef72</span>
+				</div>
 			</div>
-			<h3>2. padding</h3>
-			<div class="i_cont">
-				5px 간격으로 5px ~ 50px 까지 클래스(m*5~50)가 있습니다<br>
-				padding-top : ex) .mt5 (padding-top 5px)<br>
-				padding-bottom : ex) .mb25 (padding-bottom 25px)<br>
-				padding-left : ex) .ml10 (padding-left 10px)<br>
-				padding-right : ex) .mr50 (padding-right 50px)<br>
+			<div class="right">
+				<h3>🍉 노출</h3>
+				<div class="i_cont">
+					텍스트 숨기기 : .blind<br>
+					요소 숨기기 : .hide<br>
+					요소 노출1 : .show (display:block)<br>
+					요소 노출2 : .show_flex (display:flex)<br>
+				</div>
 			</div>
-			<h3>3. 글자 색상</h3>
-			<div class="i_cont">
-				흰색 : .txt_white<br>
-				검정 : .txt_black
+		</article>
+		<article class="i_bx col">
+			<div class="left">
+				<h2>🎯 입력</h2>
+				<h3>🍉 input</h3>
+				<div class="i_cont">
+					<h4>기본</h4>
+					<span class="noti">- 가로 크기는 기본 100px입니다. 다른 크기를 원하시면 인라인 스타일로 지정해서 사용 가능 합니다.</span>
+					<input type="text" placeholder="입력해주세요!!" style="width: 200px;"><br>
+					<h4>추가 가능한 스타일</h4>
+					<p>.big : 높이 40px<br><input type="text" placeholder="입력해주세요!!" class="big"></p>
+					<p>.ico_search : 돋보기 아이콘 노출<br><input type="text" class="ico_search"> <input type="text" class="ico_search big"></p>
+					<h4>ex)</h4>
+<pre><xmp><input type="text" placeholder="입력해주세요!!" style="width: 200px;">
+<input type="text" class="big" placeholder="입력해주세요!!">
+<input type="text" class="ico_search" placeholder="입력해주세요!!">
+<input type="text" class="big ico_search" placeholder="입력해주세요!!">
+</xmp></pre>
+				</div>
+			</div>
+			<div class="right">
+				<h3>🍉 input - Date</h3>
+				<div class="i_cont">
+					<h4>input text 타입에 <strong>ipt_date</strong> 클래스를 추가해주세요.</h4>
+					<span class="noti">- 가로 크기는 기본 100px입니다. 다른 크기를 원하시면 인라인 스타일로 지정해서 사용 가능 합니다.</span>
+					<span class="noti">- 달력은 입력이 안되게 input readonly 추가 해주세요 </span>
+					<input type="text" autocomplete='off' readonly class="ipt_date"/> ~ <input type="text" autocomplete='off' readonly class="ipt_date"/>
+					<h4>추가 가능한 스타일</h4>
+					<p>.big : 높이 40px</p>
+					<p>.ico_calendar : 달력 아이콘 노출<br><input type="text" class="ipt_date ico_calendar"> <input type="text" class="ipt_date ico_calendar big"></p>
+					<p>.big_calendar : 큰 달력<br><input type="text" class="ipt_date big_calendar"></p>
+					<h4>ex)</h4>
+<pre><xmp><input type="text" autocomplete='off' readonly class="ipt_date"/>
+<input type="text" autocomplete='off' readonly class="ipt_date big_calendar"/>
+<input type="text" autocomplete='off' readonly 
+ class="ipt_date big_calendar ico_calendar big"/>
+</xmp></pre>
+				</div>
 			</div>
 		</article>
 	</section>
