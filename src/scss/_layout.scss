@@ -218,7 +218,7 @@ nav{
 	position: absolute;
 	width: 0;
 	height: 100%;
-	padding: 50px 0;
+	padding: 60px 0 30px;
 	box-sizing: border-box;
 	overflow-y: auto;
 	background: $white;
@@ -231,15 +231,20 @@ nav{
 		width: 350px;
 		visibility: visible;
 		z-index: 5;
+		.btn_close{
+			opacity: 1;
+			transition: all 0.4s;
+		}
 	}
 	.btn_close{
 		@include setContent(25px, 25px, block, absolute);
-		top:15px;
-		right: 15px;
+		top:20px;
+		right: 23px;
 		box-sizing: border-box;
 		padding: 0;
 		@include blind;
 		cursor: pointer;
+		opacity: 0;
 		&:before, &:after{
 			content:"";
 			@include setContent(20px, 2px, block, absolute, $black);
