@@ -153,6 +153,11 @@ input {
 	display: inline-block;
 	position: relative;
 	min-width: 50px;
+	&.big{
+		.slct_tit{ 
+			height: 40px;
+		}
+	}
 	.slct_tit{
 		position: relative;
 		min-width: 30px;
@@ -193,15 +198,17 @@ input {
 		font-weight: 100;
 		li{
 			font-size: 14px;
-			padding: 3px 9px 1px;
+			padding: 3px 9px 1px 24px;
 			box-sizing: border-box;
 			cursor: pointer;
 			&.select{
-				font-weight: normal;
-				background: rgba(168, 183, 199, 0.2);
+				font-weight: 600;
+				padding: 3px 9px 1px 24px;
+				@include bgSvg(fnIcoCheck("rgb(0, 0, 0)"), no-repeat, 9px 45%, 8px);
+				// background: rgba(168, 183, 199, 0.2);
 			}
 			&:hover{
-				background: rgba(168, 183, 199, 0.2);
+				background-color: rgba(168, 183, 199, 0.2);
 			}
 		}
 	}

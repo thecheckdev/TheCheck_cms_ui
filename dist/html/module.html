@@ -6,7 +6,7 @@
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<meta name="theme-color" content="#ffffff">
 	<!-- <link rel="shortcut icon" href="ico_url" type="image/x-icon"> -->
-	<title>더체크 | 모듈 페이지</title> <!-- [페이지명 | 사이트명] -->
+	<title>모듈 페이지 | 더체크</title> <!-- [페이지명 | 사이트명] -->
 	<link rel="stylesheet" type="text/css" href="/css/style.css"/>
 	<script src="/js/jquery-1.12.4.min.js"></script>
 	<script src="/js/datepicker.js"></script>
@@ -89,6 +89,7 @@
 			padding-bottom: 5px;
 			color: #ff5656;
 		}
+		.slct,input{margin: 0 5px;}
 		pre{
 			background: #fff;
 			padding: 5px 30px;
@@ -195,6 +196,7 @@
 				<div class="i_cont">
 					<span class="noti">slct_tit이 비워져 있으면 select값으로 세팅됩니다.</span>
 					<span class="noti">- 가로 크기는 기본 100px입니다. 다른 크기를 원하시면 인라인 스타일로 지정해서 사용 가능 합니다.</span>
+					<p>.big : 높이 40px<br>
 					<div class="slct" style="width: 100px;">
 						<div class="slct_tit"></div>
 						<ul class="slct_cont">
@@ -218,6 +220,17 @@
 							<li>애플망고</li>
 							<li>배</li>
 						</ul>
+					</div><div class="slct big" style="width: 150px;">
+						<div class="slct_tit"></div>
+						<ul class="slct_cont">
+							<li class="select">전체</li>
+							<li>옵션1</li>
+							<li>옵션2</li>
+							<li>옵션3</li>
+							<li>옵션4</li>
+							<li>옵션3</li>
+							<li>옵션4</li>
+						</ul>
 					</div>
 <pre><xmp><div class="slct" style="width: 100px;">
   <div class="slct_tit"></div>
@@ -234,6 +247,9 @@
     <li>사과</li>
 	...
   </ul>
+</div>
+<div class="slct big" style="width: 200px;">
+	...
 </div>
 	</xmp></pre>
 				</div>

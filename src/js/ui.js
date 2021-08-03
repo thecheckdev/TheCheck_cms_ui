@@ -49,16 +49,16 @@ $(function() {
 
 	//메뉴
 	$(".btn_menu").click(function(){
-		$("nav").addClass("show");
+		$(".wrap_gnb").addClass("show");
 	});
-	$("nav .btn_close").click(function(){
-		$("nav").removeClass("show");
+	$(".wrap_gnb .btn_close").click(function(){
+		$(".wrap_gnb").removeClass("show");
 	});
-	$("nav .menu").click(function(){
+	$(".wrap_gnb .menu").click(function(){
 		if($(this).hasClass("on") === true){
 			$(this).removeClass("on");
 		}else {
-			$("nav .menu").removeClass("on");
+			$(".wrap_gnb .menu").removeClass("on");
 			$(this).addClass("on");
 		}
 	});
