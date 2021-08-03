@@ -46,4 +46,22 @@ $(function() {
 		if(e.target.className === "slct" || e.target.className === "slct_tit" || e.target.className === "slct_cont") {return false;}
 		$(".slct").removeClass("on");
 	});
+
+	//메뉴
+	$(".btn_menu").click(function(){
+		$("nav").addClass("show");
+	});
+	$("nav .btn_close").click(function(){
+		$("nav").removeClass("show");
+	});
+	$("nav .menu").click(function(){
+		if($(this).hasClass("on") === true){
+			$(this).removeClass("on");
+		}else {
+			$("nav .menu").removeClass("on");
+			$(this).addClass("on");
+		}
+	});
+
+
 } );
