@@ -21,7 +21,7 @@
 	<!-- script or style -->
 	<style>
 		body{
-			padding: 70px 50px;
+			padding: 20px 50px 60px;
 			box-sizing: border-box;
 			font-size: 14px;
 		}
@@ -30,11 +30,11 @@
 			font-weight: normal;
 		}
 		h1 {
-			font-size: 24px;
+			font-size: 26px;
 		}
 		h2 {
-			font-size: 20px;
-			margin-bottom: 30px;
+			font-size: 24px;
+			margin-bottom: 40px;
 		}
 		h3 {
 			font-size: 18px;
@@ -47,23 +47,34 @@
 		P{
 			margin-bottom: 20px;
 		}
-		.i_header, .i_container {
+		.i_header{
+			width: 100%;
+			margin: 0 auto;
+			padding: 17px 50px;
+			box-sizing: border-box;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			position: fixed;
+			top: 0;
+			left: 0;
+			background: #66c8c3;
+			color: #fff;
+			z-index: 10;
+		}
+		.i_container {
 			width: 1440px;
 			margin: 0 auto;
 			box-sizing: border-box;
 		}
 		.i_menu {
-			margin: 20px 0 50px;
 			text-align: right;
 		}
 		.i_menu a{
-			font-size: 14px;
+			font-size: 16px;
 			display: inline-block;
-			padding: 5px 20px;
-			background: #66c8c3;
+			margin: 0 20px;
 			color:#fff;
-			border-radius: 5px;
-			margin-right: 10px;
 		}
 		.i_cont {
 			margin: 0 0 50px;
@@ -75,21 +86,22 @@
 			display: block;
 		}
 		.i_bx{
-			display: none;
+			padding: 70px 0 0;
+			border-bottom: 1px solid #aaa;
 		}
 		.left{
 			width: 50%;
 		}
 		.right{
 			width: 50%;
-			padding-top: 50px;
+			padding-top: 64px;
 		}
 		.noti{
 			font-size: 13px;
 			padding-bottom: 5px;
 			color: #ff5656;
 		}
-		.slct,input{margin: 0 5px;}
+		.slct,input, .bx_chk{margin: 0 5px;}
 		pre{
 			background: #fff;
 			padding: 5px 30px;
@@ -99,30 +111,21 @@
 			color: #777;
 		}
 	</style>
-	<script>
-		$(function(){
-
-		});
-		function fnClickTab(i) {
-			console.log(i);
-			$(".i_bx").removeClass('show_flex');
-			$(".i_bx").eq(i).addClass('show_flex');
-		}
-	</script>
 
 </head>
 
 <body id="body">
 	<div class="i_header">
-		<h1>📝 통합페이지 모듈</h1>
+		<h1>📝&nbsp&nbsp&nbsp통합페이지 모듈</h1>
 		<div class="i_menu">
-			<a href="javascript:fnClickTab(0);">스타일 가이드</a>
-			<a href="javascript:fnClickTab(1);">입력폼</a>
-			<a href="#">버튼</a>
+			<a href="#i_bx1">스타일 가이드</a> | 
+			<a href="#i_bx2">입력폼 & 버튼</a> | 
+			<a href="#i_bx3">component</a> | 
+			<a href="#i_bx4">temp</a>
 		</div>
 	</div>
 	<section class="i_container">
-		<article class="i_bx show_flex col">
+		<article class="i_bx show_flex col" id="i_bx1">
 			<div class="left">
 				<h2>🎯 스타일 가이드</h2>
 				<h3>🍉 margin</h3>
@@ -148,6 +151,15 @@
 					<span style="font-size: 20px;">h3 : 20px</span>
 					<span style="font-size: 16px;">h4 : 16px</span>
 				</div>
+			</div>
+			<div class="right">
+				<h3>🍉 노출</h3>
+				<div class="i_cont">
+					텍스트 숨기기 : .blind<br>
+					요소 숨기기 : .hide<br>
+					요소 노출1 : .show (display:block)<br>
+					요소 노출2 : .show_flex (display:flex)<br>
+				</div>
 				<h3>🍉 글자 색상</h3>
 				<div class="i_cont">
 					<span style="color: #fff;"><em style="background:#777;">#ffffff : .txt_white</em></span>
@@ -164,19 +176,10 @@
 					<span style="color: #fdef72;">.txt_yellow : #fdef72</span>
 				</div>
 			</div>
-			<div class="right">
-				<h3>🍉 노출</h3>
-				<div class="i_cont">
-					텍스트 숨기기 : .blind<br>
-					요소 숨기기 : .hide<br>
-					요소 노출1 : .show (display:block)<br>
-					요소 노출2 : .show_flex (display:flex)<br>
-				</div>
-			</div>
 		</article>
-		<article class="i_bx col">
+		<article class="i_bx col" id="i_bx2">
 			<div class="left">
-				<h2>🎯 입력</h2>
+				<h2>🎯 입력< & 버튼</h2>
 				<h3>🍉 input</h3>
 				<div class="i_cont">
 					<h4>기본</h4>
@@ -251,7 +254,23 @@
 <div class="slct big" style="width: 200px;">
 	...
 </div>
-	</xmp></pre>
+</xmp></pre>
+				</div>
+				<h3>
+					🍉 checkbox
+				</h3>
+				<div class="i_cont">
+					<div class="bx_chk"><input type="checkbox" name="" id="chk1"><label class="chk" for="chk1">체크1</label></div>
+					<div class="bx_chk big"><input type="checkbox" name="" id="chk2"><label class="chk" for="chk2">체크2</label></div>
+<pre><xmp><div class="bx_chk">
+  <input type="checkbox" name="" id="chk1">
+  <label class="chk" for="chk1">체크1</label>
+</div>
+<div class="bx_chk big">
+  <input type="checkbox" name="" id="chk2">
+  <label class="chk" for="chk2">체크2</label>
+</div>
+</xmp></pre>
 				</div>
 			</div>
 			<div class="right">
@@ -272,6 +291,72 @@
  class="ipt_date big_calendar ico_calendar big"/>
 </xmp></pre>
 				</div>
+				<h3>
+					🍉 button
+				</h3>
+				<div class="i_cont">
+					<p>.btn_search : <button class="btn_search">조회</button></p>
+					<p>.btn_blue : <button class="btn_blue">지급하기</button></p>
+					<p>.btn_blue.full : <button class="btn_blue full">지급하기</button></p>
+					<p>.btn_grean : <button class="btn_grean">이전지급내역</button></p>
+					<p>.btn_grean.full : <button class="btn_grean full">이전지급내역</button></p>
+					<p>.btn_grean.ico : <button class="btn_grean ico">검색필터 보기</button></p>
+					<p>.btn_grean.full.ico : <button class="btn_grean full ico">검색필터 보기</button></p>
+					<p>.btn_plus : <button class="btn_plus">+</button><em class="mr20"></em>.btn_plus.dis : <button class="btn_plus dis">+</button></p>
+					<p>.btn_minus : <button class="btn_minus">-</button><em class="mr20"></em>.btn_minus.dis : <button class="btn_minus dis">-</button></p>
+				</div>
+			</div>
+		</article>
+		<article class="i_bx col" id="i_bx4">
+			<div class="left">
+				<h2>🎯 Component 가이드</h2>
+				<h3>🍉 paging</h3>
+				<div class="paginate mt10 mb10">
+					<button href="#" class="btn_page_prev dis">이전</button>
+					<button class="btn_page on">1</button>
+					<button class="btn_page">2</button>
+					<button class="btn_page">3</button>
+					<button class="btn_page">4</button>
+					<button class="btn_page">5</button>
+					<em>…</em>
+					<button class="btn_page">96</button>
+					<button class="btn_page">97</button>
+					<button class="btn_page">98</button>
+					<button class="btn_page">99</button>
+					<button class="btn_page">100</button>
+					<button href="#" class="btn_page_next">다음</button>
+					<div class="info">
+						<strong>항목 수</strong> <input type="number" class="ipt_page" value="20" style="width: 30px;">
+						<span class="desc">총 1207 중 1- 20</span>
+					</div>
+				</div> 
+				<div class="i_cont">
+<pre><xmp><div class="paginate">
+  <button href="#" class="btn_page_prev dis">이전</button>
+  <button class="btn_page on">1</button>
+  ...
+  <em>…</em>
+  <button class="btn_page">100</button>
+  <button href="#" class="btn_page_next">다음</button>
+  <div class="info">
+    <strong>항목 수</strong>
+    <input type="number" class="ipt_page" value="20" style="width: 30px;">
+    <span class="desc">총 1207 중 1- 20</span>
+  </div>
+</div> 
+</xmp></pre>
+				</div>
+			</div>
+			<div class="right">
+
+			</div>
+		</article>
+		<article class="i_bx col" id="i_bx3">
+			<div class="left">
+
+			</div>
+			<div class="right">
+
 			</div>
 		</article>
 	</section>

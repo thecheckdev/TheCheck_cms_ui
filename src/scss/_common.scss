@@ -223,3 +223,182 @@ input {
 		}
 	}
 }
+
+.bx_chk {
+	display: inline-block;
+	input[type=checkbox]{
+		display: none;
+		&:checked+label{
+			@include bgSvg(fnCheckboxFull("rgb(255, 255, 255)", "rgb(75, 202, 129)"), no-repeat, 0 0, 16px);
+		}
+	}
+	label{ 
+		font-size: 12px;
+		line-height: 16px;
+		padding: 1px 0 0 26px;
+		box-sizing: border-box;
+		cursor: pointer;
+		display: inline-block;
+		@include bgSvg(fnCheckbox("rgb(216, 221, 230)", "rgb(68, 68, 68)"), no-repeat, 0 0, 16px);
+	}
+	&.big{
+		input[type=checkbox]{
+			&:checked+label{
+				background-size: 28px;
+			}
+		}
+		label{ 
+			font-size: 14px;
+			line-height: 28px;
+			padding-left:44px;
+			background-size: 28px;
+		}
+	}
+}
+
+.paginate{
+	display: flex;
+	height: 24px;
+	justify-content: flex-end;
+	align-items: center;
+	em{
+		display: inline-block;
+		margin: 0 3px;
+	}
+	.btn_page{
+		font-size: 14px;
+		display: inline-block;
+		line-height: 22px;
+		min-width: 24px;
+		height: 100%;
+		color: $point;
+		border:2px solid $point;
+		text-align: center;
+		border-radius: 2px;
+		padding: 0 5px;
+		margin: 0 3px;
+		&.on{
+			color:$white;
+			background: $point;
+		}
+	}
+	.btn_page_prev,.btn_page_next{
+		width: 11px;
+		height: 100%;
+		display: inline-block;
+		padding: 0;
+		margin: 0 5px;
+		@include blind;
+		position: relative;
+		&:after{
+			content:"";
+			@include setContent(11px, 11px, block, absolute);
+			@include bgSvg(fnIcoArrow2("rgb(50, 184, 211)"), no-repeat, 50% 50%, 11px);
+			top:50%;
+			left:0;
+			margin-top: -5px;
+		}
+		&.dis{
+			&:after{
+				background-image:fnIcoArrow2("rgb(210, 210, 210)");
+			}
+		}
+	}
+	.btn_page_prev{
+		&:after{
+			transform: rotate(180deg);
+		}
+	}
+	em{
+		color: $point;
+	}
+	.info{
+		display: inline-block;
+		margin-left: 13px;
+		strong{
+			color:$point;
+			font-size: 12px;
+			font-weight: normal;
+		}
+		.ipt_page{
+			min-width: auto;
+			width: 30px;
+			height: 24px;
+			padding: 0px 5px;
+			margin-left: 2px;
+			text-align: center;
+			border-width: 2px;
+			&::-webkit-outer-spin-button,&::-webkit-inner-spin-button{
+				-webkit-appearance: none;
+				margin: 0;
+			}
+		}
+		.desc{
+			margin-left: 12px;
+		}
+	}
+}
+
+//button
+.btn_search{
+	font-size: 14px;
+	border: 1px solid $point;
+	padding: 6px 20px 5px;
+	color: $point;
+	background: $white;
+	border-radius: 2px;
+}
+.btn_grean{
+	font-size: 12px;
+	border: 1px solid #05C9BF;
+	color: #05C9BF;
+	border-radius: 4px;
+	padding: 6px 20px 5px 20px;
+	background: $white;
+	&.ico{
+		padding: 6px 20px 5px 35px;
+		@include bgSvg(fnIcoArrowDown("rgb(5, 201, 191)"), no-repeat, 16px 50%, 15px, $white);
+	}
+	&.full{
+		background: #05C9BF;
+		color: $white;
+		&.ico{
+			@include bgSvg(fnIcoArrowDown("rgb(255, 255, 255)"), no-repeat, 16px 50%, 15px, #05C9BF);
+		}
+	}
+}
+.btn_blue{
+	font-size: 16px;
+	border-radius: 4px;
+	padding: 7px 20px 6px;
+	min-width: 150px;
+	border: 1px solid $point;
+	background: #DFFAFF;
+	color: $point;
+	&.full{
+		background: $point; 
+		color: $white;
+	}
+}
+.btn_plus, .btn_minus{
+	@include setContent(32px, 32px);
+	line-height: 30px;
+	border: 1px solid $point;
+	border-radius: 4px;
+	@include blind;
+}
+.btn_plus{
+	@include bgSvg(fnIcoPlus("rgb(5, 201, 191)"), no-repeat, 50% 50%, 10px, $white);
+	&.dis{
+		border-color: #E5E5E5;
+		@include bgSvg(fnIcoPlus("rgb(229, 229, 229)"), no-repeat, 50% 50%, 10px, $white);
+	}
+}
+.btn_minus{
+	border: 1px solid #EC0000;
+	@include bgSvg(fnIcoMinus("rgb(236, 0, 0)"), no-repeat, 50% 50%, 10px, $white);
+	&.dis{
+		border-color: #E5E5E5;
+		@include bgSvg(fnIcoMinus("rgb(229, 229, 229)"), no-repeat, 50% 50%, 10px, $white);
+	}
+}
