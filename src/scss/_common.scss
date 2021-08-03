@@ -359,7 +359,7 @@ input {
 		padding: 6px 20px 5px 35px;
 		@include bgSvg(fnIcoArrowDown("rgb(5, 201, 191)"), no-repeat, 16px 50%, 15px, $white);
 	}
-	&.full{
+	&.fill{
 		background: #05C9BF;
 		color: $white;
 		&.ico{
@@ -375,7 +375,7 @@ input {
 	border: 1px solid $point;
 	background: #DFFAFF;
 	color: $point;
-	&.full{
+	&.fill{
 		background: $point; 
 		color: $white;
 	}
