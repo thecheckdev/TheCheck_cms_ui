@@ -49,9 +49,10 @@ header {
 		padding-top: 4px;
 	}
 	.ico_bar{
-		font-size: 18px;
-		margin: 0 20px;
-		padding-top: 4px;
+		width: 2px;
+		height: 20px;
+		margin: 0 20px; 
+		background: $white;
 	}
 	.btn_menu{
 		margin-right: 26px;
@@ -196,7 +197,7 @@ header {
 	}
 }
 .container {
-	padding: 30px 30px 70px;
+	padding: 30px;
 	box-sizing: border-box;
 	flex: 1;
 }

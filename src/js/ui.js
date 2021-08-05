@@ -63,5 +63,11 @@ $(function() {
 		}
 	});
 
-
+	//테이블 박스 세팅
+	for (var i =0; i < $(".wrap_tbl").length; i++) {
+		var target = $(".wrap_tbl").eq(i);
+		var colgroup = "<colgroup>"+target.find(".thead colgroup").html()+"</colgroup>";
+		$(colgroup).prependTo(target.find(".tbody .tbl"));
+		console.log(colgroup);
+	}
 } );

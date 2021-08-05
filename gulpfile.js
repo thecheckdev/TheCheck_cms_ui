@@ -11,6 +11,7 @@ const uglify = require('gulp-uglify');
 const imagemin = require('gulp-imagemin');
 const sourcemaps = require('gulp-sourcemaps');
 const ghPages = require('gulp-gh-pages');
+const babel = require("gulp-babel");
 
 const paths = {
 	port: '3000',
@@ -56,7 +57,7 @@ function htmlComp() {
 function sassComp(done) {
 	gulp.src(paths.style.input, { sourcemaps: true })
 		.pipe(sass.sync().on('error', sass.logError))
-		.pipe(sass({ outputStyle: 'compact' })) //nested, expanded, compact, compressed
+		.pipe(sass({ outputStyle: 'compressed' })) //nested, expanded, compact, compressed
 		.pipe(sourcemaps.write())
 		.pipe(gulp.dest(paths.style.output))
 		.pipe(browsersync.reload({ stream: true }));
@@ -71,10 +72,17 @@ function sassComp(done) {
 
 function js() {
 	return gulp.src(paths.js.input)
-		// .pipe(uglify())
+		.pipe(uglify())
 		.pipe(gulp.dest(paths.js.output))
 		.pipe(browsersync.reload({ stream: true }));
 }
+
+// function babelJs() {
+// 	return gulp.src(paths.js.input)
+// 	.pipe(babel())
+// 	// .pipe(uglify())
+// 	.pipe(gulp.dest(paths.js.output+'/es5'))
+// }
 
 function img() {
 	return gulp.src(paths.img.input)
@@ -109,4 +117,5 @@ gulp.task('build', function() {
 });
 
 // export tasks
+// exports.default = gulp.series(gulp.parallel(htmlComp, sassComp, img, js, babelJs), browserSync, watchFiles);
 exports.default = gulp.series(gulp.parallel(htmlComp, sassComp, img, js), browserSync, watchFiles);
