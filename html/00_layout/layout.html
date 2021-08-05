@@ -18,17 +18,13 @@
 	<script src="/TheCheck_cms_ui/js/ui.js"></script>
 
 	
-<script>
-	
-</script>
-
 </head>
 <body>
 	<header>
 		<div class="left">
 			<button class="btn_menu">메뉴 버튼</button>
 			<h1>THE CHECK 영업관리</h1>
-			<em class="ico_bar">|</em>
+			<em class="ico_bar"></em>
 			<span class="date">2020년 00월 00일 금요일</span>
 		</div>
 		<div class="right"> 
@@ -100,15 +96,614 @@
 		</ul>
 	</nav>  
 	<section class="container">
-		<article>
-			내용<br>
+		<article class="wrap_search">
+			<div class="left">
+				<div class="unit">
+					<strong>지사</strong>
+					<div class="slct" style="width: 100px;">
+						<div class="slct_tit"></div>
+						<ul class="slct_cont">
+							<li class="select">전체</li>
+							<li>옵션1</li>
+							<li>옵션2</li>
+							<li>옵션3</li>
+							<li>옵션4</li>
+							<li>옵션3</li>
+							<li>옵션4</li>
+						</ul>
+					</div>
+				</div>
+				<div class="unit">
+					<strong>대리점</strong>
+					<div class="slct" style="width: 100px;">
+						<div class="slct_tit"></div>
+						<ul class="slct_cont">
+							<li class="select">전체</li>
+							<li>옵션1</li>
+							<li>옵션2</li>
+						</ul>
+					</div>
+				</div>
+				<div class="unit">
+					<strong>메니저</strong>
+					<div class="slct" style="width: 100px;">
+						<div class="slct_tit"></div>
+						<ul class="slct_cont">
+							<li class="select">전체</li>
+							<li>옵션1</li>
+							<li>옵션2</li>
+						</ul>
+					</div>
+				</div>
+				<div class="unit">
+					<strong>조건</strong>
+					<div class="slct" style="width: 100px;">
+						<div class="slct_tit"></div>
+						<ul class="slct_cont">
+							<li class="select">전체</li>
+							<li>옵션1</li>
+							<li>옵션2</li>
+						</ul>
+					</div>
+					<input type="text" class="ipt">
+				</div>
+				<div class="unit">
+					<strong>기간</strong>
+					<input type="text" autocomplete='off' readonly class="ipt_date"/><em>~</em><input type="text" autocomplete='off' readonly class="ipt_date"/>
+				</div>
+				<div class="unit">
+					<button class="btn">조회</button>
+					<button class="btn fill">배정</button>
+				</div>
+			</div>
+			<div class="right">
+				<button class="btn_grean fill">당월지급예정</button>
+				<button class="btn_grean">이전지급예정</button>
+				<em class="ico_bar"></em>
+				<button class="btn_xls">다운로드</button>
+			</div>
 		</article>
-		<article>
-			본문내용1
-		</article>
-		<article>
-			본문내용2
-		</article>
+		<article class="wrap_tbl">
+			<div class="thead">
+				<table class="tbl">
+					<colgroup> 
+						<col style="width: 60px;"> 
+						<col style="width: 80px;"> 
+						<col style="width: auto;"> 
+						<col style="width: auto;"> 
+						<col style="width: auto;"> 
+
+						<col style="width: auto;"> 
+						<col style="width: auto;"> 
+						<col style="width: auto;"> 
+						<col style="width: auto;"> 
+						<col style="width: auto;"> 
+
+						<col style="width: auto;"> 
+						<col style="width: auto;"> 
+						<col style="width: auto;"> 
+						<col style="width:60px"> 
+						<col style="width: 140px;"> 
+					</colgroup>
+					<thead>
+						<tr>
+							<th><button class="ico up">번호&nbsp</button></th>
+							<th><button class="ico up">등록번호&nbsp</button></th>
+							<th><button class="ico">센터&nbsp</button></th>
+							<th><button class="ico">지사&nbsp</button></th>
+							<th><button class="ico">00점 (팀장)&nbsp</button></th>
+
+							<th><button class="ico">메니저&nbsp</button></th>
+							<th><button class="ico">사업장명&nbsp</button></th>
+							<th><button class="ico">등록일&nbsp</button></th>
+							<th><button class="ico">이용기간&nbsp</button></th>
+							<th><button class="ico">회원가입수익&nbsp</button></th>
+
+							<th><button class="ico">플랫폼수익&nbsp</button></th>
+							<th><button class="ico">기타수익&nbsp</button></th>
+							<th><button class="ico">상태/일정&nbsp</button></th>
+							<th><button class="ico">비고&nbsp</button></th>
+							<th><button>주문상태&nbsp</button></th>
+						</tr>
+					</thead>
+				</table>
+			</div>
+			<div class="tbody">
+				<table class="tbl">
+					<tbody>
+						<tr>
+							<td>123</td>
+							<td class="txt_red">4019</td>
+							<td>더체크프라임</td>
+							<td>신한정보통신</td>
+							<td>강하늘 팀장</td>
+
+							<td>유연석</td>
+							<td >스타벅스</td>
+							<td>21/08/04</td>
+							<td class="txt_orange">100일</td>
+							<td>25,000원</td>
+
+							<td>900,000원</td>
+							<td>5,000원</td>
+							<td><span class="txt_hlight">2020/03/24</span></td>
+							<td><button class="btn_msg">메모버튼</button></td>
+							<td>-</td>
+						</tr>
+						<tr>
+							<td>123</td>
+							<td>4019</td>
+							<td>더체크프라임</td>
+							<td>신한정보통신 <span class="txt_red">(지사)</span></td>
+							<td>강하늘 팀장</td>
+
+							<td>유연석</td>
+							<td class="txt_red">스타벅스</td>
+							<td>21/08/04</td>
+							<td class="txt_orange">100일</td>
+							<td>25,000원</td>
+
+							<td>900,000원</td>
+							<td>5,000원</td>
+							<td><span class="txt_hlight orange">2020/03/24</span></td>
+							<td><button class="btn_msg">메모버튼</button></td>
+							<td><button class="btn_blue fill">접수</button></td>
+						</tr>
+						<tr>
+							<td>123</td>
+							<td>4019</td>
+							<td>더체크프라임</td>
+							<td>신한정보통신</td>
+							<td>강하늘 팀장</td>
+
+							<td>유연석</td>
+							<td class="txt_red">스타벅스</td>
+							<td>21/08/04</td>
+							<td class="txt_orange">100일</td>
+							<td>25,000원</td>
+
+							<td>900,000원</td>
+							<td>5,000원</td>
+							<td><span class="txt_hlight grean">2020/03/24</span></td>
+							<td><button class="btn_txt">…</button></td>
+							<td><button class="btn_blue fill">접수</button></td>
+						</tr>
+						<tr>
+							<td>123</td>
+							<td>4019</td>
+							<td>더체크프라임</td>
+							<td>신한정보통신</td>
+							<td>강하늘 팀장</td>
+
+							<td>유연석</td>
+							<td class="txt_red">스타벅스</td>
+							<td>21/08/04</td>
+							<td class="txt_orange">100일</td>
+							<td>25,000원</td>
+
+							<td>900,000원</td>
+							<td>5,000원</td>
+							<td><span class="txt_hlight red">2020/03/24</span></td>
+							<td><button class="btn_msg">메모버튼</button></td>
+							<td><button class="btn_blue fill">접수</button></td>
+						</tr>
+						<tr>
+							<td>123</td>
+							<td>4019</td>
+							<td>더체크프라임</td>
+							<td>신한정보통신</td>
+							<td>강하늘 팀장</td>
+
+							<td>유연석</td>
+							<td class="txt_red">스타벅스</td>
+							<td>21/08/04</td>
+							<td class="txt_orange">100일</td>
+							<td>25,000원</td>
+
+							<td>900,000원</td>
+							<td>5,000원</td>
+							<td><span class="txt_hlight purple">2020/03/24</span></td>
+							<td><button class="btn_msg">메모버튼</button></td>
+							<td><button class="btn_blue fill">접수</button></td>
+						</tr>
+						<tr>
+							<td>123</td>
+							<td>4019</td>
+							<td>더체크프라임</td>
+							<td>신한정보통신</td>
+							<td>강하늘 팀장</td>
+
+							<td>유연석</td>
+							<td class="txt_red">스타벅스</td>
+							<td>21/08/04</td>
+							<td class="txt_orange">100일</td>
+							<td>25,000원</td>
+
+							<td>900,000원</td>
+							<td>5,000원</td>
+							<td><span class="txt_hlight">2020/03/24</span></td>
+							<td><button class="btn_msg">메모버튼</button></td>
+							<td><button class="btn_blue fill">접수</button></td>
+						</tr>
+						<tr>
+							<td>123</td>
+							<td>4019</td>
+							<td>더체크프라임</td>
+							<td>신한정보통신</td>
+							<td>강하늘 팀장</td>
+
+							<td>유연석</td>
+							<td class="txt_red">스타벅스</td>
+							<td>21/08/04</td>
+							<td class="txt_orange">100일</td>
+							<td>25,000원</td>
+
+							<td>900,000원</td>
+							<td>5,000원</td>
+							<td><span class="txt_hlight">2020/03/24</span></td>
+							<td><button class="btn_msg">메모버튼</button></td>
+							<td><button class="btn_blue fill">접수</button></td>
+						</tr>
+						<tr>
+							<td>123</td>
+							<td>4019</td>
+							<td>더체크프라임</td>
+							<td>신한정보통신</td>
+							<td>강하늘 팀장</td>
+
+							<td>유연석</td>
+							<td>스타벅스<br>00점</td>
+							<td>21/08/04</td>
+							<td>100일</td>
+							<td>25,000원</td>
+
+							<td>900,000원</td>
+							<td>5,000원</td>
+							<td><span class="txt_hlight">2020/03/24</span></td>
+							<td><button class="btn_txt">…</button></td>
+							<td><button class="btn_blue">상세</button><button class="btn_blue fill">처리이력</button></td>
+						</tr>
+						<tr>
+							<td>123</td>
+							<td>4019</td>
+							<td>더체크프라임</td>
+							<td>신한정보통신</td>
+							<td>강하늘 팀장</td>
+
+							<td>유연석</td>
+							<td class="txt_red">스타벅스</td>
+							<td>21/08/04</td>
+							<td class="txt_orange">100일</td>
+							<td>25,000원</td>
+
+							<td>900,000원</td>
+							<td>5,000원</td>
+							<td><span class="txt_hlight">2020/03/24</span></td>
+							<td><button class="btn_msg">메모버튼</button></td>
+							<td><button class="btn_blue fill">접수</button></td>
+						</tr>
+						<tr class="total">
+							<td>123</td>
+							<td>4019</td>
+							<td>더체크프라임</td>
+							<td>신한정보통신</td>
+							<td>강하늘 팀장</td>
+
+							<td>유연석</td>
+							<td class="txt_red">스타벅스</td>
+							<td>21/08/04</td>
+							<td class="txt_orange">100일</td>
+							<td>25,000원</td>
+
+							<td>900,000원</td>
+							<td>5,000원</td>
+							<td>2020/03/24</td>
+							<td><button class="btn_msg">메모버튼</button></td>
+							<td></td>
+						</tr>
+						<tr class="total big">
+							<td>123</td>
+							<td>4019</td>
+							<td>더체크프라임</td>
+							<td>신한정보통신</td>
+							<td>강하늘 팀장</td>
+
+							<td>유연석</td>
+							<td class="txt_red">스타벅스</td>
+							<td>21/08/04</td>
+							<td class="txt_orange">100일</td>
+							<td>25,000원</td>
+
+							<td>900,000원</td>
+							<td>5,000원</td>
+							<td>2020/03/24</td>
+							<td><button class="btn_msg">메모버튼</button></td>
+							<td></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</article> 
+		<div class="paginate">
+		  <button href="#" class="btn_page_prev dis">이전</button>
+		  <button class="btn_page on">1</button>
+		  <button class="btn_page">2</button>
+		  <button class="btn_page">3</button>
+		  <button class="btn_page">4</button>
+		  <button class="btn_page">5</button>
+		  <em>…</em>
+		  <button class="btn_page">96</button>
+		  <button class="btn_page">97</button>
+		  <button class="btn_page">98</button>
+		  <button class="btn_page">99</button>
+		  <button class="btn_page">100</button>
+		  <button href="#" class="btn_page_next">다음</button>
+		  <div class="info">
+		    <strong>항목 수</strong> <input type="number" class="ipt_page" value="20" style="width: 30px;"> <!-- 100이상으로 올라가면 가로 크기 조정해주세요-->
+		    <span class="desc">총 1207 중 1- 20</span>
+		  </div>
+		</div> 
+		<article class="wrap_tbl scroll">
+			<div class="thead">
+				<table class="tbl">
+					<colgroup> 
+						<col style="width: 60px;"> 
+						<col style="width: 80px;"> 
+						<col style="width: auto;"> 
+						<col style="width: auto;"> 
+						<col style="width: auto;"> 
+
+						<col style="width: auto;"> 
+						<col style="width: auto;"> 
+						<col style="width: auto;"> 
+						<col style="width: auto;"> 
+						<col style="width: auto;"> 
+
+						<col style="width: auto;"> 
+						<col style="width: auto;"> 
+						<col style="width: auto;"> 
+						<col style="width:60px"> 
+						<col style="width: 140px;"> 
+					</colgroup>
+					<thead>
+						<tr>
+							<th><button class="ico up">번호&nbsp</button></th>
+							<th><button class="ico up">등록번호&nbsp</button></th>
+							<th><button class="ico">센터&nbsp</button></th>
+							<th><button class="ico">지사&nbsp</button></th>
+							<th><button class="ico">00점 (팀장)&nbsp</button></th>
+
+							<th><button class="ico">메니저&nbsp</button></th>
+							<th><button class="ico">사업장명&nbsp</button></th>
+							<th><button class="ico">등록일&nbsp</button></th>
+							<th><button class="ico">이용기간&nbsp</button></th>
+							<th><button class="ico">회원가입수익&nbsp</button></th>
+
+							<th><button class="ico">플랫폼수익&nbsp</button></th>
+							<th><button class="ico">기타수익&nbsp</button></th>
+							<th><button class="ico">지급예정액&nbsp</button></th>
+							<th><button class="ico">비고&nbsp</button></th>
+							<th><button>주문상태&nbsp</button></th>
+						</tr>
+					</thead>
+				</table>
+			</div>
+			<div class="tbody">
+				<table class="tbl">
+					<tbody>
+						<tr>
+							<td>123</td>
+							<td class="txt_red">4019</td>
+							<td>더체크프라임</td>
+							<td>신한정보통신</td>
+							<td>강하늘 팀장</td>
+
+							<td>유연석</td>
+							<td >스타벅스</td>
+							<td>21/08/04</td>
+							<td class="txt_orange">100일</td>
+							<td>25,000원</td>
+
+							<td>900,000원</td>
+							<td>5,000원</td>
+							<td><span class="txt_hlight">2020/03/24</span></td>
+							<td><button class="btn_msg">메모버튼</button></td>
+							<td>-</td>
+						</tr>
+						<tr>
+							<td>123</td>
+							<td>4019</td>
+							<td>더체크프라임</td>
+							<td>신한정보통신</td>
+							<td>강하늘 팀장</td>
+
+							<td>유연석</td>
+							<td class="txt_red">스타벅스</td>
+							<td>21/08/04</td>
+							<td class="txt_orange">100일</td>
+							<td>25,000원</td>
+
+							<td>900,000원</td>
+							<td>5,000원</td>
+							<td><span class="txt_hlight">2020/03/24</span></td>
+							<td><button class="btn_msg">메모버튼</button></td>
+							<td><button class="btn_blue fill">접수</button></td>
+						</tr>
+						<tr>
+							<td>123</td>
+							<td>4019</td>
+							<td>더체크프라임</td>
+							<td>신한정보통신</td>
+							<td>강하늘 팀장</td>
+
+							<td>유연석</td>
+							<td class="txt_red">스타벅스</td>
+							<td>21/08/04</td>
+							<td class="txt_orange">100일</td>
+							<td>25,000원</td>
+
+							<td>900,000원</td>
+							<td>5,000원</td>
+							<td><span class="txt_hlight">2020/03/24</span></td>
+							<td><button class="btn_msg">메모버튼</button></td>
+							<td><button class="btn_blue fill">접수</button></td>
+						</tr>
+						<tr>
+							<td>123</td>
+							<td>4019</td>
+							<td>더체크프라임</td>
+							<td>신한정보통신</td>
+							<td>강하늘 팀장</td>
+
+							<td>유연석</td>
+							<td>스타벅스<br>00점</td>
+							<td>21/08/04</td>
+							<td>100일</td>
+							<td>25,000원</td>
+
+							<td>900,000원</td>
+							<td>5,000원</td>
+							<td><span class="txt_hlight">2020/03/24</span></td>
+							<td><button class="btn_txt">…</button></td>
+							<td><button class="btn_blue">상세</button><button class="btn_blue fill">처리이력</button></td>
+						</tr>
+						<tr>
+							<td>123</td>
+							<td>4019</td>
+							<td>더체크프라임</td>
+							<td>신한정보통신</td>
+							<td>강하늘 팀장</td>
+
+							<td>유연석</td>
+							<td class="txt_red">스타벅스</td>
+							<td>21/08/04</td>
+							<td class="txt_orange">100일</td>
+							<td>25,000원</td>
+
+							<td>900,000원</td>
+							<td>5,000원</td>
+							<td><span class="txt_hlight">2020/03/24</span></td>
+							<td><button class="btn_msg">메모버튼</button></td>
+							<td><button class="btn_blue fill">접수</button></td>
+						</tr>
+						<tr>
+							<td>123</td>
+							<td>4019</td>
+							<td>더체크프라임</td>
+							<td>신한정보통신</td>
+							<td>강하늘 팀장</td>
+
+							<td>유연석</td>
+							<td class="txt_red">스타벅스</td>
+							<td>21/08/04</td>
+							<td class="txt_orange">100일</td>
+							<td>25,000원</td>
+
+							<td>900,000원</td>
+							<td>5,000원</td>
+							<td><span class="txt_hlight">2020/03/24</span></td>
+							<td><button class="btn_msg">메모버튼</button></td>
+							<td><button class="btn_blue fill">접수</button></td>
+						</tr>
+						<tr>
+							<td>123</td>
+							<td>4019</td>
+							<td>더체크프라임</td>
+							<td>신한정보통신</td>
+							<td>강하늘 팀장</td>
+
+							<td>유연석</td>
+							<td class="txt_red">스타벅스</td>
+							<td>21/08/04</td>
+							<td class="txt_orange">100일</td>
+							<td>25,000원</td>
+
+							<td>900,000원</td>
+							<td>5,000원</td>
+							<td><span class="txt_hlight">2020/03/24</span></td>
+							<td><button class="btn_msg">메모버튼</button></td>
+							<td><button class="btn_blue fill">접수</button></td>
+						</tr>
+						<tr>
+							<td>123</td>
+							<td>4019</td>
+							<td>더체크프라임</td>
+							<td>신한정보통신</td>
+							<td>강하늘 팀장</td>
+
+							<td>유연석</td>
+							<td class="txt_red">스타벅스</td>
+							<td>21/08/04</td>
+							<td class="txt_orange">100일</td>
+							<td>25,000원</td>
+
+							<td>900,000원</td>
+							<td>5,000원</td>
+							<td><span class="txt_hlight">2020/03/24</span></td>
+							<td><button class="btn_msg">메모버튼</button></td>
+							<td><button class="btn_blue fill">접수</button></td>
+						</tr>
+						<tr>
+							<td>123</td>
+							<td>4019</td>
+							<td>더체크프라임</td>
+							<td>신한정보통신</td>
+							<td>강하늘 팀장</td>
+
+							<td>유연석</td>
+							<td class="txt_red">스타벅스</td>
+							<td>21/08/04</td>
+							<td class="txt_orange">100일</td>
+							<td>25,000원</td>
+
+							<td>900,000원</td>
+							<td>5,000원</td>
+							<td><span class="txt_hlight">2020/03/24</span></td>
+							<td><button class="btn_msg">메모버튼</button></td>
+							<td><button class="btn_blue fill">접수</button></td>
+						</tr>
+						<tr>
+							<td>123</td>
+							<td>4019</td>
+							<td>더체크프라임</td>
+							<td>신한정보통신</td>
+							<td>강하늘 팀장</td>
+
+							<td>유연석</td>
+							<td class="txt_red">스타벅스</td>
+							<td>21/08/04</td>
+							<td class="txt_orange">100일</td>
+							<td>25,000원</td>
+
+							<td>900,000원</td>
+							<td>5,000원</td>
+							<td><span class="txt_hlight">2020/03/24</span></td>
+							<td><button class="btn_msg">메모버튼</button></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td>123</td>
+							<td>4019</td>
+							<td>더체크프라임</td>
+							<td>신한정보통신</td>
+							<td>강하늘 팀장</td>
+
+							<td>유연석</td>
+							<td class="txt_red">스타벅스</td>
+							<td>21/08/04</td>
+							<td class="txt_orange">100일</td>
+							<td>25,000원</td>
+
+							<td>900,000원</td>
+							<td>5,000원</td>
+							<td><span class="txt_hlight">2020/03/24</span></td>
+							<td><button class="btn_msg">메모버튼</button></td>
+							<td></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</article> 
 	</section>
 	<footer>
 	  <span class="copyright">Copyright 2020, The Check Co.Ltd.</span>
