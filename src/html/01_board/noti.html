@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ko">
+<include src="../include/head.html" title="공지게시판 | 더체크"></include>
+<body class="p_board"> <!--페이가 게시판일때 p_board 클래스 추가-->
+	<include src="../include/header.html"></include>
+	<include src="../include/summary.html" title="공지 게시판" sub_title="서브타이틀">
+		<div class="unit">
+			<span>정보등록수</span>
+			<span class="desc">1,780명</span>
+		</div> 
+		<div class="unit">
+			<strong>회원가입수익</strong>
+			<span class="desc">700,044,000원</span>
+		</div> 
+		<div class="unit">
+			<strong>플랫폼수익</strong>
+			<span class="desc">470,644,000원</span>
+		</div> 
+		<div class="unit">
+			<strong>지급예정액</strong>
+			<span class="desc">47,644,000원</span>
+		</div> 
+	</include>
+	<include src="../include/gnb.html"></include> 
+	<section class="container">
+		<div class="tab">
+			<a href="#" class="t_menu on">전체</a>
+			<a href="#" class="t_menu">공지사항</a>
+			<a href="#" class="t_menu">업데이트</a>
+			<a href="#" class="t_menu">점검</a>
+			<a href="#" class="t_menu">기타</a>
+		</div>
+		<article class="wrap_boad">
+			<div class="bx_search">
+				<div class="slct" style="width: 100px;">
+					<div class="slct_tit"></div>
+					<ul class="slct_cont">
+						<li class="select">작성자</li>
+						<li>제목</li>
+						<li>내용</li>
+						<li>제목+내용</li>
+					</ul>
+				</div>
+				<input type="text" class="ico_search">
+			</div>
+			<div class="top">
+				<div class="left">
+					<p class="total">게시글 <strong>18</strong>건</p>
+				</div>
+				<div class="right">
+					<button type="button" class="btn_create">작성</button>
+				</div>
+			</div>
+			<table class="tbl_board type1">
+				<tr>
+					<td class="td_img">
+						<img src="https://source.unsplash.com/QAB-WJcbgJk/60x60" alt="임시 프로필 사진">
+					</td>
+					<td class="td_cont">
+						<span class="type">공지사항</span>
+						<h4><strong class="txt_point">더체크</strong>는 700만 사업주님들과 함께할 준비가 되어있습니다!</h4>
+						<p class="desc">
+							점검일시: 01월 16일 14:00 ~ 16:00시 까지 / 점검내용: 서비스 안정화 점검
+						</p>
+						<button class="btn_grean">안내</button>
+					</td>
+					<td class="td_date">
+						2020-01-16
+					</td>
+				</tr>
+				<tr>
+					<td class="td_img">
+						<img src="https://source.unsplash.com/QAB-WJcbgJk/60x60" alt="임시 프로필 사진">
+					</td>
+					<td class="td_cont">
+						<span class="type">공지사항</span>
+						<h4><strong class="txt_point">더체크</strong>는 700만 사업주님들과 함께할 준비가 되어있습니다!</h4>
+						<p class="desc">
+							점검일시: 01월 16일 14:00 ~ 16:00시 까지 / 점검내용: 서비스 안정화 점검
+						</p>
+						<button class="btn_grean">안내</button>
+					</td>
+					<td class="td_date">
+						2020-01-16
+					</td>
+				</tr>
+				<tr>
+					<td class="td_img">
+						<img src="https://source.unsplash.com/QAB-WJcbgJk/60x60" alt="임시 프로필 사진">
+					</td>
+					<td class="td_cont">
+						<span class="type">공지사항</span>
+						<h4><strong class="txt_point">더체크</strong>는 700만 사업주님들과 함께할 준비가 되어있습니다!</h4>
+						<p class="desc">
+							지금도 카드결제 시스템의 빈틈을 악용하는 범죄가 빈번하게일어나고 있습니다.<br>
+POS에서 확인 할 수 없었던 카드사 미입금 고의승인취소,전화승인취소,POS 데이터 삭제,망상취소,횡령 등 다양한 카드사의 미입금(누락)을 1초 만에 확인 할 수 있습니다.
+						</p>
+						<button class="btn_grean">안내</button>
+					</td>
+					<td class="td_date">
+						2020-01-16
+					</td>
+				</tr>
+			</table>
+			<include src="../include/paging2.html" type="type2"></include>
+		</article>
+	</section>
+	<include src="../include/footer.html"></include>
+</body>
+</html>

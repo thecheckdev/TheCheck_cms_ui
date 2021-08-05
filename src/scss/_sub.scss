@@ -1,0 +1,59 @@
+.p_board{
+	background: $white; 
+	.container{
+		padding: 30px 80px 60px;
+	}
+	.tab{
+		box-sizing: border-box;
+		border-bottom: 1px solid #DADADA;
+		text-align: center;
+		.t_menu{
+			display: inline-block;
+			font-size: 24px;
+			padding: 40px 50px;
+			color:#979797;
+			&.on{
+				color:$black;
+			}
+		}
+	}
+	.wrap_boad{
+		.bx_search{
+			text-align: right;
+			.slct{
+				width: 127px;
+				height: 48px;
+			}
+			.ico_search{
+				margin: 80px 0 75px 16px;
+				width: 730px;
+				height: 48px;
+				background-position: 98% 50%;
+				padding: 0 43px 0 20px;
+			}
+		}
+		.top {
+			display: flex;
+			margin: 0 10px 19px;
+			button{
+				margin: 5px 5px;
+			}
+			.left{
+				padding-right: 30px;
+				button{
+					min-width: 124px;
+				}
+			}
+			.total{
+				font-weight: 100;
+				strong{
+					font-weight: normal;
+					color : $orange;
+				}
+			}
+		}
+		.tbl_board{
+			margin-bottom: 100px;
+		}
+	}
+}

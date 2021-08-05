@@ -11,7 +11,7 @@ const uglify = require('gulp-uglify');
 const imagemin = require('gulp-imagemin');
 const sourcemaps = require('gulp-sourcemaps');
 const ghPages = require('gulp-gh-pages');
-const babel = require("gulp-babel");
+// const babel = require("gulp-babel");
 
 const paths = {
 	port: '3000',
@@ -62,11 +62,11 @@ function sassComp(done) {
 		.pipe(gulp.dest(paths.style.output))
 		.pipe(browsersync.reload({ stream: true }));
 	// 압축버전 - 이버전은 소스맵이 안맞아서 배포용으로 따로 뺌
-	gulp.src(paths.style.input, { sourcemaps: false })
-		.pipe(sass.sync().on('error', sass.logError))
-		.pipe(autoprefixer())
-		.pipe(sass({ outputStyle: 'compressed' })) //nested, expanded, compact, compressed
-		.pipe(gulp.dest(paths.style.output + '/min'));
+	// gulp.src(paths.style.input, { sourcemaps: false })
+	// 	.pipe(sass.sync().on('error', sass.logError))
+	// 	.pipe(autoprefixer())
+	// 	.pipe(sass({ outputStyle: 'compressed' })) //nested, expanded, compact, compressed
+	// 	.pipe(gulp.dest(paths.style.output + '/min'));
 	done();
 }
 
