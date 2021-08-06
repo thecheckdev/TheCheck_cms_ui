@@ -149,7 +149,7 @@
 	flex-shrink: 0;
 }
 
-input {
+input[type=text], input[type=password], input[type=tel], input[type=email], input[type=number], textarea {
 	align-items: center;
 	border-radius: 4px;
 	background: #FFFFFF;
@@ -165,6 +165,8 @@ input {
 	box-sizing: border-box;
 	&.big{
 		height: 40px;
+		padding: 2px 20px 0;
+		width: 130px;
 	}
 	&.ico_search{
 		width: 130px;
@@ -177,6 +179,10 @@ input {
 		@include bgSvg(fnIcoCalendar("rgb(176, 173, 171)"), no-repeat, 94% 50%, 15px, $white);
 	}
 }
+textarea{
+	padding: 10px 20px;
+	height: 480px;
+}
 
 .slct{
 	display: inline-block;
@@ -185,6 +191,12 @@ input {
 	min-width: 50px;
 	&.big{
 		height: 40px;
+		.slct_tit{
+			padding: 2px 22px 0 20px;
+		}
+		.slct_cont{
+			top:39px;
+		}
 	}
 	.slct_tit{
 		position: relative;
@@ -269,6 +281,17 @@ input {
 		display: inline-block;
 		@include bgSvg(fnCheckbox("rgb(216, 221, 230)", "rgb(68, 68, 68)"), no-repeat, 0 0, 16px);
 	}
+	&.white{
+		input[type=checkbox]{
+			&:checked+label{
+				@include bgSvg(fnCheckboxFull("rgb(255, 255, 255)", "rgb(75, 202, 129)"), no-repeat, 0 0, 14px);
+			}
+		}
+		label{
+			color: #979797;
+			@include bgSvg(fnCheckbox("rgb(255, 255, 255)", "rgb(155, 155, 155)"), no-repeat, 0 0, 14px);
+		}
+	}
 	&.big{
 		input[type=checkbox]{
 			&:checked+label{
@@ -283,7 +306,75 @@ input {
 		}
 	}
 }
-
+.bx_radio {
+	display: inline-block;
+	input[type=radio]{
+		display: none;
+		&:checked+label{
+			@include bgSvg(fnRadioboxFull("rgb(255, 255, 255)", "rgb(75, 202, 129)"), no-repeat, 0 0, 16px);
+		}
+	}
+	label{ 
+		font-size: 12px;
+		line-height: 16px;
+		padding: 1px 0 0 26px;
+		box-sizing: border-box;
+		cursor: pointer;
+		display: inline-block;
+		@include bgSvg(fnRadiobox("rgb(216, 221, 230)", "rgb(68, 68, 68)"), no-repeat, 0 0, 16px);
+	}
+	&.white{
+		input[type=radio]{
+			&:checked+label{
+				@include bgSvg(fnRadioboxFull("rgb(255, 255, 255)", "rgb(75, 202, 129)"), no-repeat, 0 0, 16px);
+			}
+		}
+		label{
+			color: #979797;
+			@include bgSvg(fnRadiobox("rgb(255, 255, 255)", "rgb(155, 155, 155)"), no-repeat, 0 0, 16px);
+		}
+	}
+	&.big{
+		input[type=radio]{
+			&:checked+label{
+				background-size: 28px;
+			}
+		}
+		label{ 
+			font-size: 14px;
+			line-height: 28px;
+			padding-left:44px;
+			background-size: 28px;
+		}
+	}
+}
+.bx_file{
+	input[type=file]{
+		display: none;
+	}
+	.area{
+		display: block;
+		border: 1px solid #A8B7C7;
+		box-sizing: border-box;
+		border-radius: 4px;
+		padding: 20px;
+		margin-bottom: 18px;
+		min-height: 90px;
+		&.nodata{
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			font-size: 12px;
+			color:#A8B7C7;
+		}
+	}
+	.bx_btn{
+		text-align: right;
+		button{
+			margin: 0 8px;
+		}
+	}
+}
 .paginate{
 	display: flex;
 	height: 24px;
@@ -390,7 +481,8 @@ input {
 .btn{
 	font-size: 14px;
 	border: 1px solid $point;
-	padding: 6px 20px 5px;
+	min-width: 65px;
+	padding: 6px 15px 5px;
 	color: $point;
 	background: $white;
 	border-radius: 2px;
@@ -555,19 +647,27 @@ input {
 	.thead{
 		th, td{
 			padding: 8px 10px;
-			font-size: 9px;
+			font-size: 14px;
 			button{
-				font-size: 9px;
+				font-size: 14px;
+				text-align: center;
 				&.ico{
+					position: relative;
+					padding-right: 18px;
 					&:after{
 						content:"";
-						@include setContent(6px, 6px, inline-block);
+						@include setContent(6px, 6px, block, absolute);
 						@include bgSvg(fnIcoArrow2("rgb(0, 0, 0)"), no-repeat, 50% 50%, 6px);
+						top:50%;
+						margin-top: -3px;
+						right: 3px;
 						transform: rotate(90deg);
 					}
 					&.up{
 						&:after{
+							top:40%;
 							transform: rotate(270deg);
+							margin-top: -1px;
 						}
 					}
 				}
@@ -575,7 +675,7 @@ input {
 		}
 	}
 	.tbody{
-		font-size: 11px;
+		font-size: 13px;
 		&::-webkit-scrollbar { 
 			width: 4px; 
 		} 
@@ -678,7 +778,7 @@ input {
 			}
 			.type{
 				display: block;
-				font-size: 12px;
+				font-size: 13px;
 				color:$red;
 				font-weight: 100;
 			}
@@ -691,7 +791,7 @@ input {
 		}
 		.td_date{
 			width: 110px;
-			font-size: 12px;
+			font-size: 13px;
 			color:#979797;
 		}
 	}
@@ -735,5 +835,30 @@ input {
 				}
 			}
 		}
+	}
+}
+.tbl_create{
+	border-top: 1px solid #E1E1E1;
+	th{
+		width: 240px;
+		box-sizing: border-box;
+		background:rgba(168, 183, 199, 0.14);
+		border-bottom: 1px solid #E1E1E1;
+		font-weight: 100;
+		font-size: 14px;
+	}
+	td{
+		box-sizing: border-box;
+		padding: 20px;
+		border-bottom: 1px solid #E1E1E1;
+	}
+	input[type=text], .slct, textarea{
+		width: 100%;
+	}
+	input[type=text].ipt_date{
+		width: 130px;
+	}
+	.bx_radio{
+		margin: 5px 10px;
 	}
 }

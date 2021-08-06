@@ -206,6 +206,7 @@
 					<input type="text" placeholder="입력해주세요!!" style="width: 200px;"><br>
 					<h4>추가 가능한 스타일</h4>
 					<p>.big : 높이 40px<br><input type="text" placeholder="입력해주세요!!" class="big"></p>
+					<p>.half : 가로 크기 50% <br>ex) &lt;td or div&gt; &lt;input type="text" class="half" &gt; &lt;input type="text" class="half"&gt; &lt;/td or div&gt;<br></p>
 					<p>.ico_search : 돋보기 아이콘 노출<br><input type="text" class="ico_search"> <input type="text" class="ico_search big"></p>
 					<h4>ex)</h4>
 <pre><xmp><input type="text" placeholder="입력해주세요!!" style="width: 200px;">
@@ -242,7 +243,8 @@
 							<li>애플망고</li>
 							<li>배</li>
 						</ul>
-					</div><div class="slct big" style="width: 150px;">
+					</div>
+					<div class="slct big" style="width: 150px;">
 						<div class="slct_tit"></div>
 						<ul class="slct_cont">
 							<li class="select">전체</li>
@@ -281,14 +283,37 @@
 				<div class="i_cont">
 					<div class="bx_chk"><input type="checkbox" name="" id="chk1"><label class="chk" for="chk1">체크1</label></div>
 					<div class="bx_chk big"><input type="checkbox" name="" id="chk2"><label class="chk" for="chk2">체크2</label></div>
+
+					<div class="bx_chk white"><input type="checkbox" name="" id="chk3"><label class="chk" for="chk3">체크1</label></div>
+					<div class="bx_chk white big"><input type="checkbox" name="" id="chk4"><label class="chk" for="chk4">체크2</label></div>
 <pre><xmp><div class="bx_chk">
   <input type="checkbox" name="" id="chk1">
   <label class="chk" for="chk1">체크1</label>
 </div>
-<div class="bx_chk big">
-  <input type="checkbox" name="" id="chk2">
-  <label class="chk" for="chk2">체크2</label>
+<div class="bx_chk big">...</div>
+<div class="bx_chk white">...</div>
+<div class="bx_chk white big">...</div>
+</xmp></pre>
+				</div>
+				<h3>
+					🍉 radiobox
+				</h3>
+				<div class="i_cont">
+					<div class="bx_radio"><input type="radio" name="radio" id="radio1"><label class="radio" for="radio1">체크1</label></div>
+					<div class="bx_radio mr20"><input type="radio" name="radio" id="radio2"><label class="radio" for="radio2">체크2</label></div>
+
+					<div class="bx_radio white"><input type="radio" name="radio1" id="radio3"><label class="radio" for="radio3">병아리</label></div>
+					<div class="bx_radio white mr20"><input type="radio" name="radio1" id="radio4"><label class="radio" for="radio4">닭</label></div>
+
+					<div class="bx_radio big"><input type="radio" name="radio2" id="radio5"><label class="radio" for="radio5">뮤지컬</label></div>
+					<div class="bx_radio big"><input type="radio" name="radio2" id="radio6"><label class="radio" for="radio6">락페스티벌</label></div>
+<pre><xmp><div class="bx_radio">
+  <input type="radio" name="radio" id="radio1">
+  <label class="radio" for="radio1">체크1</label>
 </div>
+<div class="bx_radio big">...</div>
+<div class="bx_radio white">...</div>
+<div class="bx_radio white big">...</div>
 </xmp></pre>
 				</div>
 			</div>

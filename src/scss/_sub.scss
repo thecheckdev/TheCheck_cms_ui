@@ -55,5 +55,20 @@
 		.tbl_board{
 			margin-bottom: 100px;
 		}
+		.tbl_create{
+			margin-bottom: 60px;
+		}
+		.bx_btn{
+			text-align: right;
+			button{
+				margin: 0 8px;
+			}
+		}
+		.half{
+			width: calc(50% - 8px);
+			&+.half{
+				margin-left: 9px;
+			}
+		}
 	}
 }

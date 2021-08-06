@@ -1,0 +1,189 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<include src="../include/head.html" title="게시글 작성 | 더체크"></include>
+<body class="p_board"> <!--페이가 게시판일때 p_board 클래스 추가-->
+	<include src="../include/header.html"></include>
+	<include src="../include/summary.html" title="게시글 작성"></include>
+	<include src="../include/gnb.html"></include> 
+	<section class="container">
+		<div class="tab">
+			<a href="#" class="t_menu on">전체</a>
+			<a href="#" class="t_menu">공지사항</a>
+			<a href="#" class="t_menu">업데이트</a>
+			<a href="#" class="t_menu">점검</a>
+			<a href="#" class="t_menu">기타</a>
+		</div>
+		<article class="wrap_boad">
+			<table class="tbl_create">
+				<tr>
+					<th>종류</th>
+					<td>
+						<div class="slct big">
+							<div class="slct_tit"></div>
+							<ul class="slct_cont">
+								<li class="select">공지사항</li>
+								<li>업데이트</li>
+								<li>자유게시판</li>
+								<li>자료실</li>
+							</ul>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<th>제목</th>
+					<td><input type="text" class="big"></td>
+				</tr>
+				<tr>
+					<th>파일 첨부</th>
+					<td>
+						<div class="bx_file">
+							<div class="area">
+								<div class="unit">
+									<div class="bx_chk white"><input type="checkbox" name="" id="chk1"><label class="chk" for="chk1">더체크.zip</label></div>
+								</div>
+								<div class="unit">
+									<div class="bx_chk white"><input type="checkbox" name="" id="chk2"><label class="chk" for="chk2">index.html</label></div>
+								</div>
+							</div>
+							<div class="bx_btn">
+								<button class="btn">삭제</button>
+								<input type="file" multiple id="file"/><label for="file" class="btn fill">파일추가</label>
+							</div>
+						</div>
+					</td>
+				</tr>
+				<tr class="tr_cont">
+					<th>내용</th>
+					<td>
+						<textarea name="" id=""></textarea>
+					</td>
+				</tr>
+				<tr>
+					<th>마감일 설정</th>
+					<td>
+						<input type="text" autocomplete='off' readonly class="ipt_date big ico_calendar"/>
+					</td>
+				</tr>
+			</table>
+			<table class="tbl_create">
+				<colgroup>
+					<col style="width:240px">
+					<col>
+					<col style="width:240px">
+					<col>
+				</colgroup>
+				<tr>
+					<th>종류</th>
+					<td colspan="3">
+						<div class="slct big">
+							<div class="slct_tit"></div>
+							<ul class="slct_cont">
+								<li class="select">공지사항</li>
+								<li>업데이트</li>
+								<li>자유게시판</li>
+								<li>자료실</li>
+							</ul>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<th>제목</th>
+					<td colspan="3"><input type="text" class="big"></td>
+				</tr>
+				<tr>
+					<th>노출 상태</th>
+					<td>
+						<div class="bx_radio white"><input type="radio" name="radio" id="radio3"><label class="radio" for="radio3">노출</label></div>
+						<div class="bx_radio white"><input type="radio" name="radio" id="radio4"><label class="radio" for="radio4">미노출</label></div>
+					</td>
+					<th>노출 시간</th>
+					<td>
+						<div class="slct big">
+							<div class="slct_tit"></div>
+							<ul class="slct_cont">
+								<li class="select">공지사항</li>
+								<li>업데이트</li>
+								<li>자유게시판</li>
+								<li>자료실</li>
+							</ul>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<th>노출타입</th>
+					<td>
+						<div class="bx_radio white"><input type="radio" name="radio" id="radio1"><label class="radio" for="radio1">일반</label></div>
+						<div class="bx_radio white"><input type="radio" name="radio" id="radio2"><label class="radio" for="radio2">중요</label></div>
+					</td>
+					<th>노출 시간</th>
+					<td>
+						<div class="slct big half">
+							<div class="slct_tit"></div>
+							<ul class="slct_cont">
+								<li class="select">공지사항</li>
+								<li>업데이트</li>
+								<li>자유게시판</li>
+								<li>자료실</li>
+							</ul>
+						</div>
+						<div class="slct big half" style="width: 48%;">
+							<div class="slct_tit"></div>
+							<ul class="slct_cont">
+								<li class="select">공지사항</li>
+								<li>업데이트</li>
+								<li>자유게시판</li>
+								<li>자료실</li>
+							</ul>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<th>노출타입</th>
+					<td>
+						<div class="bx_radio white"><input type="radio" name="radio" id="radio5"><label class="radio" for="radio5">타입1</label></div>
+						<div class="bx_radio white"><input type="radio" name="radio" id="radio6"><label class="radio" for="radio6">타입2</label></div>
+					</td>
+					<th>노출 시간</th>
+					<td>
+						<input type="text" class="big half">
+						<input type="text" class="big half">
+					</td>
+				</tr>
+				<tr>
+					<th>파일 첨부</th>
+					<td colspan="3">
+						<div class="bx_file">
+							<div class="area nodata">
+								<label for="file">파일을 추가해주세요.</label>
+							</div>
+							<div class="bx_btn">
+								<button class="btn">삭제</button>
+								<input type="file" multiple id="file"/><label for="file" class="btn fill">파일추가</label>
+							</div>
+						</div>
+					</td>
+				</tr>
+				<tr class="tr_cont">
+					<th>내용</th>
+					<td colspan="3">
+						<textarea name="" id=""></textarea>
+					</td>
+				</tr>
+				<tr>
+					<th>마감일 설정</th>
+					<td colspan="3">
+						<input type="text" autocomplete='off' readonly class="ipt_date big ico_calendar"/>
+					</td>
+				</tr>
+			</table>
+			<div class="bx_btn">
+				<button class="btn">삭제</button>
+				<button class="btn">수정</button>
+				<button class="btn fill">등록</button>
+			</div>
+		</article>
+	</section>
+	<include src="../include/footer.html"></include>
+</body>
+</html>

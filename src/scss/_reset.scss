@@ -49,7 +49,9 @@ button {
 input[type=text], input[type=password], input[type=tel], input[type=email], input[type=button], input[type=submit], input[type=reset], button, select {
   font-family:$family;
 }
-
+label{
+  cursor: pointer;
+}
 a {
   color:$black;
   &:active, &:link, &:visited, &:hover{
