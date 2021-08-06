@@ -1,0 +1,256 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=1280, user-scalable=yes"><!--PC 최소 PXF로 고정하기! 프로젝트에 따라 변경 가능성-->
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="theme-color" content="#ffffff">
+	<!-- <link rel="shortcut icon" href="ico_url" type="image/x-icon"> -->
+	<title>게시글 작성 | 더체크</title> <!-- [페이지명 | 사이트명] -->
+	<!-- <link rel="stylesheet" type="text/css" href="/css/style.css"/>
+	<script src="/js/jquery-1.12.4.min.js"></script>
+	<script src="/js/datepicker.js"></script>
+	<script src="/js/ui.js"></script>  -->
+	
+	<link rel="stylesheet" type="text/css" href="/TheCheck_cms_ui/css/style.css?v=0805"/>
+	<script src="/TheCheck_cms_ui/js/jquery-1.12.4.min.js"></script>
+	<script src="/TheCheck_cms_ui/js/datepicker.js"></script>
+	<script src="/TheCheck_cms_ui/js/ui.js?v=0805"></script>
+
+	 
+</head> 
+<body class="p_board"> <!--페이가 게시판일때 p_board 클래스 추가-->
+	<header>
+		<div class="left">
+			<button class="btn_menu">메뉴 버튼</button>
+			<h1>THE CHECK 영업관리</h1>
+			<em class="ico_bar"></em>
+			<span class="date">2020년 00월 00일 금요일</span>
+		</div>
+		<div class="right"> 
+			<button class="btn_add"><span class="blind">추가 버튼</span></button>
+			<button class="btn_noti"><em>1</em><span class="blind">알림 버튼</span></button>
+			<button class="btn_help"><span class="blind">도움 버튼</span></button>
+			<button class="btn_profile"><span>관리자</span><img src="https://source.unsplash.com/QAB-WJcbgJk/60x60" alt="임시 프로필 사진"></button>
+		</div>
+	</header>
+	
+	<section class="summary">
+		<div class="left">
+			<h2></h2>
+			<h1>게시글 작성</h1>
+		</div>
+		<div class="right">
+			
+		</div>
+	</section>
+	<nav class="wrap_gnb">
+		<button type="button" class="btn_close">닫기</button>
+		<ul class="gnb">
+			<li>
+				<a href="#" class="menu ico">메뉴1</a><!--서브메뉴가 있는 경우 ico 클래스를 추가해주세요-->
+				<ul class="dep2">
+					<li><a href="#" class="menu_dep2">서브1</a></li>
+					<li><a href="#" class="menu_dep2">서브2</a></li>
+					<li><a href="#" class="menu_dep2">서브3</a></li>
+					<li><a href="#" class="menu_dep2">서브4</a></li>
+				</ul>	
+			</li>
+			<li>
+				<a href="#" class="menu">메뉴2</a> 
+			</li>
+			<li>
+				<a href="#" class="menu ico">메뉴3</a>
+				<ul class="dep2">
+					<li><a href="#" class="menu_dep2">서브1</a></li>
+					<li><a href="#" class="menu_dep2">서브2</a></li>
+					<li><a href="#" class="menu_dep2">서브3</a></li>
+					<li><a href="#" class="menu_dep2">서브4</a></li>
+				</ul>
+			</li>
+		</ul>
+	</nav>  
+	<section class="container">
+		<div class="tab">
+			<a href="#" class="t_menu on">전체</a>
+			<a href="#" class="t_menu">공지사항</a>
+			<a href="#" class="t_menu">업데이트</a>
+			<a href="#" class="t_menu">점검</a>
+			<a href="#" class="t_menu">기타</a>
+		</div>
+		<article class="wrap_boad">
+			<table class="tbl_create">
+				<tr>
+					<th>종류</th>
+					<td>
+						<div class="slct big">
+							<div class="slct_tit"></div>
+							<ul class="slct_cont">
+								<li class="select">공지사항</li>
+								<li>업데이트</li>
+								<li>자유게시판</li>
+								<li>자료실</li>
+							</ul>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<th>제목</th>
+					<td><input type="text" class="big"></td>
+				</tr>
+				<tr>
+					<th>파일 첨부</th>
+					<td>
+						<div class="bx_file">
+							<div class="area">
+								<div class="unit">
+									<div class="bx_chk white"><input type="checkbox" name="" id="chk1"><label class="chk" for="chk1">더체크.zip</label></div>
+								</div>
+								<div class="unit">
+									<div class="bx_chk white"><input type="checkbox" name="" id="chk2"><label class="chk" for="chk2">index.html</label></div>
+								</div>
+							</div>
+							<div class="bx_btn">
+								<button class="btn">삭제</button>
+								<input type="file" multiple id="file"/><label for="file" class="btn fill">파일추가</label>
+							</div>
+						</div>
+					</td>
+				</tr>
+				<tr class="tr_cont">
+					<th>내용</th>
+					<td>
+						<textarea name="" id=""></textarea>
+					</td>
+				</tr>
+				<tr>
+					<th>마감일 설정</th>
+					<td>
+						<input type="text" autocomplete='off' readonly class="ipt_date big ico_calendar"/>
+					</td>
+				</tr>
+			</table>
+			<table class="tbl_create">
+				<colgroup>
+					<col style="width:240px">
+					<col>
+					<col style="width:240px">
+					<col>
+				</colgroup>
+				<tr>
+					<th>종류</th>
+					<td colspan="3">
+						<div class="slct big">
+							<div class="slct_tit"></div>
+							<ul class="slct_cont">
+								<li class="select">공지사항</li>
+								<li>업데이트</li>
+								<li>자유게시판</li>
+								<li>자료실</li>
+							</ul>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<th>제목</th>
+					<td colspan="3"><input type="text" class="big"></td>
+				</tr>
+				<tr>
+					<th>노출 상태</th>
+					<td>
+						<div class="bx_radio white"><input type="radio" name="radio" id="radio3"><label class="radio" for="radio3">노출</label></div>
+						<div class="bx_radio white"><input type="radio" name="radio" id="radio4"><label class="radio" for="radio4">미노출</label></div>
+					</td>
+					<th>노출 시간</th>
+					<td>
+						<div class="slct big">
+							<div class="slct_tit"></div>
+							<ul class="slct_cont">
+								<li class="select">공지사항</li>
+								<li>업데이트</li>
+								<li>자유게시판</li>
+								<li>자료실</li>
+							</ul>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<th>노출타입</th>
+					<td>
+						<div class="bx_radio white"><input type="radio" name="radio" id="radio1"><label class="radio" for="radio1">일반</label></div>
+						<div class="bx_radio white"><input type="radio" name="radio" id="radio2"><label class="radio" for="radio2">중요</label></div>
+					</td>
+					<th>노출 시간</th>
+					<td>
+						<div class="slct big half">
+							<div class="slct_tit"></div>
+							<ul class="slct_cont">
+								<li class="select">공지사항</li>
+								<li>업데이트</li>
+								<li>자유게시판</li>
+								<li>자료실</li>
+							</ul>
+						</div>
+						<div class="slct big half" style="width: 48%;">
+							<div class="slct_tit"></div>
+							<ul class="slct_cont">
+								<li class="select">공지사항</li>
+								<li>업데이트</li>
+								<li>자유게시판</li>
+								<li>자료실</li>
+							</ul>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<th>노출타입</th>
+					<td>
+						<div class="bx_radio white"><input type="radio" name="radio" id="radio5"><label class="radio" for="radio5">타입1</label></div>
+						<div class="bx_radio white"><input type="radio" name="radio" id="radio6"><label class="radio" for="radio6">타입2</label></div>
+					</td>
+					<th>노출 시간</th>
+					<td>
+						<input type="text" class="big half">
+						<input type="text" class="big half">
+					</td>
+				</tr>
+				<tr>
+					<th>파일 첨부</th>
+					<td colspan="3">
+						<div class="bx_file">
+							<div class="area nodata">
+								<label for="file">파일을 추가해주세요.</label>
+							</div>
+							<div class="bx_btn">
+								<button class="btn">삭제</button>
+								<input type="file" multiple id="file"/><label for="file" class="btn fill">파일추가</label>
+							</div>
+						</div>
+					</td>
+				</tr>
+				<tr class="tr_cont">
+					<th>내용</th>
+					<td colspan="3">
+						<textarea name="" id=""></textarea>
+					</td>
+				</tr>
+				<tr>
+					<th>마감일 설정</th>
+					<td colspan="3">
+						<input type="text" autocomplete='off' readonly class="ipt_date big ico_calendar"/>
+					</td>
+				</tr>
+			</table>
+			<div class="bx_btn">
+				<button class="btn">삭제</button>
+				<button class="btn">수정</button>
+				<button class="btn fill">등록</button>
+			</div>
+		</article>
+	</section>
+	<footer>
+	  <span class="copyright">Copyright 2020, The Check Co.Ltd.</span>
+	</footer>
+</body>
+</html>
