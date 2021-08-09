@@ -10,7 +10,7 @@
 	<!-- <link rel="stylesheet" type="text/css" href="/css/style.css"/>
 	<script src="/js/jquery-1.12.4.min.js"></script>
 	<script src="/js/datepicker.js"></script>
-	<script src="/js/ui.js"></script>  -->
+	<script src="/js/ui.js"></script> -->
 	
 	<link rel="stylesheet" type="text/css" href="/TheCheck_cms_ui/css/style.css?v=0805"/>
 	<script src="/TheCheck_cms_ui/js/jquery-1.12.4.min.js"></script>
@@ -207,12 +207,26 @@
 					<h4>추가 가능한 스타일</h4>
 					<p>.big : 높이 40px<br><input type="text" placeholder="입력해주세요!!" class="big"></p>
 					<p>.half : 가로 크기 50% <br>ex) &lt;td or div&gt; &lt;input type="text" class="half" &gt; &lt;input type="text" class="half"&gt; &lt;/td or div&gt;<br></p>
-					<p>.ico_search : 돋보기 아이콘 노출<br><input type="text" class="ico_search"> <input type="text" class="ico_search big"></p>
+					<p>.bx_ipt : input + 돋보기 버튼 (기본크기 : 130px, .big 크기 : 150px)</p>
+					<div class="bx_ipt" style="width: 150px;">
+						<input type="text" class="ipt_ico">
+						<button class="btn_search">검색</button>
+					</div>
+					<div class="bx_ipt big">
+						<input type="text" class="ipt_ico">
+						<button class="btn_search">검색</button>
+					</div>
 					<h4>ex)</h4>
 <pre><xmp><input type="text" placeholder="입력해주세요!!" style="width: 200px;">
 <input type="text" class="big" placeholder="입력해주세요!!">
-<input type="text" class="ico_search" placeholder="입력해주세요!!">
-<input type="text" class="big ico_search" placeholder="입력해주세요!!">
+<div class="bx_ipt" style="width: 150px;">
+	<input type="text" class="ipt_ico" placeholder="입력해주세요!!">
+	<button class="btn_search">검색</button>
+</div>
+<div class="bx_ipt big" style="">
+	<input type="text" class="ipt_ico" placeholder="입력해주세요!!">
+	<button class="btn_search">검색</button>
+</div>
 </xmp></pre>
 				</div>
 				<h3>🍉 select</h3>
