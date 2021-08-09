@@ -10,13 +10,13 @@
 	<link rel="stylesheet" type="text/css" href="/css/style.css"/>
 	<script src="/js/jquery-1.12.4.min.js"></script>
 	<script src="/js/datepicker.js"></script>
-	<script src="/js/ui.js"></script> 
+	<script src="/js/ui.js"></script>
 	
 	<!-- <link rel="stylesheet" type="text/css" href="/TheCheck_cms_ui/css/style.css?v=0805"/>
 	<script src="/TheCheck_cms_ui/js/jquery-1.12.4.min.js"></script>
 	<script src="/TheCheck_cms_ui/js/datepicker.js"></script>
 	<script src="/TheCheck_cms_ui/js/ui.js?v=0805"></script> -->
-
+  
 	 
 </head> 
 <body class="p_board"> <!--페이가 게시판일때 p_board 클래스 추가-->
@@ -38,7 +38,7 @@
 	<section class="summary">
 		<div class="left">
 			<h2></h2>
-			<h1></h1>
+			<h1>게시판</h1>
 		</div>
 		<div class="right">
 			
@@ -72,15 +72,15 @@
 	</nav>  
 	<section class="container">
 		<div class="tab">
-			<a href="#" class="t_menu">전체</a>
+			<a href="#" class="t_menu on">전체</a>
 			<a href="#" class="t_menu">공지사항</a>
 			<a href="#" class="t_menu">업데이트</a>
 			<a href="#" class="t_menu">자유게시판</a>
-			<a href="#" class="t_menu on">자료실</a>
+			<a href="#" class="t_menu">자료실</a>
 		</div>
 		<article class="wrap_boad">
 			<div class="bx_search">
-				<div class="slct" style="width: 100px;">
+				<div class="slct" style="width: 130px;">
 					<div class="slct_tit"></div>
 					<ul class="slct_cont">
 						<li class="select">작성자</li>
@@ -89,106 +89,145 @@
 						<li>제목+내용</li>
 					</ul>
 				</div>
-				<input type="text" class="ico_search">
+				<!-- s: v:210809 input, button 수정-->
+				<div class="bx_ipt i_search">
+					<input type="text" class="ipt_ico">
+					<button class="btn_search">검색</button>
+				</div>
+				<!-- s: v:210809 -->
 			</div>
 			<div class="top">
 				<div class="left">
-					<button class="btn_gray">전체</button> 
-					<button class="btn_gray">회원가입</button> 
-					<button class="btn_gray">정보등록</button> 
-					<button class="btn_gray">이용가이드</button> 
-					<button class="btn_gray">카드메출누락</button> 
-					<button class="btn_gray">사용후기</button> 
-					<button class="btn_blue fill">홍보영상</button> 
+					<button class="btn_blue fill">선택항목 삭제</button> 
 				</div>
 				<div class="right">
 					<button type="button" class="btn_create">작성</button>
 				</div>
 			</div>
-			<table class="tbl_board type2">
-				<tr>
-					<td class="td_img">
-						<div class="bx_video">
-							<div class="dim">
-								<button class="btn_play">재생버튼</button>
-							</div>
-							<video poster="https://source.unsplash.com/QAB-WJcbgJk/60x60"></video>
-						</div>
-					</td>
-					<td class="td_cont">
-						<span class="type">회원가입</span>
-						<h4><strong class="txt_point">회원가입방법_여신금융협회</strong></h4>
-						<p class="desc">
-							더체크 [여신금융협회 회원가입방법] 여신금융협회란? 신용카드업, 시설대여업, 할부금융업 및
-							신기술사업금융업을 영위하고 있는 여신전문금융회사를 회원으로 하는 비영리 사단법인 간단하게 
-							더체크 [여신금융협회 회원가입방법] 여신금융협회란? 신용카드업, 시설대여업, 할부금융업 및
-							신기술사업금융업을 영위하고 있는 여신전문금융회사를 회원으로 하는 비영리 사단법인 간단하게 
-							더체크 [여신금융협회 회원가입방법] 여신금융협회란? 신용카드업, 시설대여업, 할부금융업 및
-							신기술사업금융업을 영위하고 있는 여신전문금융회사를 회원으로 하는 비영리 사단법인 간단하게 
-							더체크 [여신금융협회 회원가입방법] 여신금융협회란? 신용카드업, 시설대여업, 할부금융업 및
-							신기술사업금융업을 영위하고 있는 여신전문금융회사를 회원으로 하는 비영리 사단법인 간단하게 
-							더체크 [여신금융협회 회원가입방법] 여신금융협회란? 신용카드업, 시설대여업, 할부금융업 및
-							신기술사업금융업을 영위하고 있는 여신전문금융회사를 회원으로 하는 비영리 사단법인 간단하게 
-							더체크 [여신금융협회 회원가입방법] 여신금융협회란? 신용카드업, 시설대여업, 할부금융업 및
-							신기술사업금융업을 영위하고 있는 여신전문금융회사를 회원으로 하는 비영리 사단법인 간단하게 
-							더체크 [여신금융협회 회원가입방법] 여신금융협회란? 신용카드업, 시설대여업, 할부금융업 및
-							신기술사업금융업을 영위하고 있는 여신전문금융회사를 회원으로 하는 비영리 사단법인 간단하게 
-							더체크 [여신금융협회 회원가입방법] 여신금융협회란? 신용카드업, 시설대여업, 할부금융업 및
-						</p>
-						<p class="info"><span>작성자 : 더체크본사</span><span>작성일: 2020-01-16</span></p>
-					</td>
-				</tr>
-				<tr>
-					<td class="td_img">
-						<div class="bx_video">
-							<div class="dim">
-								<button class="btn_play">재생버튼</button>
-							</div>
-							<video poster="https://source.unsplash.com/QAB-WJcbgJk/60x60"></video>
-						</div>
-					</td>
-					<td class="td_cont">
-						<span class="type">회원가입</span>
-						<h4><strong class="txt_point">회원가입방법_여신금융협회</strong></h4>
-						<p class="desc">
-							더체크 [여신금융협회 회원가입방법] 여신금융협회란? 신용카드업, 시설대여업, 할부금융업 및
-							신기술사업금융업을 영위하고 있는 여신전문금융회사를 회원으로 하는 비영리 사단법인 간단하게 
-						</p>
-						<p class="info"><span>작성자 : 더체크본사</span><span>작성일: 2020-01-16</span></p>
-					</td>
-				</tr>
-				<tr>
-					<td class="td_img">
-						<div class="bx_video">
-							<div class="dim">
-								<button class="btn_play">재생버튼</button>
-							</div>
-							<video poster="https://source.unsplash.com/QAB-WJcbgJk/60x60"></video>
-						</div>
-					</td>
-					<td class="td_cont">
-						<span class="type">회원가입</span>
-						<h4><strong class="txt_point">회원가입방법_여신금융협회</strong></h4>
-						<p class="desc">
-							더체크 [여신금융협회 회원가입방법] 여신금융협회란? 신용카드업, 시설대여업, 할부금융업 및
-							신기술사업금융업을 영위하고 있는 여신전문금융회사를 회원으로 하는 비영리 사단법인 간단하게 
-							더체크 [여신금융협회 회원가입방법] 여신금융협회란? 신용카드업, 시설대여업, 할부금융업 및
-							신기술사업금융업을 영위하고 있는 여신전문금융회사를 회원으로 하는 비영리 사단법인 간단하게 
-							더체크 [여신금융협회 회원가입방법] 여신금융협회란? 신용카드업, 시설대여업, 할부금융업 및
-							신기술사업금융업을 영위하고 있는 여신전문금융회사를 회원으로 하는 비영리 사단법인 간단하게 
-							더체크 [여신금융협회 회원가입방법] 여신금융협회란? 신용카드업, 시설대여업, 할부금융업 및
-							신기술사업금융업을 영위하고 있는 여신전문금융회사를 회원으로 하는 비영리 사단법인 간단하게 
-							더체크 [여신금융협회 회원가입방법] 여신금융협회란? 신용카드업, 시설대여업, 할부금융업 및
-							신기술사업금융업을 영위하고 있는 여신전문금융회사를 회원으로 하는 비영리 사단법인 간단하게 
-							더체크 [여신금융협회 회원가입방법] 여신금융협회란? 신용카드업, 시설대여업, 할부금융업 및
-							신기술사업금융업을 영위하고 있는 여신전문금융회사를 회원으로 하는 비영리 사단법인 간단하게 
-							더체크 [여신금융협회 회원가입방법] 여신금융협회란? 신용카드업, 시설대여업, 할부금융업 및
-							신기술사업금융업을 영위하고 있는 여신전문금융회사를 회원으로 하는 비영리 사단법인 간단하게 
-							더체크 [여신금융협회 회원가입방법] 여신금융협회란? 신용카드업, 시설대여업, 할부금융업 및
-						</p>
-						<p class="info"><span>작성자 : 더체크본사</span><span>작성일: 2020-01-16</span></p>
-					</td>
-				</tr>
+			<table class="tbl_board">
+				<colgroup>
+					<col style="width: 40px;">
+					<col style="width: 140px;">
+					<col style="width: 125px;">
+					<col style="width: auto;">
+					<col style="width: 165px;">
+
+					<col style="width: 70px;">
+					<col style="width: 135px;">
+				</colgroup>
+				<thead>
+					<th>
+						<div class="bx_chk white"><input type="checkbox" name="" id="chk3"><label class="chk" for="chk3"></label></div>
+					</th>
+					<th>작성자</th>
+					<th>종류</th>
+					<th class="td_cont">내용</th>
+					<th>날짜</th>
+					<th>조회수</th>
+					<th>수정/삭제</th>
+				</thead>
+				<tbody>
+					<tr>
+						<td>
+							<div class="bx_chk white"><input type="checkbox" name="" id="chk3"><label class="chk" for="chk3"></label></div>
+						</td>
+						<td>
+							<button class="btn_profile"><img src="https://source.unsplash.com/QAB-WJcbgJk/60x60" alt="임시 프로필 사진"><span>강하늘</span></button>
+						</td>
+						<td>공지사항</td>
+						<td class="td_cont">
+							<a href="#" class="tit">지금도 카드결제 시스템의 빈틈을 악용하는 범죄가 빈번하게 일어나고 있습니다.지금도 카드결제 시스템의 빈틈을 악용하는 범죄가 빈번하게 일어나고 있습니다.지금도 카드결제 시스템의 빈틈을 악용하는 범죄가 빈번하게 일어나고 있습니다.지금도 카드결제 시스템의 빈틈을 악용하는 범죄가 빈번하게 일어나고 있습니다.</a>
+						</td>
+						<td>
+							2021.08.06 14:59
+						</td>
+						<td>42</td>
+						<td>
+							<button class="btn_txt">수정</button>
+							<button class="btn_txt">삭제</button>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<div class="bx_chk white"><input type="checkbox" name="" id="chk3"><label class="chk" for="chk3"></label></div>
+						</td>
+						<td>
+							<button class="btn_profile"><img src="https://source.unsplash.com/QAB-WJcbgJk/60x60" alt="임시 프로필 사진"><span>강하늘</span></button>
+						</td>
+						<td>공지사항</td>
+						<td class="td_cont">
+							<a href="#" class="tit">지금도 카드결제 시스템의 빈틈을 악용하는 범죄가 빈번하게 일어나고 있습니다.지금도 카드결제 시스템의 빈틈을 악용하는 범죄가 빈번하게 일어나고 있습니다.지금도 카드결제 시스템의 빈틈을 악용하는 범죄가 빈번하게 일어나고 있습니다.지금도 카드결제 시스템의 빈틈을 악용하는 범죄가 빈번하게 일어나고 있습니다.</a>
+						</td>
+						<td>
+							2021.08.06 14:59
+						</td>
+						<td>42</td>
+						<td>
+							<button class="btn_txt">수정</button>
+							<button class="btn_txt">삭제</button>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<div class="bx_chk white"><input type="checkbox" name="" id="chk3"><label class="chk" for="chk3"></label></div>
+						</td>
+						<td>
+							<button class="btn_profile"><img src="https://source.unsplash.com/QAB-WJcbgJk/60x60" alt="임시 프로필 사진"><span>강하늘</span></button>
+						</td>
+						<td>공지사항</td>
+						<td class="td_cont">
+							<a href="#" class="tit">지금도 카드결제 시스템의 빈틈을 악용하는 범죄가 빈번하게 일어나고 있습니다.지금도 카드결제 시스템의 빈틈을 악용하는 범죄가 빈번하게 일어나고 있습니다.지금도 카드결제 시스템의 빈틈을 악용하는 범죄가 빈번하게 일어나고 있습니다.지금도 카드결제 시스템의 빈틈을 악용하는 범죄가 빈번하게 일어나고 있습니다.</a>
+						</td>
+						<td>
+							2021.08.06 14:59
+						</td>
+						<td>42</td>
+						<td>
+							<button class="btn_txt">수정</button>
+							<button class="btn_txt">삭제</button>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<div class="bx_chk white"><input type="checkbox" name="" id="chk3"><label class="chk" for="chk3"></label></div>
+						</td>
+						<td>
+							<button class="btn_profile"><img src="https://source.unsplash.com/QAB-WJcbgJk/60x60" alt="임시 프로필 사진"><span>강하늘</span></button>
+						</td>
+						<td>공지사항</td>
+						<td class="td_cont">
+							<a href="#" class="tit">지금도 카드결제 시스템의 빈틈을 악용하는 범죄가 빈번하게 일어나고 있습니다.지금도 카드결제 시스템의 빈틈을 악용하는 범죄가 빈번하게 일어나고 있습니다.지금도 카드결제 시스템의 빈틈을 악용하는 범죄가 빈번하게 일어나고 있습니다.지금도 카드결제 시스템의 빈틈을 악용하는 범죄가 빈번하게 일어나고 있습니다.</a>
+						</td>
+						<td>
+							2021.08.06 14:59
+						</td>
+						<td>42</td>
+						<td>
+							<button class="btn_txt">수정</button>
+							<button class="btn_txt">삭제</button>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<div class="bx_chk white"><input type="checkbox" name="" id="chk3"><label class="chk" for="chk3"></label></div>
+						</td>
+						<td>
+							<button class="btn_profile"><img src="https://source.unsplash.com/QAB-WJcbgJk/60x60" alt="임시 프로필 사진"><span>강하늘</span></button>
+						</td>
+						<td>공지사항</td>
+						<td class="td_cont">
+							<a href="#" class="tit">지금도 카드결제 시스템의 빈틈을 악용하는 범죄가 빈번하게 일어나고 있습니다.지금도 카드결제 시스템의 빈틈을 악용하는 범죄가 빈번하게 일어나고 있습니다.지금도 카드결제 시스템의 빈틈을 악용하는 범죄가 빈번하게 일어나고 있습니다.지금도 카드결제 시스템의 빈틈을 악용하는 범죄가 빈번하게 일어나고 있습니다.</a>
+						</td>
+						<td>
+							2021.08.06 14:59
+						</td>
+						<td>42</td>
+						<td>
+							<button class="btn_txt">수정</button>
+							<button class="btn_txt">삭제</button>
+						</td>
+					</tr>
+				</tbody>
 			</table>
 			<div class="paginate type2">
 			  <button href="#" class="btn_page_prev dis">이전</button>

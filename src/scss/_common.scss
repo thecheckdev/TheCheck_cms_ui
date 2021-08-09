@@ -112,6 +112,7 @@
 	border-radius: 4px;
 	padding: 9px 17px 6px;
 	margin: 4px 8px;
+	font-weight: $bold;
 	&.orange{
 		color:#FF6F06;
 		background:rgba(255, 111, 6, 0.15);
@@ -155,7 +156,8 @@ input[type=text], input[type=password], input[type=tel], input[type=email], inpu
 	background: #FFFFFF;
 	border: 1px solid #A8B7C7;
 	font-size: 13px;
-	color: #AEB5BC;
+	font-weight: $weight;
+	color: $black;
 	box-sizing: border-box;
 	display: inline-block;
 	width: 100px;
@@ -168,9 +170,8 @@ input[type=text], input[type=password], input[type=tel], input[type=email], inpu
 		padding: 2px 20px 0;
 		width: 130px;
 	}
-	&.ico_search{
+	&.ipt_ico{
 		width: 130px;
-		@include bgSvg(fnIcoSearch("rgb(151, 151, 151)"), no-repeat, 93% 50%, 15px, $white);
 		padding-right: 23px;
 	}
 	&.ico_calendar{
@@ -179,9 +180,40 @@ input[type=text], input[type=password], input[type=tel], input[type=email], inpu
 		@include bgSvg(fnIcoCalendar("rgb(176, 173, 171)"), no-repeat, 94% 50%, 15px, $white);
 	}
 }
+.bx_ipt{
+	position: relative;
+	display: inline-block;
+	width: 130px;
+	height: 30px;
+    margin: 0 5px;
+	input[type=text].ipt_ico{
+		width: 100%;
+		height: 100%;
+		margin: 0;
+	}
+	.btn_search{
+		content:"";
+		@include blind;
+		@include setContent(15px, 15px, block, absolute);
+		@include bgSvg(fnIcoSearch("rgb(151, 151, 151)"), no-repeat, 93% 50%, 15px, $white);
+		top: 50%;
+		right: 6px;
+		transform: translateY(-50%);
+	}
+	&.big{
+		width: 160px;
+		height: 40px;
+		.ipt_ico{
+			padding: 0 33px 0 20px;
+		}
+		.btn_search{
+			right: 10px;
+		}
+	}
+}
 textarea{
 	padding: 10px 20px;
-	height: 480px;
+	line-height: 1.6;
 }
 
 .slct{
@@ -189,15 +221,7 @@ textarea{
 	position: relative;
 	height: 30px;
 	min-width: 50px;
-	&.big{
-		height: 40px;
-		.slct_tit{
-			padding: 2px 22px 0 20px;
-		}
-		.slct_cont{
-			top:39px;
-		}
-	}
+	text-align: left;
 	.slct_tit{
 		position: relative;
 		min-width: 30px;
@@ -210,7 +234,7 @@ textarea{
 		display: flex;
 		align-items: center;
 		font-size: 13px;
-		color: #AEB5BC;
+		color: $black;
 		cursor: pointer;
 		z-index: 3;
 		&:after{
@@ -235,14 +259,13 @@ textarea{
 		visibility: hidden;
 		border-color: #A8B7C7;
 		transition: all 0.1s;
-		font-weight: 100;
 		li{
 			font-size: 14px;
 			padding: 3px 9px 1px 24px;
 			box-sizing: border-box;
 			cursor: pointer;
 			&.select{
-				font-weight: 600;
+				font-weight: $bold;
 				padding: 3px 9px 1px 24px;
 				@include bgSvg(fnIcoCheck("rgb(0, 0, 0)"), no-repeat, 9px 45%, 8px);
 				// background: rgba(168, 183, 199, 0.2);
@@ -262,47 +285,74 @@ textarea{
 			z-index: 2;
 		}
 	}
+	&.big{
+		height: 40px;
+		.slct_tit{
+			padding: 2px 25px 0 20px;
+			&:after{
+				right: 10px;
+			}
+		}
+		.slct_cont{
+			top:39px;
+			li{
+				padding: 8px 9px 6px 24px; 
+			}
+		}
+	}
 }
 
 .bx_chk {
 	display: inline-block;
 	input[type=checkbox]{
 		display: none;
-		&:checked+label{
+		&:checked+label:before{
 			@include bgSvg(fnCheckboxFull("rgb(255, 255, 255)", "rgb(75, 202, 129)"), no-repeat, 0 0, 16px);
 		}
 	}
 	label{ 
 		font-size: 12px;
 		line-height: 16px;
-		padding: 1px 0 0 26px;
 		box-sizing: border-box;
 		cursor: pointer;
 		display: inline-block;
-		@include bgSvg(fnCheckbox("rgb(216, 221, 230)", "rgb(68, 68, 68)"), no-repeat, 0 0, 16px);
+		vertical-align: middle;
+		&:before{
+			content: "";
+			vertical-align: middle;
+			margin: 0 6px;
+			@include setContent(16px, 16px, inline-block);
+			@include bgSvg(fnCheckbox("rgb(216, 221, 230)", "rgb(68, 68, 68)"), no-repeat, 0 0, 16px);
+		}
 	}
 	&.white{
 		input[type=checkbox]{
-			&:checked+label{
-				@include bgSvg(fnCheckboxFull("rgb(255, 255, 255)", "rgb(75, 202, 129)"), no-repeat, 0 0, 14px);
+			&:checked+label:before{
+				@include bgSvg(fnCheckboxFull("rgb(255, 255, 255)", "rgb(75, 202, 129)"), no-repeat, 0 0, 16px);
 			}
 		}
 		label{
 			color: #979797;
-			@include bgSvg(fnCheckbox("rgb(255, 255, 255)", "rgb(155, 155, 155)"), no-repeat, 0 0, 14px);
+			&:before{
+				@include bgSvg(fnCheckbox("rgb(255, 255, 255)", "rgb(155, 155, 155)"), no-repeat, 0 0, 16px);
+			}
 		}
 	}
 	&.big{
 		input[type=checkbox]{
-			&:checked+label{
+			&:checked+label:before{
 				background-size: 28px;
 			}
 		}
 		label{ 
 			font-size: 14px;
 			line-height: 28px;
-			padding-left:44px;
-			background-size: 28px;
+			&:before{
+				width: 28px;
+				height: 28px;
+				background-size: 28px;
+				margin: 0 10pxs;
+			}
 		}
 	}
 }
@@ -437,7 +487,7 @@ textarea{
 		strong{
 			color:$point;
 			font-size: 12px;
-			font-weight: normal;
+			font-weight: $bold;
 		}
 		.ipt_page{
 			min-width: auto;
@@ -588,12 +638,27 @@ textarea{
 	padding: 0 10px 0 38px;
 	@include bgSvg(fnIcoCreate("rgb(65,65,65)"), no-repeat, 0 50%, 24px);
 }
+.btn_profile{
+	overflow: hidden;
+	padding: 0px;
+	display: flex;
+	align-items: center;
+	span {
+		font-size: 14px;
+	}
+	img{
+		@include setContent(40px, 40px);
+		border-radius: 50%;
+		margin: 0 16px 0 0;
+	}
+}
 .ico_bar{
 	display: block;
 	width: 1px;
 	height: 28px;
 	margin: 0 8px;
 	background: #979797;
+	vertical-align: middle;
 }
 //search 네역
 .wrap_search{
@@ -609,7 +674,7 @@ textarea{
 			margin: 0 10px 15px;
 			flex-shrink: 0;
 			strong{
-				font-weight: normal;
+				font-weight: $bold;
 				margin-right: 5px;
 			}
 			.btn_search{
@@ -733,7 +798,7 @@ textarea{
 	background:$white;
 	h2{
 		color: $point;
-		font-weight: normal;
+		font-weight: $bold;
 		padding-top: 4px;
 	}
 	.left{
@@ -750,13 +815,46 @@ textarea{
 	}
 }
 .tbl_board{
+	font-size: 14px;
+	th{
+		font-weight: $bold;
+		padding: 10px 10px;
+		border-bottom: 1px solid #dddbda;
+	}
+	td{
+		text-align: center;
+		padding: 20px 10px;
+		border-bottom: 1px solid #dddbda;
+	}
+	.td_cont{
+		text-align: left;
+		.tit{
+			display: block;
+			@include ellipsis();
+			font-size: 14px;
+		}
+	}
+	.btn_profile{
+		margin: 0 auto;
+		img{
+			width: 32px;
+			height: 32px;
+			margin-right: 10px;
+		}
+	}
+	.btn_txt{
+		font-size: 14px;
+		color: #979797;
+		&+.btn_txt{
+			margin-left: 5px;
+		}
+	}
 	&.type1, &.type2{
 		border-top: 1px solid #979797;
 		td{
 			padding: 60px 15px;
 			box-sizing: border-box;
 			vertical-align: top;
-			border-bottom: 1px solid #dddbda;
 		}
 		.td_img{
 			width: 180px;
@@ -768,19 +866,15 @@ textarea{
 			}
 		}
 		.td_cont{
-			text-align: left;
-			font-size: 14px;
-			font-weight: 100;
 			h4{
 				font-size: 16px;
-				font-weight: 100;
 				margin: 12px 0 10px;
 			}
 			.type{
 				display: block;
 				font-size: 13px;
 				color:$red;
-				font-weight: 100;
+				font-weight: $bold;
 			}
 			.desc{
 				height: 40px;
@@ -844,7 +938,6 @@ textarea{
 		box-sizing: border-box;
 		background:rgba(168, 183, 199, 0.14);
 		border-bottom: 1px solid #E1E1E1;
-		font-weight: 100;
 		font-size: 14px;
 	}
 	td{
@@ -857,6 +950,9 @@ textarea{
 	}
 	input[type=text].ipt_date{
 		width: 130px;
+	}
+	textarea{
+		min-height: 480px;
 	}
 	.bx_radio{
 		margin: 5px 10px;

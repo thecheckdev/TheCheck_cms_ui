@@ -20,16 +20,29 @@
 	.wrap_boad{
 		.bx_search{
 			text-align: right;
+			margin: 80px 0 75px 16px;
 			.slct{
 				width: 127px;
 				height: 48px;
+				.slct_tit{
+					padding: 2px 22px 0 20px;
+				}
+				.slct_cont{
+					top:47px;
+					li{
+						padding: 8px 9px 6px 24px; 
+					}
+				}
 			}
-			.ico_search{
-				margin: 80px 0 75px 16px;
+			.bx_ipt{
 				width: 730px;
 				height: 48px;
-				background-position: 98% 50%;
-				padding: 0 43px 0 20px;
+				.ipt_ico{
+					padding: 0 43px 0 20px;
+				}
+				.btn_search{
+					right: 14px;
+				}
 			}
 		}
 		.top {
@@ -40,14 +53,20 @@
 			}
 			.left{
 				padding-right: 30px;
+				display: flex;
+				align-items: center;
 				button{
 					min-width: 124px;
 				}
 			}
+			.right{
+				display: flex;
+				align-items: center;
+			}
 			.total{
-				font-weight: 100;
+				font-weight: $weight;
 				strong{
-					font-weight: normal;
+					font-weight: $bold;
 					color : $orange;
 				}
 			}
@@ -69,6 +88,175 @@
 			&+.half{
 				margin-left: 9px;
 			}
+		}
+	}
+	.wrap_detail{
+		strong{
+			color: #F58080;
+		}
+		.top{
+			.bx_btn{
+				text-align: right;
+				margin: 80px 0 0;
+			}
+			.bx_tit{
+				font-size: 17px;
+				padding: 12px 0;
+				border-bottom: 1px solid #C8C8C8;
+				font-weight: $weight;
+			}
+			.bx_desc{
+				font-size: 12px;
+				li {
+					display: inline-block;
+					vertical-align: middle;
+					padding: 10px 0;
+					color: #979797;
+					&:after{
+						content:"";
+						@include setContent(1px, 14px, inline-block, relative, #d3d3d3);
+						margin: -3px 10px 0;
+						vertical-align: middle;
+					}
+					&:last-child:after{
+						display: none;
+					}
+				}
+			}
+		}
+		.cont{
+			padding: 35px 0 90px;
+			min-height: 450px;
+			box-sizing: border-box;
+			img, video{
+				max-width: 100%;
+			}
+		}
+		.bx_replye{
+			font-size: 14px;
+			margin-bottom: 120px;
+			.bx_btn{
+				text-align: right;
+				border-bottom: 1px solid #979797;
+				padding-bottom: 10px;
+				button, em{
+					display: inline-block;
+					vertical-align: middle;
+				}
+				button{
+					font-weight: $weight;
+					color: $black;
+				}
+				.ico_bar{
+					height: 12px;
+					margin: 0 6px;
+				}
+			}
+			li{
+				box-sizing: border-box;
+				padding: 18px 37px;
+				border-bottom: 1px solid #DDDBDA;
+			}
+			ul ul{
+				margin-top: 20px;
+				border-top: 1px solid #DDDBDA;
+				& > li:last-child{
+					border-bottom: none;
+					padding-bottom: 0;
+				}
+			}
+			.profile{
+				font-weight: $bold;
+				margin-left: -37px;
+				img{
+					width: 25px;
+					height: 25px;
+					border-radius: 50%;
+					vertical-align: middle;
+					margin-right: 8px;
+				}
+			}
+			.desc{
+				margin: 20px 0 10px;
+			}
+			.date{
+				font-size: 11px;
+				color: #b0b0b0;
+				&+.btn{
+					margin-top:16px;
+				}
+			}
+			.form_replye{
+				margin-top: 40px;
+				padding: 20px 32px 48px;
+				border: 1px solid #C8C8C8;
+				box-sizing: border-box;
+				border-radius: 6px;
+				h4{
+					font-size: 14px;
+					color: #979797;
+					margin-bottom: 36px;
+				}
+				.bx{
+					width: 100%;
+					&:after{
+						@include clear;
+					}
+					input, textarea{
+						width: calc(100% - 85px);
+						float: left;
+						background: #eee;
+					}
+					textarea{
+						height: 82px;
+						&+button{
+							height: 82px;
+						}
+					}
+					button{
+						float: right;
+					}
+				}
+			}
+		}
+		.paginate{
+			display: block;
+			height: auto;
+			font-size: 14px;
+			.bx{
+				padding: 9px 0;
+				box-sizing: border-box;
+				width: 100%;
+				&:last-child{
+					border-top: 1px solid #DDDBDA;
+				}
+			}
+			.tit{
+				display: inline-block;
+				@include ellipsis;
+				width: calc(100% - 80px); 
+				padding-left: 36px;
+				box-sizing: border-box;
+				vertical-align: middle;
+			}
+			.btn_next, .btn_prev{
+				&:after{
+					content:"";
+					margin: 0 10px;
+					@include setContent(7px, 12px,inline-block);
+					@include bgSvg(fnIcoArrow("rgb(0, 0, 0)"), no-repeat, 50% 50%, 100%);
+				}
+			}
+			.btn_prev{
+				&:after{
+					transform: rotate(90deg);
+				}
+			}
+			.btn_next{
+				&:after{
+					transform: rotate(270deg);
+				}
+			} 
 		}
 	}
 }
