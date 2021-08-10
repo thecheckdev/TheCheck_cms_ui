@@ -114,6 +114,7 @@ header {
 	background-repeat: no-repeat;
 	background-color: #2162c4;
 	color: $white;
+    flex-shrink: 0;
 	h1{
 		font-weight: $weight;
 	}

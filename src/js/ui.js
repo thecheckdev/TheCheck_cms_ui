@@ -8,6 +8,7 @@ document.createElement("footer");
 document.createElement("main");
 
 $(function() {
+	$("body").removeClass("no_scroll");
 	$(".ipt_date").datepicker({
 		language: "ko",
 	});
@@ -68,6 +69,17 @@ $(function() {
 		var target = $(".wrap_tbl").eq(i);
 		var colgroup = "<colgroup>"+target.find(".thead colgroup").html()+"</colgroup>";
 		$(colgroup).prependTo(target.find(".tbody .tbl"));
-		console.log(colgroup);
 	}
-} );
+	//팝업
+	$(".wrap_pop .btn_close").click(function(){
+		$("body").removeClass("no_scroll");
+		$(".wrap_pop").removeClass("show");
+	});
+});
+
+//팝업
+function fnOpenPop(i){
+	$("body").addClass("no_scroll");
+	$("html").scrollTop(($(window).height() - $(".popup_area").outerHeight()) / 2 + $(window).scrollTop());
+	$(".wrap_pop[data-pop="+i+"]").addClass("show");
+}
