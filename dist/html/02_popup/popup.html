@@ -10,13 +10,12 @@
 	<link rel="stylesheet" type="text/css" href="/css/style.css"/>
 	<script src="/js/jquery-1.12.4.min.js"></script> 
 	<script src="/js/datepicker.js"></script>
-	<script src="/js/ui.js"></script>
+	<script src="/js/ui.js"></script> 
 	
-	<!-- <link rel="stylesheet" type="text/css" href="/TheCheck_cms_ui/css/style.css?v=210810"/>
+	<!-- <link rel="stylesheet" type="text/css" href="/TheCheck_cms_ui/css/style.css?v=210811"/>
 	<script src="/TheCheck_cms_ui/js/jquery-1.12.4.min.js"></script>
 	<script src="/TheCheck_cms_ui/js/datepicker.js"></script>
-	<script src="/TheCheck_cms_ui/js/ui.js?v=0805"></script> -->
-  
+	<script src="/TheCheck_cms_ui/js/ui.js?v=210811"></script> -->
 	 
 </head> 
 <body class="no_scroll">
@@ -215,6 +214,16 @@
 							<td class="td_left">유형6 - ex) 회원 사업장 상세</td>
 							<td><button type="button" class="btn fill" onclick="fnOpenPop(6);">팝업 열기</button></td> 
 						</tr>
+						<tr>
+							<td>07</td>
+							<td class="td_left">유형7 - ex) 조직관리 팝업 상세</td>
+							<td><button type="button" class="btn fill" onclick="fnOpenPop(7);">팝업 열기</button></td> 
+						</tr>
+						<tr>
+							<td>08</td>
+							<td class="td_left">유형8 - ex) 배정리스트 팝업 상세</td>
+							<td><button type="button" class="btn fill" onclick="fnOpenPop(8);">팝업 열기</button></td> 
+						</tr>
 					</tbody>
 				</table>
 			</div>
@@ -377,7 +386,7 @@
 		</div>
 	</div>
 	<div class="wrap_pop" data-pop="6">
-		<div class="bx_pop pop_detail">
+		<div class="bx_pop pop_create">
 			<h2>회원 사업장 상세</h2>
 			<div class="cont">
 				<h4>기본정보</h4>
@@ -408,13 +417,13 @@
 					</div>
 					<div class="bx_ipt_line">
 						<strong>영업시간</strong>
-						<input type="text" value="09:00 ~ 23:00" style="width: 105px;">
+						<input type="text" value="09:00 ~ 23:00" style="width: 95px;">
 					</div>
 				</div>
 				<div class="row c_full">
 					<div class="bx_ipt_line">
 						<strong>사업장주소</strong>
-						<input type="text" value="서울특별시 강남구 테헤란로 77길 13" style="width:416px;">
+						<input type="text" value="서울특별시 강남구 테헤란로 77길 13" style="width:400px;">
 					</div>
 					<div class="bx_ipt_line">
 						<strong>상세주소</strong>
@@ -439,7 +448,7 @@
 						<input type="password" value="1234" style="width:120px;">
 					</div>
 				</div>
-				<div class="row c_full">
+				<div class="row c_full mt35">
 					<div class="unit">
 						<h4>등록계정</h4>
 						<span class="txt_line">여신금융협회</span>
@@ -470,7 +479,7 @@
 						</div> 
 					</div>
 				</div>
-				<div>
+				<div class="mt25">
 					<h4>메모</h4>
 					<textarea name="" id=""></textarea>
 				</div>
@@ -481,5 +490,254 @@
 			</div>
 		</div>
 	</div>
+	<div class="wrap_pop" data-pop="7">
+		<div class="bx_pop pop_create type1">
+			<h2>센터 상세 정보</h2>
+			<div class="cont">
+				<div class="left">
+					<h4>기본정보</h4>
+					<div class="row">
+						<div class="bx_ipt_line"> 
+							<strong>아이디</strong>
+							<input type="text" value="id1234">
+						</div>
+						<div class="bx_ipt_line">
+							<strong>패스워드</strong>
+							<input type="password" value="1234" style="width:120px;">
+						</div>
+					</div>
+					<div class="row c_full">
+						<div class="bx_ipt_line">
+							<strong>조직위계</strong>
+							<input type="text" value="센터">
+						</div>
+						<div class="bx_ipt_line">
+							<strong>소속</strong>
+							<input type="text" value="더체크">
+						</div>
+						<div class="bx_ipt_line">
+							<strong>영업단 이름</strong>
+							<input type="text" value="더체크영업" >
+						</div>
+					</div>
+					<div class="row c_full">
+						<div class="bx_ipt_line">
+							<strong>대표자 이름</strong>
+							<input type="text" value="강하늘">
+						</div>
+						<div class="bx_ipt_line">
+							<strong>사업자번호</strong>
+							<input type="text" value="01-0000-000">
+						</div>
+						<div class="bx_ipt_line">
+							<strong>관리코드</strong>
+							<input type="text" value="01-0000-000">
+						</div>
+					</div>
+					<div class="row c_full">
+						<div class="bx_ipt_line">
+							<strong>업무용 이메일</strong>
+							<input type="text" value="abc123456@naver.com" style="width: 130px;">
+						</div>
+						<div class="bx_ipt_line">
+							<strong>연락처</strong>
+							<input type="text" value="010-2000-0000">
+						</div>
+						<div class="bx_ipt_line">
+							<strong>대표번호</strong>
+							<input type="text" value="010-2000-0000">
+						</div>
+					</div>
+					<div class="row c_full">
+						<div class="bx_ipt_line">
+							<strong>사업장 주소</strong>
+							<input type="text" value="서울특별시 강남구 테헤란로 77길 13" style="width:260px;">
+						</div>
+						<div class="bx_ipt_line">
+							<strong>상세 주소</strong>
+							<input type="text" value="99동 101호" style="width:180px;">
+						</div>
+					</div>
+					<div class="col3 mt35">
+						<div class="unit">
+							<h4>상태&계약정보</h4>
+							<div class="bx_ipt_line">
+								<strong>상태</strong>
+								<input type="text" value="2021.08.01">
+							</div>
+							<div class="bx_ipt_line">
+								<strong>계약일</strong>
+								<input type="text" value="2021.08.01">
+							</div>
+							<div class="bx_ipt_line">
+								<strong>계약만료일</strong>
+								<input type="text" value="2021.08.01">
+							</div> 
+						</div>
+						<div class="unit">
+							<h4>수익정보</h4>
+							<div class="bx_ipt_line">
+								<strong>지급방식</strong>
+								<input type="text" value="0">
+							</div>
+							<div class="bx_ipt_line">
+								<strong>적립비율</strong>
+								<input type="text" value="1">
+							</div>
+							<div class="bx_ipt_line">
+								<strong>회원가입 수익</strong>
+								<input type="text" value="1">
+							</div> 
+						</div>
+						<div class="unit">
+							<h4>계좌 정보</h4>
+							<div class="bx_ipt_line">
+								<strong>예금주</strong>
+								<input type="text" value="강하늘">
+							</div>
+							<div class="bx_ipt_line">
+								<strong>은행</strong>
+								<input type="text" value="국민은행">
+							</div>
+							<div class="bx_ipt_line"> 
+								<strong>계좌번호</strong>
+								<input type="text" value="12345-54-54554">
+							</div> 
+						</div>
+					</div>
+					<div class="mt35">
+						<div class="unit">
+							<h4>회계정보</h4>
+							<div class="bx_ipt_line">
+								<strong>회계 담당자</strong>
+								<input type="text" value="강하늘">
+							</div><br>
+							<div class="bx_ipt_line">
+								<strong>담당자 연락처</strong>
+								<input type="text" value="010-0000-0000">
+							</div><br>
+							<div class="bx_ipt_line">
+								<strong>세금계산서 발급용 이메일 주소</strong>
+								<input type="text" value="1343@naver.com" style="width:130px;">
+							</div> 
+						</div>
+					</div>
+				</div>
+				<div class="right">
+					<h4>메모</h4> 
+					<textarea name="" id=""></textarea>
+				</div>
+			</div>
+			<div class="bx_btn">
+				<button type="button" class="btn btn_close">취소</button>
+				<button type="button" class="btn fill">사업자 정보 수정</button> 
+			</div>
+		</div>
+	</div>
+	<div class="wrap_pop" data-pop="8">
+		<div class="bx_pop pop_create type2">
+			<!-- <h2>센터 상세 정보</h2> -->
+			<div class="cont">
+				<h4 class="txt_point">사업장 정보</h4>
+				<div class="col4">
+					<div class="unit">
+						<strong>상호</strong>
+						<input type="text" class="big">
+					</div>
+					<div class="unit">
+						<strong>대표자</strong>
+						<input type="text" class="big">
+					</div>
+					<div class="unit">
+						<strong>대표자 전화번호</strong>
+						<input type="text" class="big">
+					</div>
+					<div class="unit">
+						<strong>희망 방문일</strong>
+						<input type="text" class="big">
+					</div>
+				</div>
+				<div class="col2 mt15">
+					<div class="unit">
+						<strong>주소</strong>
+						<input type="text" class="big">
+					</div>
+					<div class="unit">
+						<strong>상세주소</strong>
+						<div class="bx_address"> 
+							<input type="text" class="big" style="width: 420px;">
+							<button class="btn">주소 검색</button>
+						</div>
+					</div>
+				</div>
+				<h4 class="txt_point">배정정보</h4>
+				<div class="col4">
+					<div class="unit">
+						<strong>제휴사</strong>
+						<input type="text" class="big">
+					</div>
+					<div class="unit">
+						<strong>대리점</strong>
+						<input type="text" class="big">
+					</div>
+					<div class="unit">
+						<strong>배정일</strong>
+						<input type="text" class="ipt_date ico_calendar big">
+					</div>
+					<div class="unit">
+						<strong>등록일</strong>
+						<input type="text" class="ipt_date ico_calendar big">
+					</div>
+				</div>
+				<h4 class="txt_point">상태</h4>
+				<div>
+					<div class="slct big" style="width: 150px;">
+						<div class="slct_tit"></div>
+						<ul class="slct_cont">
+							<li class="select">전체</li>
+							<li>옵션1</li>
+							<li>옵션2</li>
+							<li>옵션3</li>
+							<li>옵션4</li>
+							<li>옵션3</li>
+							<li>옵션4</li>
+						</ul>
+					</div>
+					<!-- <span class="txt_line orange">보류</span>  -->
+				</div>
+				<div class="col2 mt35">
+					<div class="unit">
+						<strong>메모</strong>
+						<textarea name="" id="" ></textarea>
+					</div>
+					<div class="unit">
+						<strong>등록실패 사유</strong>
+						<textarea name="" id="" ></textarea>
+					</div>
+				</div>
+			</div>
+			<div class="bx_btn">
+				<button type="button" class="btn btn_close">취소</button>
+				<button type="button" class="btn fill">저장</button> 
+			</div>
+		</div>
+	</div>
+<!-- 
+	<div class="wrap_pop" data-pop="9">
+		<div class="bx_pop pop_detail">
+			<h2>센터 상세 정보</h2>
+			<div class="cont">
+				<div class="left">
+					
+				</div>
+				<div class="right">
+					<div class="bx_btn">
+						<button type="button" class="btn btn_close">취소</button>
+						<button type="button" class="btn fill">사업자 정보 수정</button> 
+					</div>
+				</div>
+			</div>
+		</div>
+	</div> -->
 </body>
 </html>

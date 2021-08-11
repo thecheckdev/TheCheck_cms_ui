@@ -132,7 +132,7 @@
 }
 
 .flex{
-	display: flex;
+	display: flex !important;
 }
 .left{
 	flex-grow: 1;
@@ -214,13 +214,15 @@ input[type=text], input[type=password], input[type=tel], input[type=email], inpu
 		box-sizing: border-box;
 		padding-right: 5px; 
 		vertical-align: middle;
+		flex-shrink: 0;
 	}
 	input[type=text], input[type=password], input[type=tel], input[type=email], input[type=number]{
 		border: none;
-		height: 23px;
+		height: 23px; 
 		font-size: 11px;
 		vertical-align: middle;
 		width: 70px;
+		flex-grow: 1;
 		&:focus{
 			outline: none;
 		}
@@ -682,6 +684,8 @@ textarea{
 	font-weight: $bold;
 	display: inline-block;
 	background: $white;
+	min-width: 60px;
+	text-align: center;
 	&.blue{
 		border: 1px solid $bule_light;
 		color: $bule_light;
@@ -1025,11 +1029,12 @@ body.no_scroll{
 		min-width: 460px;
 		min-height: 320px;
 		max-height: 90%;
+		overflow-x: hidden;
 		overflow-y: auto;
 		background: $white;
 		border-radius: 6px;
 		box-sizing: border-box;
-		padding: 20px 20px 54px;
+		padding: 20px 40px 45px;
 
 	}
 	&.show{
@@ -1072,12 +1077,16 @@ body.no_scroll{
 	}
 	h2{
 		font-size: 18px;
+		margin-bottom: 20px; 
+		padding: 0;
 	}
 	h3{
 		font-size: 14px;
 		border-bottom: 1px solid #C8C8C8;
 	}
 	.ico_tit{
+		padding: 0;
+		margin-bottom: 20px; 
 		&:before{
 			content: "";
 			vertical-align: middle;
@@ -1181,16 +1190,25 @@ body.no_scroll{
 			}
 		}
 	}
-	.pop_detail{
-		width: 1166px;
+	.pop_create{
+		width: 95%;
+		max-width: 1166px;
+		padding: 20px 40px 54px;
+		@media (max-width: 1166px) {
+			overflow-x: auto;
+		}
+		.left{
+			flex-grow: 0;
+		}
 		.cont{
+			width: 1086px;
+			padding-right: 40px;
 			display: block;
 			text-align: left;
 		}
-		h4{
-			font-size: 14px;
-			color:#A8B7C7;
-			margin-bottom: 10px;
+		.bx_btn{
+			width: 1086px;
+			padding-right: 40px;
 		}
 		.bx_ipt_line{
 			margin-right: 25px;
@@ -1202,7 +1220,7 @@ body.no_scroll{
 			display: flex; 
 			margin-bottom: 20px;
 			&.c_full{
-				flex-wrap: wrap;
+				// flex-wrap: wrap;
 				justify-content: space-between;
 				&>.bx_ipt_line{
 					margin-right: 0;
@@ -1223,8 +1241,82 @@ body.no_scroll{
 		textarea{
 			width: 100%;
 			height: 100px;
-			border: none;
-			background: #dfdfdf;
-		};
+		}
+		h4{
+			font-size: 14px;
+			color: $point;
+			margin-bottom: 10px;
+		}
+		.col1,.col2,.col3, .col4{
+			display: flex;
+			justify-content: space-between;
+			&>.bx_ipt_line{
+				margin-right: 0;
+			}
+			.unit{
+				flex-direction: column;
+				display: inline-flex; 
+				box-sizing: border-box;
+				padding-right: 20px;
+				.bx_ipt_line{
+					margin-right: 0;
+				}
+			}
+		}
+		.col2{
+			.unit{
+				width: 50%;
+			}
+		}
+		.col4{
+			.unit{
+				width: 25%;
+			}
+		}
+		&.type1{
+			.cont{
+				display: flex;
+				align-items: stretch; 
+				justify-content: space-between;
+				.left{
+					width: 580px;
+				}
+				.right{
+					textarea{
+						width: 410px;
+						height: 580px;
+					}
+				}
+			}
+			.bx_btn{
+				width: 986px;
+			}
+			.bx_ipt_line{
+				input[type=text], input[type=password], input[type=tel], input[type=email], input[type=number] {
+					width: 110px;
+				}
+			}
+		}
+		&.type2{
+			h4 {
+				margin: 35px 0 10px;
+			}
+			.unit{
+				strong{
+					display: block;
+					margin-bottom: 10px;
+				}
+				input, textarea{
+					width: 100%;
+				}
+			}
+			.bx_address{
+				display: flex;
+				justify-content: space-between;
+				.btn{
+					height: 40px;
+				}
+			}
+		}
 	}
 }
