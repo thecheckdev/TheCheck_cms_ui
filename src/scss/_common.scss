@@ -1179,15 +1179,34 @@ body.no_scroll{
 			&+p{
 				margin-top: 8px;
 			}
+			&+table{
+				margin-top: 20px;
+			}
 		}
 		.cont{
 			min-height: 100px;
 			padding: 20px 0;
 			box-sizing: border-box;
 			font-size: 16px;
+			flex-flow: column;
 			.desc{
 				font-size: 14px;
 			}
+		}
+	}
+	.pop_com{
+		background: #EAEDF4;
+		.tbl{
+			width: 350px;
+			margin: 20px 0;
+			tr:nth-child(2n+1){
+				background: $white;
+			}
+			th,td{
+				font-weight: $weight;
+				padding: 10px 10px;
+			}
+			font-size: 13px;
 		}
 	}
 	.pop_create{
@@ -1316,6 +1335,67 @@ body.no_scroll{
 				.btn{
 					height: 40px;
 				}
+			}
+		}
+	}
+	.pop_assign{
+		width: 95%;
+		max-width: 1166px;
+		padding: 100px 40px 70px;
+		background: #F5F5F5;
+		@media (max-width: 1166px) {
+			overflow-x: auto;
+		}
+		.cont{
+			width: 1086px;
+			margin: 85px 0;
+		}
+		.bx_btn{
+			width: 1086px;
+		}
+		h2{
+			font-size: 20px;
+			text-align: center;
+			margin-bottom: 50px;
+		}
+		.btn_img{
+			width: 196px;
+			height: 254px;
+			border-radius: 8px;
+			box-sizing: border-box;
+			padding-top: 210px;
+			color:$point;
+			box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.25);
+			margin: 15px 20px;
+			display: inline-flex;
+			justify-content: center;
+			align-items: flex-start;
+			font-size: 20px;
+			&.assign1{
+				@include bgSvg(fnImgAssign1("rgb(5, 201, 191)"), no-repeat, 50% 20px , 100px, $white);
+			}
+			&.assign2{
+				@include bgSvg(fnImgAssign2("rgb(5, 201, 191)"), no-repeat, 50% 60px, 110px, $white);
+			}
+			&.assign3{
+				@include bgSvg(fnImgAssign3("rgb(5, 201, 191)"), no-repeat, 50% 74px, 120px, $white);
+			}
+			&.assign4{
+				@include bgSvg(fnImgAssign4("rgb(5, 201, 191)"), no-repeat, 50% 74px, 100px, $white);
+			}
+		}
+		.wrap_tbl {
+			.thead{
+				button{
+					font-size: 12px;
+				}
+			}
+			.tbody{
+				font-size: 12px;
+				height: 350px;
+			}
+			.paginate{
+				margin: 30px auto 100px;
 			}
 		}
 	}

@@ -165,7 +165,6 @@
 		<article class="wrap_tbl">
 			<div class="thead">
 				<table class="tbl">
-					<!--s: v:210808 테이블 수정 -->
 					<colgroup> 
 						<col style="width: 70px;"> 
 						<col style="width: auto; text-align: left;"> 
@@ -178,7 +177,6 @@
 							<th></th>
 						</tr>
 					</thead>
-					<!--e: v:210808 테이블 수정 -->
 				</table>
 			</div>
 			<div class="tbody">
@@ -221,9 +219,29 @@
 						</tr>
 						<tr>
 							<td>08</td>
-							<td class="td_left">유형8 - ex) 배정리스트 팝업 상세</td>
+							<td class="td_left">유형8 - ex) 배정 상세</td>
 							<td><button type="button" class="btn fill" onclick="fnOpenPop(8);">팝업 열기</button></td> 
 						</tr>
+						<tr>
+							<td>09</td>
+							<td class="td_left">유형9 - ex) 배정 step1</td>
+							<td><button type="button" class="btn fill" onclick="fnOpenPop(9);">팝업 열기</button></td> 
+						</tr>
+						<tr>
+							<td>10</td>
+							<td class="td_left">유형10 - ex) 배정 step2</td>
+							<td><button type="button" class="btn fill" onclick="fnOpenPop(10);">팝업 열기</button></td> 
+						</tr>
+						<tr>
+							<td>10</td>
+							<td class="td_left">유형11 - ex) 기타 수익 내역</td>
+							<td><button type="button" class="btn fill" onclick="fnOpenPop(11);">팝업 열기</button></td> 
+						</tr>
+						<!-- <tr> 보류
+							<td>09</td>
+							<td class="td_left">유형9 - ex) 배정리스트 팝업 상세</td>
+							<td><button type="button" class="btn fill" onclick="fnOpenPop(n);">팝업 열기</button></td> 
+						</tr> -->
 					</tbody>
 				</table>
 			</div>
@@ -259,13 +277,10 @@
 	<div class="wrap_pop" data-pop="1">
 		<div class="bx_pop alert"> 
 			<div class="cont">
-				<div class="bx">
-					<h4>배정이 완료되었습니다.</h4>
-					<p class="txt_point">알림창입니다.</p>
-					<p><strong>내용을</strong> 입력해주세요</p>
-					<p><span class="txt_red">내용을</span> 입력해주세요</p>
-					<p class="desc">내용을 입력해주세요</p>
-				</div>
+				<h4>배정이 완료되었습니다.</h4>
+				<p class="txt_point">알림창입니다.</p>
+				<p><strong>내용을</strong> 입력해주세요</p>
+				<p><span class="txt_red">내용을</span> 입력해주세요</p>
 			</div>
 			<div class="bx_btn">
 				<button type="button" class="btn fill btn_close">확인</button>
@@ -722,13 +737,183 @@
 			</div>
 		</div>
 	</div>
-<!-- 
 	<div class="wrap_pop" data-pop="9">
+		<div class="bx_pop pop_assign">
+			<h2>배정할 영업단을 선택해주세요.</h2>
+			<div class="cont">
+				<button class="btn_img assign1">
+					<span>센터</span>
+				</button>
+				<button class="btn_img assign2">
+					<span>지사</span>
+				</button>
+				<button class="btn_img assign3">
+					<span>대리점</span>
+				</button>
+				<button class="btn_img assign4">
+					<span>매니저</span>
+				</button>
+			</div>
+			<div class="bx_btn">
+				<button type="button" class="btn btn_close">취소</button>
+			</div>
+		</div>
+	</div>
+	<div class="wrap_pop" data-pop="10">
+		<div class="bx_pop pop_assign">
+			<h2>선택된 배정 목록을 확인하세요.</h2>
+			<div class="wrap_tbl">
+				<div class="thead">
+					<table class="tbl">
+						<colgroup> 
+							<col style="width: 50px;"> 
+							<col style="width: 70px;"> 
+							<col style="width: auto;"> 
+							<col style="width: auto;"> 
+							<col style="width: auto;"> 
+
+							<col style="width: auto;"> 
+							<col style="width: 300px;"> 
+						</colgroup>
+						<thead>
+							<tr>
+								<th>
+									<div class="bx_chk white"><input type="checkbox" name="" id="chk3"><label class="chk" for="chk3"></label></div>
+								</th>
+								<th><button class="ico up">번호</button></th>
+								<th><button class="ico">대리점 (팀장)</button></th>
+								<th><button class="ico">배정현황</button></th>
+								<th><button class="ico up">완료</button></th>
+
+								<th><button class="ico">미완료</button></th>
+								<th><button class="ico">주소</button></th>
+							</tr>
+						</thead>
+					</table>
+				</div>
+				<div class="tbody">
+					<table class="tbl">
+						<tbody>
+							<tr>
+								<td>
+									<div class="bx_chk white"><input type="checkbox" name="" id="chk3"><label class="chk" for="chk3"></label></div>
+								</td>
+								<td class="txt_red">1</td>
+								<td>더체크</td>
+								<td>50</td>
+								<td>20</td>
+
+								<td>1</td>
+								<td>서울시 강남구 개포동 111 아파트 101동 700호</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<div class="paginate">
+					<button href="#" class="btn_page_prev dis">이전</button>
+					<button class="btn_page on">1</button>
+					<button class="btn_page">2</button>
+					<button class="btn_page">3</button>
+					<button class="btn_page">4</button>
+					<button class="btn_page">5</button>
+					<em>…</em>
+					<button class="btn_page">96</button>
+					<button class="btn_page">97</button>
+					<button class="btn_page">98</button>
+					<button class="btn_page">99</button>
+					<button class="btn_page">100</button>
+					<button href="#" class="btn_page_next">다음</button>
+					<div class="info">
+					  <strong>페이당 출력 </strong> <input type="number" class="ipt_page" value="10" style="width: 30px;"> <!-- 100이상으로 올라가면 가로 크기 조정해주세요-->
+					  <span class="desc">총 1207 중 1- 20</span>
+					</div>
+				  </div> 
+			</div>
+			<div class="bx_btn">
+				<button type="button" class="btn btn_close">취소</button>
+				<button type="button" class="btn fill">배정진행</button> 
+			</div>
+		</div>
+	</div>
+	<div class="wrap_pop" data-pop="11">
+		<div class="bx_pop pop_com"> 
+			<h2>배정이 완료되었습니다.</h2>
+			<div class="cont">
+				<table class="tbl"> <!--  style="width: ;" 가로값 조정가능 -->
+					<tr>
+						<th>회원가입 인센티브</th>
+						<td>54,000원</td>
+					</tr>
+					<tr>
+						<th>연말시상 프로모션</th>
+						<td>54,000원</td>
+					</tr>
+					<tr>
+						<th>광고 수익</th>
+						<td>54,000원</td>
+					</tr>
+					<tr>
+						<th>수익</th>
+						<td>54,000원</td>
+					</tr>
+				</table>
+			</div>
+			<div class="bx_btn">
+				<button type="button" class="btn fill btn_close">닫기</button>
+			</div>
+		</div>
+	</div>
+	<!--<div class="wrap_pop" data-pop="n">
 		<div class="bx_pop pop_detail">
-			<h2>센터 상세 정보</h2>
 			<div class="cont">
 				<div class="left">
-					
+					<div class="row">
+						<div class="bx_ipt_line">
+							<strong>사업장명</strong>
+							<input type="text" value="양꼬치주세요" style="width:130px;">
+						</div> 
+					</div>
+					<div class="col2">
+						<div class="unit">
+							<strong>담당자</strong>
+							<div class="slct big">
+								<div class="slct_tit"></div>
+								<ul class="slct_cont">
+									<li class="select">00:00</li>
+									<li>01:00</li>
+									<li>02:00</li>
+									<li>03:00</li>
+									<li>04:00</li>
+									<li>05:00</li>
+									<li>06:00</li>
+								</ul>
+							</div>
+						</div>
+						<div class="bx_btn">
+							<button type="button" class="btn btn_close">취소</button>
+							<button type="button" class="btn fill">사수정</button> 
+						</div>
+						<div class="unit">
+							<strong>희망 방문일</strong>
+							<input type="text" class="big">
+							<div class="slct big">
+								<div class="slct_tit"></div>
+								<ul class="slct_cont">
+									<li class="select">00:00</li>
+									<li>01:00</li>
+									<li>02:00</li>
+									<li>03:00</li>
+									<li>04:00</li>
+									<li>05:00</li>
+									<li>06:00</li>
+								</ul>
+							</div>
+						</div>
+						<div class="bx_btn">
+							<button type="button" class="btn btn_close">취소</button>
+							<button type="button" class="btn fill">수정</button> 
+						</div>
+					</div>
 				</div>
 				<div class="right">
 					<div class="bx_btn">
