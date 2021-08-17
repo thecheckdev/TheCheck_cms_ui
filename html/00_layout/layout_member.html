@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=1280, user-scalable=yes"><!--PC 최소 PXF로 고정하기! 프로젝트에 따라 변경 가능성-->
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="theme-color" content="#ffffff">
+	<!-- <link rel="shortcut icon" href="ico_url" type="image/x-icon"> -->
+	<title>회원 레이아웃 | 더체크</title> <!-- [페이지명 | 사이트명] -->
+	<!-- <link rel="stylesheet" type="text/css" href="/css/style.css"/>
+	<script src="/js/jquery-1.12.4.min.js"></script> 
+	<script src="/js/datepicker.js"></script>
+	<script src="/js/ui.js"></script> -->
+	
+	<link rel="stylesheet" type="text/css" href="/TheCheck_cms_ui/css/style.css?v=210817"/>
+	<script src="/TheCheck_cms_ui/js/jquery-1.12.4.min.js"></script>
+	<script src="/TheCheck_cms_ui/js/datepicker.js"></script>
+	<script src="/TheCheck_cms_ui/js/ui.js?v=210817"></script>
+	 
+</head> 
+<body class="p_member"> <!--페이지가 회원일때 p_member 클래스 추가-->
+	<header>
+		<div class="left">
+			<button class="btn_menu">메뉴 버튼</button>
+			<h1>THE CHECK 영업관리</h1>
+			<em class="ico_bar"></em>
+			<span class="date">2020년 00월 00일 금요일</span>
+		</div>
+		<div class="right"> 
+			<button class="btn_add"><span class="blind">추가 버튼</span></button>
+			<button class="btn_noti"><em>1</em><span class="blind">알림 버튼</span></button>
+			<button class="btn_help"><span class="blind">도움 버튼</span></button>
+			<button class="btn_profile"><span>관리자</span><img src="https://source.unsplash.com/QAB-WJcbgJk/60x60" alt="임시 프로필 사진"></button>
+		</div>
+	</header>
+	
+	<section class="summary">
+		<div class="left">
+			<h2>서브타이틀</h2>
+			<h1>회원 현황</h1>
+		</div>
+		<div class="right">
+			
+		<div class="unit">
+			<strong>신청</strong>
+			<span class="desc">9000 건</span>
+		</div> 
+		<div class="unit">
+			<strong>접수</strong>
+			<span class="desc">9000 건</span>
+		</div> 
+		<div class="unit">
+			<strong>보류</strong>
+			<span class="desc">9000 건</span>
+		</div> 
+		<div class="unit">
+			<strong>취소</strong>
+			<span class="desc">9000 건</span>
+		</div> 
+		<div class="unit">
+			<strong>완료</strong>
+			<span class="desc">9000 건</span>
+		</div> 
+	
+		</div>
+	</section>
+	<nav class="wrap_gnb">
+		<button type="button" class="btn_close">닫기</button>
+		<ul class="gnb">
+			<li>
+				<a href="#" class="menu ico">메뉴1</a><!--서브메뉴가 있는 경우 ico 클래스를 추가해주세요-->
+				<ul class="dep2">
+					<li><a href="#" class="menu_dep2">서브1</a></li>
+					<li><a href="#" class="menu_dep2">서브2</a></li>
+					<li><a href="#" class="menu_dep2">서브3</a></li>
+					<li><a href="#" class="menu_dep2">서브4</a></li>
+				</ul>	
+			</li>
+			<li>
+				<a href="#" class="menu">메뉴2</a> 
+			</li>
+			<li>
+				<a href="#" class="menu ico">메뉴3</a>
+				<ul class="dep2">
+					<li><a href="#" class="menu_dep2">서브1</a></li>
+					<li><a href="#" class="menu_dep2">서브2</a></li>
+					<li><a href="#" class="menu_dep2">서브3</a></li>
+					<li><a href="#" class="menu_dep2">서브4</a></li>
+				</ul>
+			</li>
+		</ul>
+	</nav>  
+	<section class="container">
+		<div class="area a_search">
+			<h3>검색조건 설정</h3>
+			<strong class="tit">기간설정</strong>
+			<div class="bx">
+				<input type="text" class="ipt_date ico_calendar half">
+				<input type="text" class="ipt_date ico_calendar half">
+			</div>
+			<strong class="tit">사용자 지정 검색</strong>
+			<div class="bx_ipt">
+				<input type="text" class="ipt_ico">
+				<button class="btn_search">검색</button>
+			</div>
+			<strong class="tit">검색 필터</strong>
+			<div class="bx_chk"><input type="checkbox" name="" id="chk1"><label class="chk" for="chk1">체크2</label></div>
+			<div class="bx_chk"><input type="checkbox" name="" id="chk2"><label class="chk" for="chk2">체크2</label></div>
+			<div class="bx_chk"><input type="checkbox" name="" id="chk3"><label class="chk" for="chk3">체크2</label></div>
+			<div class="bx_chk"><input type="checkbox" name="" id="chk4"><label class="chk" for="chk4">체크2</label></div>
+			<div class="bx_chk"><input type="checkbox" name="" id="chk5"><label class="chk" for="chk5">체크2</label></div>
+			<div class="bx_chk"><input type="checkbox" name="" id="chk6"><label class="chk" for="chk6">체크2</label></div>
+			<div class="bx_chk"><input type="checkbox" name="" id="chk7"><label class="chk" for="chk7">체크2</label></div>
+		</div>
+		<div class="area a_slct">
+			<h3>센터 선택</h3>
+			<ul>
+				<li><a href="#">전체</a></li>
+				<li class="on"><a href="#">더체크프라임</a></li>
+				<li><a href="#">더체크옴니</a></li>
+				<li><a href="#">비즈코디</a></li>
+			</ul>
+		</div>
+		<!-- <div class="area a_slct">
+			<h3>상세 선택</h3>
+			<ul>
+				<li><a href="#">전체</a></li>
+				<li class="on"><a href="#">더체크프라임</a></li>
+				<li><a href="#">더체크옴니</a></li>
+				<li><a href="#">비즈코디</a></li>
+			</ul>
+		</div> -->
+		<article class="area cont">
+			<h3>상세 현황</h3>
+			<table class="tbl_board">
+				<colgroup>
+					<col style="width: 70px;">
+					<col style="width: auto;">
+					<col style="width: auto;">
+					<col style="width: auto;">
+					<col style="width: auto;">
+					<col style="width: auto;">
+				</colgroup>
+				<thead>
+					<th>순위</th>
+					<th>영업단명</th>
+					<th>소속</th>
+					<th>회원가입</th>
+					<th>정보등록수</th>
+					<th>마지막영업일</th>
+				</thead>
+				<tbody>
+					<tr>
+						<td>1</td>
+						<td>정보통신</td>
+						<td>더체크프라임</td>
+						<td>31</td>
+						<td>20</td>
+						<td>2021.10.10</td>
+					</tr>
+					<tr>
+						<td>1</td>
+						<td>정보통신</td>
+						<td>더체크프라임</td>
+						<td>31</td>
+						<td>20</td>
+						<td>2021.10.10</td>
+					</tr>
+					<tr>
+						<td>1</td>
+						<td>정보통신</td>
+						<td>더체크프라임</td>
+						<td>31</td>
+						<td>20</td>
+						<td>2021.10.10</td>
+					</tr>
+					<tr>
+						<td>1</td>
+						<td>정보통신</td>
+						<td>더체크프라임</td>
+						<td>31</td>
+						<td>20</td>
+						<td>2021.10.10</td>
+					</tr>
+					<tr>
+						<td>1</td>
+						<td>정보통신</td>
+						<td>더체크프라임</td>
+						<td>31</td>
+						<td>20</td>
+						<td>2021.10.10</td>
+					</tr>
+					<tr>
+						<td>1</td>
+						<td>정보통신</td>
+						<td>더체크프라임</td>
+						<td>31</td>
+						<td>20</td>
+						<td>2021.10.10</td>
+					</tr>
+					<tr>
+						<td>1</td>
+						<td>정보통신</td>
+						<td>더체크프라임</td>
+						<td>31</td>
+						<td>20</td>
+						<td>2021.10.10</td>
+					</tr>
+					<tr>
+						<td>1</td>
+						<td>정보통신</td>
+						<td>더체크프라임</td>
+						<td>31</td>
+						<td>20</td>
+						<td>2021.10.10</td>
+					</tr>
+					<tr>
+						<td>1</td>
+						<td>정보통신</td>
+						<td>더체크프라임</td>
+						<td>31</td>
+						<td>20</td>
+						<td>2021.10.10</td>
+					</tr>
+					<tr>
+						<td>1</td>
+						<td>정보통신</td>
+						<td>더체크프라임</td>
+						<td>31</td>
+						<td>20</td>
+						<td>2021.10.10</td>
+					</tr>
+					<tr>
+						<td>1</td>
+						<td>정보통신</td>
+						<td>더체크프라임</td>
+						<td>31</td>
+						<td>20</td>
+						<td>2021.10.10</td>
+					</tr>
+				</tbody>
+			</table>
+			<div class="paginate">
+			  <button href="#" class="btn_page_prev dis">이전</button>
+			  <button class="btn_page on">1</button>
+			  <button class="btn_page">2</button>
+			  <button class="btn_page">3</button>
+			  <button class="btn_page">4</button>
+			  <button class="btn_page">5</button>
+			  <button class="btn_page">96</button>
+			  <button class="btn_page">97</button>
+			  <button class="btn_page">98</button>
+			  <button class="btn_page">99</button>
+			  <button class="btn_page">100</button>
+			  <button href="#" class="btn_page_next">다음</button>
+			</div> 
+		</article>
+	</section>
+	<footer>
+	  <span class="copyright">Copyright 2020, The Check Co.Ltd.</span>
+	</footer>
+</body>
+</html>
