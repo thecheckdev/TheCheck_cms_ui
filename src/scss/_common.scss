@@ -136,9 +136,11 @@
 }
 .left{
 	flex-grow: 1;
+	text-align: left;
 }
 .right{
 	flex-shrink: 0;
+	text-align: right;
 }
 
 input[type=text], input[type=password], input[type=tel], input[type=email], input[type=number], textarea {
@@ -170,6 +172,12 @@ input[type=text], input[type=password], input[type=tel], input[type=email], inpu
 		padding-right: 23px;
 		@include bgSvg(fnIcoCalendar("rgb(176, 173, 171)"), no-repeat, 94% 50%, 15px, $white);
 	}
+	&.half{
+		width: calc(50% - 8px);
+		&+.half{
+			margin-left: 9px;
+		}
+	} 
 }
 .bx_ipt{
 	position: relative;
@@ -324,6 +332,7 @@ textarea{
 
 .bx_chk {
 	display: inline-block;
+	flex-shrink: 0;
 	input[type=checkbox]{
 		display: none;
 		&:checked+label:before{
@@ -738,7 +747,6 @@ textarea{
 	.right{
 		display: flex;
 		align-items: flex-start;
-		flex-shrink: 0;
 		button{
 			margin: 0 8px;
 		}
@@ -858,12 +866,38 @@ textarea{
 	.right{
 		display: flex;
 		align-items: center;
-		flex-shrink: 0;
 		button{
 			margin: 0 8px;
 		}
 	}
 }
+.content_top_info{
+	margin: 10px 0 40px;
+	padding: 11px 0 10px;
+	border-top: 1px solid $black;
+	border-bottom: 1px solid $black;
+	display: flex;
+	.unit{
+		flex-grow: 1;
+		border-right: 3px solid #DDDBDA;
+		&:last-child{
+			border: none;
+		}
+		.tit_sm{
+			font-size: 13px;
+			color:#c7c7c7;
+			margin-bottom: 2px;
+		}
+		span{
+			display: block;
+			flex-shrink: 0;
+			font-size: 20px;
+			font-weight: $bold;
+			text-align: center;
+		}
+	}
+}
+
 .tbl_board{
 	font-size: 14px;
 	th{
@@ -1010,6 +1044,97 @@ textarea{
 }
 body.no_scroll{
     overflow: hidden;
+}
+.form_create{
+	h4{
+		font-size: 14px;
+		color: $point;
+		margin-bottom: 10px;
+		&.txt_point{
+			margin: 35px 0 10px; 
+		}
+	}
+	textarea{
+		width: 100%;
+		height: 100px;
+	}
+	
+	.row{
+		display: flex; 
+		margin-bottom: 20px;
+		.bx_ipt_line{
+			margin-right: 25px;
+			&:last-child{
+				margin-right: 0;
+			}
+		}
+		&.c_full{
+			// flex-wrap: wrap;
+			justify-content: space-between;
+			&>.bx_ipt_line{
+				margin-right: 0;
+			}
+		}
+		.unit{
+			&:last-child{
+				margin-right: 0;
+			}
+			.btn_line, .txt_line{
+				margin: 7px 5px;
+			}
+		}
+	}
+	.bx_address{
+		display: flex;
+		justify-content: space-between;
+		input{
+			flex-grow: 1;
+		}
+		.btn{
+			height: 40px;
+			margin-left: 15px;
+			flex-shrink: 0;
+		}
+	}
+	.bx_ipt_tit{
+		.tit{
+			width: 100%;
+			display: block;
+			margin-bottom: 10px;
+		}
+		input, textarea{
+			width: 100%;
+		}
+	}
+}
+.col1,.col2,.col3, .col4{
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	.unit{
+		// flex-direction: column;
+    	flex-wrap: wrap;
+		display: inline-flex; 
+		box-sizing: border-box;
+		flex-grow: 1;
+		padding-right: 20px;
+		flex-shrink: 0;
+	}
+}
+.col2{
+	.unit{
+		width: 50%;
+	}
+}
+.col3{
+	.unit{
+		width: 33%;
+	}
+}
+.col4{
+	.unit{
+		width: 25%;
+	}
 }
 .wrap_pop{
 	position: fixed;
@@ -1228,68 +1353,11 @@ body.no_scroll{
 		.bx_btn{
 			width: 1086px;
 			padding-right: 40px;
-		}
-		.bx_ipt_line{
-			margin-right: 25px;
-			&:last-child{
-				margin-right: 0;
-			}
-		}
-		.row{
-			display: flex; 
-			margin-bottom: 20px;
-			&.c_full{
-				// flex-wrap: wrap;
-				justify-content: space-between;
-				&>.bx_ipt_line{
-					margin-right: 0;
-				}
-			}
-			.unit{
-				&:last-child{
-					margin-right: 0;
-				}
-				.btn_line, .txt_line{
-					margin: 7px 5px;
-				}
-			}
-		}
-		.bx_btn{
 			margin-top: 50px;
 		}
-		textarea{
-			width: 100%;
-			height: 100px;
-		}
-		h4{
-			font-size: 14px;
-			color: $point;
-			margin-bottom: 10px;
-		}
 		.col1,.col2,.col3, .col4{
-			display: flex;
-			justify-content: space-between;
-			&>.bx_ipt_line{
-				margin-right: 0;
-			}
 			.unit{
 				flex-direction: column;
-				display: inline-flex; 
-				box-sizing: border-box;
-				padding-right: 20px;
-				.bx_ipt_line{
-					margin-right: 0;
-				}
-			}
-		}
-		.col2{
-			.unit{
-				width: 50%;
-			}
-		}
-		.col4{
-			.unit{
-				width: 25%;
 			}
 		}
 		&.type1{
@@ -1301,6 +1369,7 @@ body.no_scroll{
 					width: 580px;
 				}
 				.right{
+					text-align: left;
 					textarea{
 						width: 410px;
 						height: 580px;
@@ -1313,27 +1382,6 @@ body.no_scroll{
 			.bx_ipt_line{
 				input[type=text], input[type=password], input[type=tel], input[type=email], input[type=number] {
 					width: 110px;
-				}
-			}
-		}
-		&.type2{
-			h4 {
-				margin: 35px 0 10px;
-			}
-			.unit{
-				strong{
-					display: block;
-					margin-bottom: 10px;
-				}
-				input, textarea{
-					width: 100%;
-				}
-			}
-			.bx_address{
-				display: flex;
-				justify-content: space-between;
-				.btn{
-					height: 40px;
 				}
 			}
 		}
