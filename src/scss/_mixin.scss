@@ -1,5 +1,5 @@
 @function calcRem($size) { /*Mobile용 믹스인*/
-  $remSize: $size / $font_def;
+  $remSize: $size / $font;
   @return  #{$remSize}rem;
 }
 
