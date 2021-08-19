@@ -262,7 +262,7 @@ textarea{
 		font-size: 13px;
 		color: $black;
 		cursor: pointer;
-		z-index: 3;
+		z-index: 1;
 		&:after{
 			content: "";
 			width: 7px;
@@ -286,7 +286,8 @@ textarea{
 		border-color: #A8B7C7;
 		transition: all 0.1s;
 		max-height: 200px;
-		overflow-y: auto;
+		z-index: 2;
+		overflow-y: hidden;
 		li{
 			font-size: 14px;
 			padding: 3px 9px 1px 24px;
@@ -311,6 +312,7 @@ textarea{
 			padding: 8px 0;
 			display: block;
 			z-index: 2;
+			overflow-y: auto;
 		}
 	}
 	&.big{
