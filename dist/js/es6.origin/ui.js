@@ -136,4 +136,4 @@ const fnRemoveAllClass = (el, nm) => {
 	[].forEach.call(el, item => {
 		item.classList.remove(nm);
 	});
-} 
+}
