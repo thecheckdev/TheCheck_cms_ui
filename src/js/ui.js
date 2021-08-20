@@ -17,23 +17,22 @@ document.addEventListener("DOMContentLoaded", () => {
 	checkOs = AgentUserOs.indexOf("ipad") == -1 ? -1 : checkOs; 
 	checkOs = AgentUserOs.indexOf("mac") == -1 ? -1 : checkOs; 
 	if (checkOs == -1) {
-		// body.classList.add("n_apple"); 
 		html.classList.add("n_apple");
 	}
 	body.classList.remove("no_scroll");
 	getInternetExplorerVersion(); 
 	//달력
-	// $(".ipt_date").datepicker({
-	// 	language: "ko",
-	// });
-	// $(".ipt_date.big_calendar").datepicker({
-	// 	language: "ko",
-	// 	classes: 'datepicker-big',
-	// });
-	// $(".ipt_date").focusout(function(e){
-	// 	e.preventDefault();
-	// 	$(this).val($.trim($(this).val()));
-	// });
+	$(".ipt_date").datepicker({
+		language: "ko",
+	});
+	$(".ipt_date.big_calendar").datepicker({
+		language: "ko",
+		classes: 'datepicker-big',
+	});
+	$(".ipt_date").focusout(function(e){
+		e.preventDefault();
+		$(this).val($.trim($(this).val()));
+	});
 
 	//셀랙트 박스 세팅
 	const slct = document.getElementsByClassName("slct");
@@ -116,7 +115,6 @@ const fnOpenPop = i =>{
 	const html = document.getElementsByTagName("html")[0];
 	body.classList.add("no_scroll");
 	[].forEach.call(wrap_pop, item => {
-		// console.log(item.getElementsByClassName("bx_pop")[0].innerHeight);
 		if(item.dataset.pop == i){
 			item.classList.add("show");
 			scrollTop = document.documentElement.scrollTop;

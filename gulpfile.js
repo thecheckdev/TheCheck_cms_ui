@@ -48,7 +48,7 @@ function browserSync(done) {
 }
 
 function htmlComp() {
-	return gulp.src(paths.htlml.input)
+	return gulp.src(paths.html.input)
 		.pipe(html())
 		.pipe(gulp.dest(paths.html.output))
 		.pipe(browsersync.reload({ stream: true }));
