@@ -10,7 +10,22 @@ document.createElement("footer");
 document.createElement("main");
 var scrollTop = 0;
 document.addEventListener("DOMContentLoaded", function () {
-  //달력
+  var body = document.getElementsByTagName("body")[0];
+  var html = document.getElementsByTagName("html")[0];
+  var uanaVigatorOs = navigator.userAgent;
+  var AgentUserOs = uanaVigatorOs.replace(/ /g, '');
+  AgentUserOs = AgentUserOs.toLowerCase();
+  var checkOs = AgentUserOs.indexOf("iphone") == -1 ? -1 : 1;
+  checkOs = AgentUserOs.indexOf("ipad") == -1 ? -1 : checkOs;
+  checkOs = AgentUserOs.indexOf("mac") == -1 ? -1 : checkOs;
+
+  if (checkOs == -1) {
+    // body.classList.add("n_apple"); 
+    html.classList.add("n_apple");
+  }
+
+  body.classList.remove("no_scroll");
+  getInternetExplorerVersion(); //달력
   // $(".ipt_date").datepicker({
   // 	language: "ko",
   // });
@@ -22,8 +37,7 @@ document.addEventListener("DOMContentLoaded", function () {
   // 	e.preventDefault();
   // 	$(this).val($.trim($(this).val()));
   // });
-  var body = document.getElementsByTagName("body")[0];
-  body.classList.remove("no_scroll"); //셀랙트 박스 세팅
+  //셀랙트 박스 세팅
 
   var slct = document.getElementsByClassName("slct");
   [].forEach.call(slct, function (item) {
@@ -117,4 +131,29 @@ var fnRemoveAllClass = function fnRemoveAllClass(el, nm) {
   [].forEach.call(el, function (item) {
     item.classList.remove(nm);
   });
+}; // IE 하위 브라우저
+
+
+var getInternetExplorerVersion = function getInternetExplorerVersion() {
+  var html = document.getElementsByTagName("html")[0];
+  var body = document.getElementsByTagName("body")[0];
+  var rv = -1; // Return value assumes failure.
+
+  if (navigator.appName != "Microsoft Internet Explorer") {
+    return;
+  } else {
+    var ua = navigator.userAgent;
+    var re = new RegExp("MSIE ([0-9]{1,}[\.0-9]{0,})");
+    if (re.exec(ua) != null) rv = parseFloat(RegExp.$1);
+  }
+
+  if (rv <= 10) {
+    // IE브라우저 8버전 이하 시 ie_old 추가
+    rv = 10;
+    html.classList.add("ie");
+    var newDiv = document.createElement("div");
+    newDiv.classList.add("pop_ie");
+    newDiv.innerHTML = '<div class="bx_pop alert"><div class="cont">' + '<p>해당 사이트는 최신 버전의<br>OS와 브라우저에 최적화되어 있습니다.<br>' + 'Edge, Crome 등 최신 브라우저를 설치해 주시기 바랍니다.<br><br>' + '<a href="https://www.google.com/intl/ko/chrome/">Crome 설치 페이지로 이동 ▶</a><br>' + '<a href="https://www.microsoft.com/ko-kr/edge/">Edge 설치 페이지로 이동 ▶</a>' + '</p></div></div>';
+    body.appendChild(newDiv);
+  }
 };

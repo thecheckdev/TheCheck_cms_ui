@@ -1,2 +1,59 @@
 @charset "UTF-8";
 @import "variable", "mixin", "svg", "reset", "datepicker", "layout", "common", "main", "sub";
+.n_apple{
+	font-size: 15px;
+	.txt_hlight{
+		padding: 8px 17px 9px;
+	}
+	.paginate {
+		.btn_page{
+			padding: 4px 5px 5px;
+		}
+		&.type2 .btn_page{
+			padding: 0 3px;
+		}
+		.ipt_page{
+			line-height: 20px;
+		}
+	}
+	.btn{
+		padding: 5px 15px 6px;
+	}
+	.btn_grean{
+		padding: 5px 20px 6px 20px;
+		&.ico{
+			padding: 5px 20px 6px 35px;
+		}
+	}
+	header .btn_noti em{
+		line-height: 10px;
+	}
+	.slct{
+		.slct_tit{
+			padding: 1px 22px 1px 8px;
+			line-height: 28px ;
+		}
+	}
+	input[type=text], input[type=password], input[type=tel], input[type=email], input[type=number], textarea{
+		padding: 0 8px;
+	}
+	textarea{
+		padding: 10px 20px;
+	}
+	.bx_ipt_line{
+		input[type=text], input[type=password], input[type=tel], input[type=email], input[type=number], textarea{
+			padding: 0 8px;
+			line-height: 24px; 
+		}
+	}
+	.bx_chk{
+		label{ 
+			&:before{
+				margin-top:-2px;
+			}
+		}
+	}
+	.wrap_pop .bx_step em{
+		padding: 3px 0 4px;
+	}
+}

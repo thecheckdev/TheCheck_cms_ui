@@ -7,7 +7,21 @@ document.createElement("header");
 document.createElement("footer");
 document.createElement("main");
 let scrollTop = 0;
+getInternetExplorerVersion();
+const body = document.getElementsByTagName("body")[0];
+const html = document.getElementsByTagName("html")[0];
 document.addEventListener("DOMContentLoaded", () => {
+	const uanaVigatorOs = navigator.userAgent;
+	let AgentUserOs = uanaVigatorOs.replace(/ /g,'');
+	AgentUserOs = AgentUserOs.toLowerCase();
+	let checkOs = AgentUserOs.indexOf("iphone") == -1 ? -1 : 1; 
+	checkOs = AgentUserOs.indexOf("ipad") == -1 ? -1 : checkOs; 
+	checkOs = AgentUserOs.indexOf("mac") == -1 ? -1 : checkOs; 
+	if (checkOs == -1) {
+		// body.classList.add("n_apple"); 
+		html.classList.add("n_apple");
+	}
+	body.classList.remove("no_scroll");
 	//달력
 	// $(".ipt_date").datepicker({
 	// 	language: "ko",
@@ -20,8 +34,6 @@ document.addEventListener("DOMContentLoaded", () => {
 	// 	e.preventDefault();
 	// 	$(this).val($.trim($(this).val()));
 	// });
-	const body = document.getElementsByTagName("body")[0];
-	body.classList.remove("no_scroll");
 
 	//셀랙트 박스 세팅
 	const slct = document.getElementsByClassName("slct");
@@ -121,3 +133,23 @@ const fnRemoveAllClass = (el, nm) => {
 		item.classList.remove(nm);
 	});
 } 
+
+// IE 하위 브라우저
+const getInternetExplorerVersion = () => {
+	console.log("-0--");
+  let rv = -1; // Return value assumes failure.
+  if (navigator.appName != "Microsoft Internet Explorer"){
+    return;
+  }
+  else {
+    let ua = navigator.userAgent;
+    let re = new RegExp("MSIE ([0-9]{1,}[\.0-9]{0,})");
+    if (re.exec(ua) != null)
+      rv = parseFloat(RegExp.$1);
+  }
+  if(rv < 10){ // IE브라우저 8버전 이하 시 ie_old 추가
+    rv = 10;
+		html.classList.add("ie");
+  }
+	html.classList.add("ie","ie11");
+}
