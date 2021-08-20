@@ -13,9 +13,9 @@ document.addEventListener("DOMContentLoaded", () => {
 	const uanaVigatorOs = navigator.userAgent;
 	let AgentUserOs = uanaVigatorOs.replace(/ /g,'');
 	AgentUserOs = AgentUserOs.toLowerCase();
-	let checkOs = AgentUserOs.indexOf("iphone") == -1 ? -1 : 1; 
-	checkOs = AgentUserOs.indexOf("ipad") == -1 ? -1 : checkOs; 
-	checkOs = AgentUserOs.indexOf("mac") == -1 ? -1 : checkOs; 
+	let checkOs = AgentUserOs.indexOf("mac") == -1 ? -1 : 1; 
+	checkOs = AgentUserOs.indexOf("iphone") == -1 ? (checkOs > -1? 1 : -1) : 1; 
+	checkOs = AgentUserOs.indexOf("ipad") == -1 ? (checkOs > -1? 1 : -1) : 1; 
 	if (checkOs == -1) {
 		html.classList.add("n_apple");
 	}
