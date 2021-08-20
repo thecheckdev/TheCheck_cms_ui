@@ -6,7 +6,7 @@ document.createElement("nav");
 document.createElement("header");
 document.createElement("footer");
 document.createElement("main");
-
+let scrollTop = 0;
 document.addEventListener("DOMContentLoaded", () => {
 	//달력
 	// $(".ipt_date").datepicker({
@@ -93,38 +93,22 @@ document.addEventListener("DOMContentLoaded", () => {
 		btn_close.addEventListener("click", () => {
 			body.classList.remove("no_scroll");
 			item.classList.remove("show");
+			window.scrollTo(0, scrollTop); 
 			// item
 		});
 	});
 });
-	// //팝업
-	// $(".wrap_pop .btn_close").click(function(){
-	// 	$("body").removeClass("no_scroll");
-	// 	$(".wrap_pop").removeClass("show");
-	// });
-// });
-
-//팝업
-// function fnOpenPop(i){
-// 	$("body").addClass("no_scroll");
-// 	$("html").scrollTop(($(window).height() - $(".popup_area").outerHeight()) / 2 + $(window).scrollTop());
-// 	$(".wrap_pop[data-pop="+i+"]").addClass("show");
-// }
 const fnOpenPop = i =>{
 	const body = document.getElementsByTagName("body")[0];
 	const wrap_pop = document.getElementsByClassName("wrap_pop");
+	const html = document.getElementsByTagName("html")[0];
 	body.classList.add("no_scroll");
 	[].forEach.call(wrap_pop, item => {
-		// const top =  window.innerHeight - item.getElementsByClassName("bx_pop").innerHeight;
-		// console.log(top);
-		console.log(item.getElementsByClassName("bx_pop")[0]);
-		console.log(item.innerHeight);
 		// console.log(item.getElementsByClassName("bx_pop")[0].innerHeight);
 		if(item.dataset.pop == i){
 			item.classList.add("show");
+			scrollTop = document.documentElement.scrollTop;
 		}
-		// console.log(i);
-		// console.log(index);
 	});
 }
 

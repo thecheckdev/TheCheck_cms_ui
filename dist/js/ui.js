@@ -8,6 +8,7 @@ document.createElement("nav");
 document.createElement("header");
 document.createElement("footer");
 document.createElement("main");
+var scrollTop = 0;
 document.addEventListener("DOMContentLoaded", function () {
   //달력
   // $(".ipt_date").datepicker({
@@ -87,37 +88,23 @@ document.addEventListener("DOMContentLoaded", function () {
     var btn_close = item.querySelectorAll(".btn_close")[0];
     btn_close.addEventListener("click", function () {
       body.classList.remove("no_scroll");
-      item.classList.remove("show"); // item
+      item.classList.remove("show");
+      window.scrollTo(0, scrollTop); // item
     });
   });
-}); // //팝업
-// $(".wrap_pop .btn_close").click(function(){
-// 	$("body").removeClass("no_scroll");
-// 	$(".wrap_pop").removeClass("show");
-// });
-// });
-//팝업
-// function fnOpenPop(i){
-// 	$("body").addClass("no_scroll");
-// 	$("html").scrollTop(($(window).height() - $(".popup_area").outerHeight()) / 2 + $(window).scrollTop());
-// 	$(".wrap_pop[data-pop="+i+"]").addClass("show");
-// }
+});
 
 var fnOpenPop = function fnOpenPop(i) {
   var body = document.getElementsByTagName("body")[0];
   var wrap_pop = document.getElementsByClassName("wrap_pop");
+  var html = document.getElementsByTagName("html")[0];
   body.classList.add("no_scroll");
   [].forEach.call(wrap_pop, function (item) {
-    // const top =  window.innerHeight - item.getElementsByClassName("bx_pop").innerHeight;
-    // console.log(top);
-    console.log(item.getElementsByClassName("bx_pop")[0]);
-    console.log(item.innerHeight); // console.log(item.getElementsByClassName("bx_pop")[0].innerHeight);
-
+    // console.log(item.getElementsByClassName("bx_pop")[0].innerHeight);
     if (item.dataset.pop == i) {
       item.classList.add("show");
-    } // console.log(i);
-    // console.log(index);
-
+      scrollTop = document.documentElement.scrollTop;
+    }
   });
 }; //앞뒤 공백 제거
 
