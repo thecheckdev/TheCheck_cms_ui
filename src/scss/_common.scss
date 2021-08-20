@@ -158,6 +158,7 @@ input[type=text], input[type=password], input[type=tel], input[type=email], inpu
 	line-height: 30px;
 	padding: 2px 8px 0;
 	box-sizing: border-box;
+	vertical-align: middle; 
 	&.big{
 		height: 40px;
 		padding: 2px 20px 0;
@@ -248,6 +249,7 @@ textarea{
 	height: 30px;
 	min-width: 50px;
 	text-align: left;
+	vertical-align: middle;
 	.slct_tit{
 		position: relative;
 		min-width: 30px;
@@ -268,6 +270,8 @@ textarea{
 			width: 7px;
 			height: 4px;
 			position: absolute;
+			top:50%;
+			transform: translateY(-50%);
 			right: 8px;
 			@include bgSvg(fnSlctDrop("rgb(0, 0, 0)"), no-repeat, 0 0, 7px);
 		}
@@ -468,14 +472,13 @@ textarea{
 	.btn_page{
 		font-size: calcRem(14px);
 		display: inline-block;
-		line-height: 22px;
+		line-height: 1;
 		min-width: 24px;
-		height: 100%;
 		color: $point;
 		border:2px solid $point;
 		text-align: center;
 		border-radius: 2px;
-		padding: 0 5px;
+		padding: 5px 5px 3px;
 		margin: 0 3px;
 		&.on{
 			color:$white;
@@ -1138,7 +1141,7 @@ body.no_scroll{
 		width: 25%;
 	}
 }
-.wrap_pop{
+.wrap_pop, .pop_ie{
 	position: fixed;
 	top:0;
 	left: 0;
@@ -1447,6 +1450,25 @@ body.no_scroll{
 			.paginate{
 				margin: 30px auto 100px;
 			}
+		}
+	}
+}
+.ie{
+	overflow: hidden;
+	.pop_ie{
+		display: flex;
+		line-height: 1.8;
+		.alert{
+			width: 500px; 
+			padding: 20px 50px;
+			height: 250px;
+			box-sizing: border-box;
+		}
+		a{
+			color:#005ec0;
+			text-decoration: underline;
+			font-size: 12px;
+			margin: 10px 0;
 		}
 	}
 }

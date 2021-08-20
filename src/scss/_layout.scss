@@ -6,6 +6,7 @@ body {
 	flex-direction: column;
 	background: #F5F6F6;
 	font-weight: $weight;
+	font-size:$font; 
 }
 h1 {
 	font-size: calcRem(56px);
@@ -74,6 +75,7 @@ header {
 		@include setContent(16px, 20px, block, relative);
 		@include bgSvg(fnIcoNoti("rgb(255, 255, 255)"), no-repeat, null, 100%);
 		margin: 0 28px;
+		overflow: visible;
 		em {
 			@include setContent(auto, 16px, block, absolute);
 			min-width: 16px;
