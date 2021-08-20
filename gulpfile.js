@@ -79,7 +79,7 @@ function js() {
 function babelJs() {
 	return gulp.src(paths.js.input)
 	.pipe(babel())
-	// .pipe(uglify())
+	.pipe(uglify())
 	.pipe(gulp.dest(paths.js.output))
 	.pipe(browsersync.reload({ stream: true }));
 }
