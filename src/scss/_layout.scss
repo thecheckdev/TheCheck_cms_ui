@@ -212,7 +212,7 @@ footer{
 	}
 }
 .wrap_gnb{
-	position: absolute;
+	position: fixed;
 	width: 0;
 	height: 100%;
 	padding: 60px 0 30px;
@@ -224,6 +224,8 @@ footer{
 	z-index: -1;
 	overflow: hidden;
 	overflow-y: auto;
+	top:0;
+	left: 0;
 	&.show{
 		width: 350px;
 		visibility: visible;
