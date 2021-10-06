@@ -1,0 +1,1033 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=1280, user-scalable=yes"><!--PC 최소 PXF로 고정하기! 프로젝트에 따라 변경 가능성-->
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="theme-color" content="#ffffff">
+	<!-- <link rel="shortcut icon" href="ico_url" type="image/x-icon"> -->
+	<title>모듈 페이지 | 더체크</title> <!-- [페이지명 | 사이트명] -->
+	<link rel="stylesheet" type="text/css" href="/css/style.css"/>
+	<script src="/js/jquery-1.12.4.min.js"></script>
+	<script src="/js/datepicker.js"></script>
+	<script src="/js/ui.js"></script>
+	
+	<!-- <link rel="stylesheet" type="text/css" href="/TheCheck_cms_ui/css/style.css?v=210820"/>
+	<script src="/TheCheck_cms_ui/js/jquery-1.12.4.min.js"></script>
+	<script src="/TheCheck_cms_ui/js/datepicker.js"></script>
+	<script src="/TheCheck_cms_ui/js/ui.js?v=210820"></script> -->
+	
+	<!-- script or style -->
+	<style>
+		body{
+			padding: 20px 50px 60px;
+			box-sizing: border-box;
+			font-size: 14px;
+		}
+		h1,h2,h3 {
+			line-height: 1;
+			font-weight: normal;
+		}
+		h1 {
+			font-size: 26px;
+		}
+		h2 {
+			font-size: 24px;
+			margin-bottom: 40px;
+		}
+		h3 {
+			font-size: 18px;
+			margin-bottom: 10px;
+		}
+		h4 {
+			font-size: 16px;
+			margin: 20px auto 10px;
+		}
+		P{
+			margin-bottom: 20px;
+		}
+		.i_header{
+			width: 100%;
+			margin: 0 auto;
+			padding: 17px 50px;
+			box-sizing: border-box;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			position: fixed;
+			top: 0;
+			left: 0;
+			background: #66c8c3;
+			color: #fff;
+			z-index: 10;
+		}
+		.i_container {
+			width: 1440px;
+			margin: 0 auto;
+			box-sizing: border-box;
+		}
+		.i_menu {
+			text-align: right;
+		}
+		.i_menu a{
+			font-size: 16px;
+			display: inline-block;
+			margin: 0 20px;
+			color:#fff;
+		}
+		.i_cont {
+			margin: 0 0 50px;
+			padding: 0 16px;
+			box-sizing: border-box;
+		}
+		.i_cont span{
+			line-height: 1.6;
+			display: block;
+		}
+		.i_bx{
+			padding: 70px 0 0;
+			border-bottom: 1px solid #aaa;
+		}
+		.left{
+			width: 50%;
+		}
+		.right{
+			width: 50%;
+			padding-top: 64px;
+			text-align: left;
+		}
+		.full{
+			width: 100%;
+		}
+		.noti{
+            display: block;
+			font-size: 13px;
+			padding: 0 0 5px 14px;
+            text-indent: -8px;
+			color: #ff5656;
+		}
+		.slct,input, .bx_chk{margin: 0 5px;}
+		pre{
+			background: #fff;
+			padding: 5px 30px;
+		}
+		xmp{
+			display: inline-block;
+			color: #777;
+		}
+		span.txt_hlight, span.txt_line{
+			display: inline-block;
+			line-height: 1;
+		}
+		.show_flex{
+			display: flex !important;
+		}
+	</style>
+ 
+</head>  
+
+<body id="body">
+	<div class="i_header">
+		<h1>📝&nbsp&nbsp&nbsp통합페이지 모듈</h1>
+		<div class="i_menu">
+			<a href="#i_bx1">스타일 가이드</a> | 
+			<a href="#i_bx2">입력폼 & 버튼</a> | 
+			<a href="#i_bx3">component</a> | 
+			<a href="#i_bx4">temp</a>
+		</div>
+	</div>
+	<section class="i_container">
+		<article class="i_bx show_flex flex" id="i_bx1">
+			<div class="left">
+				<h2>🎯 스타일 가이드</h2>
+				<h3>🍉 margin</h3>
+				<div class="i_cont">
+					5px 간격으로 5px ~ 50px 까지 클래스(m*5~50)가 있습니다<br>
+					margin-top : ex) .mt5 (margin-top 5px)<br>
+					margin-bottom : ex) .mb25 (margin-bottom 25px)<br>
+					margin-left : ex) .ml10 (margin-left 10px)<br>
+					margin-right : ex) .mr50 (margin-right 50px)<br>
+				</div>
+				<h3>🍉 padding</h3>
+				<div class="i_cont">
+					5px 간격으로 5px ~ 50px 까지 클래스(m*5~50)가 있습니다<br>
+					padding-top : ex) .mt5 (padding-top 5px)<br>
+					padding-bottom : ex) .mb25 (padding-bottom 25px)<br>
+					padding-left : ex) .ml10 (padding-left 10px)<br>
+					padding-right : ex) .mr50 (padding-right 50px)<br>
+				</div>
+				<h3>🍉 제목 크기</h3>
+				<div class="i_cont">
+					<span style="font-size: 56px;">h1 : 56px</span>
+					<span style="font-size: 24px;">h2 : 24px</span>
+					<span style="font-size: 20px;">h3 : 20px</span>
+					<span style="font-size: 16px;">h4 : 16px</span>
+				</div>
+			</div>
+			<div class="right">
+				<h3>🍉 노출</h3>
+				<div class="i_cont">
+					텍스트 숨기기 : .blind<br>
+					요소 숨기기 : .hide<br>
+					요소 노출1 : .show (display:block)<br>
+					요소 노출2 : .show_flex (display:flex)<br>
+				</div>
+				<h3>🍉 글자 색상</h3>
+				<div class="i_cont">
+					<span class="txt_white"><em style="background:#777;">#ffffff : .txt_white</em></span>
+					<span class="txt_black">.txt_black : #000000</span>
+					<span class="txt_green">.txt_green : #025454</span>
+					<span class="txt_green_light">.txt_green_light : #00a9c0</span>
+					<span class="txt_green_dark">.txt_green_dark : #2f4d56</span>
+					<span class="txt_bule_light">.txt_bule_light : #005ec0</span>
+					<span class="txt_bule_dark">.txt_bule_dark : #002470</span>
+					<span class="txt_brown_light">.txt_brown_light : #9a8478</span>
+					<span class="txt_brown_dark">.txt_brown_dark : #1e130c</span>
+					<span class="txt_purple_light">.txt_purple_light : #c567d8</span>
+					<span class="txt_purple_dark">.txt_purple_dark : #361bb2</span>
+					<span class="txt_yellow">.txt_yellow : #fdef72</span>
+					<span class="txt_red">.txt_purple_light : #c567d8</span>
+					<span class="txt_orange">.txt_purple_dark : #361bb2</span>
+					<span class="txt_point">.txt_yellow : #fdef72</span>
+				</div>
+				<h3>🍉 형광펜 스타일</h3>
+				<div class="i_cont">
+					<span class="txt_hlight">.txt_hlight : #000000</span>
+					<span class="txt_hlight orange">.txt_hlight.orange : #025454</span>
+					<span class="txt_hlight grean">.txt_hlight.grean : #00a9c0</span>
+					<span class="txt_hlight red">.txt_hlight.red : #2f4d56</span>
+					<span class="txt_hlight purple">.txt_hlight.purple : #005ec0</span>
+				</div>
+				<h3>🍉 박스 스타일</h3>
+				<div class="i_cont">
+					<span class="txt_line">.txt_line : #000000</span>
+					<span class="txt_line orange">.txt_line.orange : #FF6F06</span>
+					<span class="txt_line blue">.txt_line.grean : #005ec0</span>
+					<span class="txt_line red">.txt_line.red : #DF3333</span>
+				</div>
+			</div>
+		</article>
+		<article class="i_bx flex" id="i_bx2">
+			<div class="left">
+				<h2>🎯 입력 & 버튼</h2>
+				<h3>🍉 input</h3>
+				<div class="i_cont">
+					<h4>기본</h4>
+					<span class="noti">- 가로 크기는 기본 100px입니다. 다른 크기를 원하시면 인라인 스타일로 지정해서 사용 가능 합니다.</span>
+					<input type="text" placeholder="입력해주세요!!" style="width: 200px;"><br>
+					<h4>추가 가능한 스타일</h4>
+					<p>.big : 높이 40px<br><input type="text" placeholder="입력해주세요!!" class="big"></p>
+					<p>.half : 가로 크기 50% <br>ex) &lt;td or div&gt; &lt;input type="text" class="half" &gt; &lt;input type="text" class="half"&gt; &lt;/td or div&gt;<br></p>
+					<p>.bx_ipt : input + 돋보기 버튼 (기본크기 : 130px, .big 크기 : 150px)</p>
+					<div class="bx_ipt" style="width: 150px;">
+						<input type="text" class="ipt_ico">
+						<button class="btn_search">검색</button>
+					</div>
+					<div class="bx_ipt big">
+						<input type="text" class="ipt_ico">
+						<button class="btn_search">검색</button>
+					</div>
+					<h4>ex)</h4>
+<pre><xmp><input type="text" placeholder="입력해주세요!!" style="width: 200px;">
+<input type="text" class="big" placeholder="입력해주세요!!">
+<div class="bx_ipt" style="width: 150px;">
+	<input type="text" class="ipt_ico" placeholder="입력해주세요!!">
+	<button class="btn_search">검색</button>
+</div>
+<div class="bx_ipt big" style="">
+	<input type="text" class="ipt_ico" placeholder="입력해주세요!!">
+	<button class="btn_search">검색</button>
+</div>
+</xmp></pre>
+				</div>
+				<h3>🍉 select</h3>
+				<div class="i_cont">
+					<span class="noti">slct_tit이 비워져 있으면 select값으로 세팅됩니다.</span>
+					<span class="noti">- 가로 크기는 기본 100px입니다. 다른 크기를 원하시면 인라인 스타일로 지정해서 사용 가능 합니다.</span>
+					<p>.big : 높이 40px<br>
+					<div class="slct" style="width: 100px;">
+						<div class="slct_tit"></div>
+						<ul class="slct_cont">
+							<li class="select">전체</li>
+							<li>옵션1</li>
+							<li>옵션2</li>
+							<li>옵션3</li>
+							<li>옵션4</li>
+							<li>옵션3</li>
+							<li>옵션4</li>
+						</ul>
+					</div>
+					<div class="slct" style="width: 200px;">
+						<div class="slct_tit">과일을 선택해주세요.</div>
+						<ul class="slct_cont">
+							<li class="select">전체!</li>
+							<li>사과</li>
+							<li>바나나</li>
+							<li>망고</li>
+							<li>포도</li>
+							<li>애플망고</li>
+							<li>배</li>
+						</ul>
+					</div>
+					<div class="slct big" style="width: 150px;">
+						<div class="slct_tit"></div>
+						<ul class="slct_cont">
+							<li class="select">전체</li>
+							<li>옵션1</li>
+							<li>옵션2</li>
+							<li>옵션3</li>
+							<li>옵션4</li>
+							<li>옵션3</li>
+							<li>옵션4</li>
+						</ul>
+					</div>
+<pre><xmp><div class="slct" style="width: 100px;">
+  <div class="slct_tit"></div>
+  <ul class="slct_cont">
+    <li class="select">전체</li>
+    <li>옵션1</li>
+    ...
+  </ul>
+</div>
+<div class="slct" style="width: 200px;">
+  <div class="slct_tit">과일을 선택해주세요.</div>
+  <ul class="slct_cont">
+    <li class="select">전체!</li>
+    <li>사과</li>
+	...
+  </ul>
+</div>
+<div class="slct big" style="width: 200px;">
+	...
+</div>
+</xmp></pre>
+				</div>
+				<h3>
+					🍉 checkbox
+				</h3>
+				<div class="i_cont">
+					<div class="bx_chk"><input type="checkbox" name="" id="chk1"><label class="chk" for="chk1">체크1</label></div>
+					<div class="bx_chk big"><input type="checkbox" name="" id="chk2"><label class="chk" for="chk2">체크2</label></div>
+
+					<div class="bx_chk white"><input type="checkbox" name="" id="chk3"><label class="chk" for="chk3">체크1</label></div>
+					<div class="bx_chk white big"><input type="checkbox" name="" id="chk4"><label class="chk" for="chk4">체크2</label></div>
+<pre><xmp><div class="bx_chk">
+  <input type="checkbox" name="" id="chk1">
+  <label class="chk" for="chk1">체크1</label>
+</div>
+<div class="bx_chk big">...</div>
+<div class="bx_chk white">...</div>
+<div class="bx_chk white big">...</div>
+</xmp></pre>
+				</div>
+				<h3>
+					🍉 radiobox
+				</h3>
+				<div class="i_cont">
+					<div class="bx_radio"><input type="radio" name="radio" id="radio1"><label class="radio" for="radio1">체크1</label></div>
+					<div class="bx_radio mr20"><input type="radio" name="radio" id="radio2"><label class="radio" for="radio2">체크2</label></div>
+
+					<div class="bx_radio white"><input type="radio" name="radio1" id="radio3"><label class="radio" for="radio3">병아리</label></div>
+					<div class="bx_radio white mr20"><input type="radio" name="radio1" id="radio4"><label class="radio" for="radio4">닭</label></div>
+
+					<div class="bx_radio big"><input type="radio" name="radio2" id="radio5"><label class="radio" for="radio5">뮤지컬</label></div>
+					<div class="bx_radio big"><input type="radio" name="radio2" id="radio6"><label class="radio" for="radio6">락페스티벌</label></div>
+<pre><xmp><div class="bx_radio">
+  <input type="radio" name="radio" id="radio1">
+  <label class="radio" for="radio1">체크1</label>
+</div>
+<div class="bx_radio big">...</div>
+<div class="bx_radio white">...</div>
+<div class="bx_radio white big">...</div>
+</xmp></pre>
+				</div>
+			</div>
+			<div class="right">
+				<h3>🍉 input - Date</h3>
+				<div class="i_cont">
+					<h4>input text 타입에 <strong>ipt_date</strong> 클래스를 추가해주세요.</h4>
+					<span class="noti">- 가로 크기는 기본 100px입니다. 다른 크기를 원하시면 인라인 스타일로 지정해서 사용 가능 합니다.</span>
+					<span class="noti">- 달력은 입력이 안되게 input readonly 추가 해주세요 </span>
+					<input type="text" autocomplete='off' readonly class="ipt_date"/> ~ <input type="text" autocomplete='off' readonly class="ipt_date"/>
+					<h4>추가 가능한 스타일</h4>
+					<p>.big : 높이 40px</p>
+					<p>.ico_calendar : 달력 아이콘 노출<br><input type="text" class="ipt_date ico_calendar"> <input type="text" class="ipt_date ico_calendar big"></p>
+					<p>.big_calendar : 큰 달력<br><input type="text" class="ipt_date big_calendar"></p>
+					<h4>ex)</h4>
+<pre><xmp><input type="text" autocomplete='off' readonly class="ipt_date"/>
+<input type="text" autocomplete='off' readonly class="ipt_date big_calendar"/>
+<input type="text" autocomplete='off' readonly 
+ class="ipt_date big_calendar ico_calendar big"/>
+</xmp></pre>
+				</div>
+				<h3 >
+					🍉 button
+				</h3>
+				<div class="i_cont">
+					<p>.btn : <button class="btn">조회</button></p>
+					<p>.btn.fill : <button class="btn fill">조회</button></p>
+					<p>.btn_gray : <button class="btn_gray">조회</button></p>
+					<p>.btn_blue : <button class="btn_blue">지급하기</button></p>
+					<p>.btn_blue.fill : <button class="btn_blue fill">지급하기</button></p>
+					<p>.btn_grean : <button class="btn_grean">이전지급내역</button></p>
+					<p>.btn_grean.fill : <button class="btn_grean fill">이전지급내역</button></p>
+					<p>.btn_grean.ico : <button class="btn_grean ico">검색필터 보기</button></p>
+					<p>.btn_grean.fill.ico : <button class="btn_grean fill ico">검색필터 보기</button></p>
+					<p>.btn_plus : <button class="btn_plus">+</button><em class="mr20"></em>.btn_plus.dis : <button class="btn_plus dis">+</button></p>
+					<p>.btn_minus : <button class="btn_minus">-</button><em class="mr20"></em>.btn_minus.dis : <button class="btn_minus dis">-</button></p>
+					<p class="mb50">.btn_msg : <button class="btn_msg">메모버튼</button><em class="mr20"></em>.btn_txt : <button class="btn_txt">…</button></p>
+					<h3>🍉 박스 스타일</h3>
+					<div class="i_cont">
+						<button class="txt_line">.txt_line : #000000</button>
+						<button class="txt_line orange">.txt_line.orange : #FF6F06</button>
+						<button class="txt_line blue">.txt_line.grean : #005ec0</button>
+						<button class="txt_line red">.txt_line.red : #DF3333</button>
+					</div>
+				</div>
+			</div>
+		</article>
+		<article class="i_bx flex" id="i_bx3">
+			<div class="full">
+				<h2>🎯 Component 가이드</h2>
+				<h3>🍉 table - 스크롤 없는 테이블</h3> 
+                <span class="noti">
+                    - 테이블 셀 크기는 .thead colgroup col 인라인 스타일로 지정해주세요. <br>
+                    제목 테이블과 내용 테이블 셀크기가 다를 경우 꼭 width 값을 지정해주시기 바랍니다.
+                </span>
+                <span class="noti txt_black">
+                    - 자세한 코드는 layout.html 파일을 참고 부탁드립니다.
+                </span>
+				<article class="wrap_tbl">
+					<div class="thead">
+						<table class="tbl">
+							<colgroup> 
+								<col style="width: 60px;"> 
+								<col style="width: 80px;"> 
+								<col style="width: auto;"> 
+								<col style="width: auto;"> 
+								<col style="width: auto;"> 
+
+								<col style="width: auto;"> 
+								<col style="width: auto;"> 
+								<col style="width: auto;"> 
+								<col style="width: auto;"> 
+								<col style="width: auto;"> 
+								<col style="width: auto;"> 
+
+								<col style="width:60px"> 
+								<col style="width: 140px;"> 
+							</colgroup>
+							<thead>
+								<tr>
+									<th><button class="ico up">번호&nbsp</button></th>
+									<th><button class="ico up">등록번호&nbsp</button></th>
+									<th><button class="ico">센터&nbsp</button></th>
+									<th><button class="ico">지사&nbsp</button></th>
+									<th><button class="ico">00점 (팀장)&nbsp</button></th>
+
+									<th><button class="ico">사업장명&nbsp</button></th>
+									<th><button class="ico">등록일&nbsp</button></th>
+									<th><button class="ico">이용기간&nbsp</button></th>
+									<th><button class="ico">플랫폼수익&nbsp</button></th>
+									<th><button class="ico">기타수익&nbsp</button></th>
+
+									<th><button class="ico">상태/일정&nbsp</button></th>
+									<th><button class="ico">비고&nbsp</button></th>
+									<th><button>주문상태&nbsp</button></th>
+								</tr>
+							</thead>
+						</table>
+					</div>
+					<div class="tbody">
+						<table class="tbl">
+							<tbody>
+								<tr>
+									<td>123</td>
+									<td class="txt_red">4019</td>
+									<td>더체크프라임</td>
+									<td>신한정보통신</td>
+									<td>강하늘 팀장</td>
+
+									<td >스타벅스</td>
+									<td>21/08/04</td>
+									<td class="txt_orange">100일</td>
+									<td>900,000원</td>
+									<td>5,000원</td>
+
+									<td><span class="txt_hlight">2020/03/24</span></td>
+									<td><button class="btn_msg">메모버튼</button></td>
+									<td>-</td>
+								</tr>
+								<tr>
+									<td>123</td>
+									<td>4019</td>
+									<td>더체크프라임</td>
+									<td>신한정보통신 <span class="txt_red">(지사)</span></td>
+									<td>강하늘 팀장</td>
+
+									<td class="txt_red">스타벅스</td>
+									<td>21/08/04</td>
+									<td class="txt_orange">100일</td>
+									<td>900,000원</td>
+									<td>5,000원</td>
+
+									<td><span class="txt_hlight orange">2020/03/24</span></td>
+									<td><button class="btn_msg">메모버튼</button></td>
+									<td><button class="btn_blue fill">접수</button></td>
+								</tr>
+								<tr>
+									<td>123</td>
+									<td>4019</td>
+									<td>더체크프라임</td>
+									<td>신한정보통신</td>
+									<td>강하늘 팀장</td>
+
+									<td class="txt_red">스타벅스</td>
+									<td>21/08/04</td>
+									<td class="txt_orange">100일</td>
+									<td>900,000원</td>
+									<td>5,000원</td>
+
+									<td><span class="txt_hlight grean">2020/03/24</span></td>
+									<td><button class="btn_txt">…</button></td>
+									<td><button class="btn_blue fill">접수</button></td>
+								</tr>
+								<tr>
+									<td>123</td>
+									<td>4019</td>
+									<td>더체크프라임</td>
+									<td>신한정보통신</td>
+									<td>강하늘 팀장</td>
+
+									<td class="txt_red">스타벅스</td>
+									<td>21/08/04</td>
+									<td class="txt_orange">100일</td>
+									<td>900,000원</td>
+									<td>5,000원</td>
+
+									<td><span class="txt_hlight red">2020/03/24</span></td>
+									<td><button class="btn_msg">메모버튼</button></td>
+									<td><button class="btn_blue fill">접수</button></td>
+								</tr>
+								<tr>
+									<td>123</td>
+									<td>4019</td>
+									<td>더체크프라임</td>
+									<td>신한정보통신</td>
+									<td>강하늘 팀장</td>
+
+									<td class="txt_red">스타벅스</td>
+									<td>21/08/04</td>
+									<td class="txt_orange">100일</td>
+									<td>900,000원</td>
+									<td>5,000원</td>
+
+									<td><span class="txt_hlight purple">2020/03/24</span></td>
+									<td><button class="btn_msg">메모버튼</button></td>
+									<td><button class="btn_blue fill">접수</button></td>
+								</tr>
+								<tr>
+									<td>123</td>
+									<td>4019</td>
+									<td>더체크프라임</td>
+									<td>신한정보통신</td>
+									<td>강하늘 팀장</td>
+
+									<td>스타벅스<br>00점</td>
+									<td>21/08/04</td>
+									<td>100일</td>
+									<td>900,000원</td>
+									<td>5,000원</td>
+
+									<td><span class="txt_hlight">2020/03/24</span></td>
+									<td><button class="btn_txt">…</button></td>
+									<td><button class="btn_blue">상세</button><button class="btn_blue fill">처리이력</button></td>
+								</tr>
+								<tr class="total">
+									<td>123</td>
+									<td>4019</td>
+									<td>더체크프라임</td>
+									<td>신한정보통신</td>
+									<td>강하늘 팀장</td>
+
+									<td class="txt_red">스타벅스</td>
+									<td>21/08/04</td>
+									<td class="txt_orange">100일</td>
+									<td>900,000원</td>
+									<td>5,000원</td>
+
+									<td>2020/03/24</td>
+									<td><button class="btn_msg">메모버튼</button></td>
+									<td></td>
+								</tr>
+								<tr class="total big">
+									<td>123</td>
+									<td>4019</td>
+									<td>더체크프라임</td>
+									<td>신한정보통신</td>
+									<td>강하늘 팀장</td>
+
+									<td class="txt_red">스타벅스</td>
+									<td>21/08/04</td>
+									<td class="txt_orange">100일</td>
+									<td>900,000원</td>
+									<td>5,000원</td>
+
+									<td>2020/03/24</td>
+									<td><button class="btn_msg">메모버튼</button></td>
+									<td></td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</article> 
+				<h3>🍉 table - 스크롤 있는 상단이 고정되는 테이블</h3>
+				<span class="noti">
+					- 스크롤 기능이 있는 테이블은 .wrap_tbl에 scroll 클래스를 추가해주세요. | ex) class="wrap_tbl scroll"
+				</span>
+				<span class="noti">
+					- 테이블 셀 크기는 .thead colgroup col 인라인 스타일로 지정해주세요. <br>
+					제목 테이블과 내용 테이블 셀크기가 다를 경우 꼭 width 값을 지정해주시기 바랍니다.
+				</span>
+				<article class="wrap_tbl scroll">
+					<div class="thead">
+						<table class="tbl">
+							<colgroup> 
+								<col style="width: 60px;"> 
+								<col style="width: 80px;"> 
+								<col style="width: auto;"> 
+								<col style="width: auto;"> 
+								<col style="width: auto;"> 
+
+								<col style="width: auto;"> 
+								<col style="width: auto;"> 
+								<col style="width: auto;"> 
+								<col style="width: auto;"> 
+								<col style="width: auto;"> 
+								<col style="width: auto;"> 
+
+								<col style="width:60px"> 
+								<col style="width: 140px;"> 
+							</colgroup>
+							<thead>
+								<tr>
+									<th><button class="ico up">번호&nbsp</button></th>
+									<th><button class="ico up">등록번호&nbsp</button></th>
+									<th><button class="ico">센터&nbsp</button></th>
+									<th><button class="ico">지사&nbsp</button></th>
+									<th><button class="ico">00점 (팀장)&nbsp</button></th>
+
+									<th><button class="ico">사업장명&nbsp</button></th>
+									<th><button class="ico">등록일&nbsp</button></th>
+									<th><button class="ico">이용기간&nbsp</button></th>
+									<th><button class="ico">플랫폼수익&nbsp</button></th>
+									<th><button class="ico">기타수익&nbsp</button></th>
+
+									<th><button class="ico">상태/일정&nbsp</button></th>
+									<th><button class="ico">비고&nbsp</button></th>
+									<th><button>주문상태&nbsp</button></th>
+								</tr>
+							</thead>
+						</table>
+					</div>
+					<div class="tbody">
+						<table class="tbl">
+							<tbody>
+								<tr>
+									<td>123</td>
+									<td class="txt_red">4019</td>
+									<td>더체크프라임</td>
+									<td>신한정보통신</td>
+									<td>강하늘 팀장</td>
+
+									<td >스타벅스</td>
+									<td>21/08/04</td>
+									<td class="txt_orange">100일</td>
+									<td>900,000원</td>
+									<td>5,000원</td>
+
+									<td><span class="txt_hlight">2020/03/24</span></td>
+									<td><button class="btn_msg">메모버튼</button></td>
+									<td>-</td>
+								</tr>
+								<tr>
+									<td>123</td>
+									<td>4019</td>
+									<td>더체크프라임</td>
+									<td>신한정보통신 <span class="txt_red">(지사)</span></td>
+									<td>강하늘 팀장</td>
+
+									<td class="txt_red">스타벅스</td>
+									<td>21/08/04</td>
+									<td class="txt_orange">100일</td>
+									<td>900,000원</td>
+									<td>5,000원</td>
+
+									<td><span class="txt_hlight orange">2020/03/24</span></td>
+									<td><button class="btn_msg">메모버튼</button></td>
+									<td><button class="btn_blue fill">접수</button></td>
+								</tr>
+								<tr>
+									<td>123</td>
+									<td>4019</td>
+									<td>더체크프라임</td>
+									<td>신한정보통신 <span class="txt_red">(지사)</span></td>
+									<td>강하늘 팀장</td>
+
+									<td class="txt_red">스타벅스</td>
+									<td>21/08/04</td>
+									<td class="txt_orange">100일</td>
+									<td>900,000원</td>
+									<td>5,000원</td>
+
+									<td><span class="txt_hlight orange">2020/03/24</span></td>
+									<td><button class="btn_msg">메모버튼</button></td>
+									<td><button class="btn_blue fill">접수</button></td>
+								</tr>
+								<tr>
+									<td>123</td>
+									<td>4019</td>
+									<td>더체크프라임</td>
+									<td>신한정보통신 <span class="txt_red">(지사)</span></td>
+									<td>강하늘 팀장</td>
+
+									<td class="txt_red">스타벅스</td>
+									<td>21/08/04</td>
+									<td class="txt_orange">100일</td>
+									<td>900,000원</td>
+									<td>5,000원</td>
+
+									<td><span class="txt_hlight orange">2020/03/24</span></td>
+									<td><button class="btn_msg">메모버튼</button></td>
+									<td><button class="btn_blue fill">접수</button></td>
+								</tr>
+								<tr>
+									<td>123</td>
+									<td>4019</td>
+									<td>더체크프라임</td>
+									<td>신한정보통신 <span class="txt_red">(지사)</span></td>
+									<td>강하늘 팀장</td>
+
+									<td class="txt_red">스타벅스</td>
+									<td>21/08/04</td>
+									<td class="txt_orange">100일</td>
+									<td>900,000원</td>
+									<td>5,000원</td>
+
+									<td><span class="txt_hlight orange">2020/03/24</span></td>
+									<td><button class="btn_msg">메모버튼</button></td>
+									<td><button class="btn_blue fill">접수</button></td>
+								</tr>
+								<tr>
+									<td>123</td>
+									<td>4019</td>
+									<td>더체크프라임</td>
+									<td>신한정보통신 <span class="txt_red">(지사)</span></td>
+									<td>강하늘 팀장</td>
+
+									<td class="txt_red">스타벅스</td>
+									<td>21/08/04</td>
+									<td class="txt_orange">100일</td>
+									<td>900,000원</td>
+									<td>5,000원</td>
+
+									<td><span class="txt_hlight orange">2020/03/24</span></td>
+									<td><button class="btn_msg">메모버튼</button></td>
+									<td><button class="btn_blue fill">접수</button></td>
+								</tr>
+								<tr>
+									<td>123</td>
+									<td>4019</td>
+									<td>더체크프라임</td>
+									<td>신한정보통신</td>
+									<td>강하늘 팀장</td>
+
+									<td class="txt_red">스타벅스</td>
+									<td>21/08/04</td>
+									<td class="txt_orange">100일</td>
+									<td>900,000원</td>
+									<td>5,000원</td>
+
+									<td><span class="txt_hlight grean">2020/03/24</span></td>
+									<td><button class="btn_txt">…</button></td>
+									<td><button class="btn_blue fill">접수</button></td>
+								</tr>
+								<tr>
+									<td>123</td>
+									<td>4019</td>
+									<td>더체크프라임</td>
+									<td>신한정보통신</td>
+									<td>강하늘 팀장</td>
+
+									<td class="txt_red">스타벅스</td>
+									<td>21/08/04</td>
+									<td class="txt_orange">100일</td>
+									<td>900,000원</td>
+									<td>5,000원</td>
+
+									<td><span class="txt_hlight red">2020/03/24</span></td>
+									<td><button class="btn_msg">메모버튼</button></td>
+									<td><button class="btn_blue fill">접수</button></td>
+								</tr>
+								<tr>
+									<td>123</td>
+									<td>4019</td>
+									<td>더체크프라임</td>
+									<td>신한정보통신</td>
+									<td>강하늘 팀장</td>
+
+									<td class="txt_red">스타벅스</td>
+									<td>21/08/04</td>
+									<td class="txt_orange">100일</td>
+									<td>900,000원</td>
+									<td>5,000원</td>
+
+									<td><span class="txt_hlight purple">2020/03/24</span></td>
+									<td><button class="btn_msg">메모버튼</button></td>
+									<td><button class="btn_blue fill">접수</button></td>
+								</tr>
+								<tr>
+									<td>123</td>
+									<td>4019</td>
+									<td>더체크프라임</td>
+									<td>신한정보통신</td>
+									<td>강하늘 팀장</td>
+
+									<td>스타벅스<br>00점</td>
+									<td>21/08/04</td>
+									<td>100일</td>
+									<td>900,000원</td>
+									<td>5,000원</td>
+
+									<td><span class="txt_hlight">2020/03/24</span></td>
+									<td><button class="btn_txt">…</button></td>
+									<td><button class="btn_blue">상세</button><button class="btn_blue fill">처리이력</button></td>
+								</tr>
+								<tr class="">
+									<td>123</td>
+									<td>4019</td>
+									<td>더체크프라임</td>
+									<td>신한정보통신</td>
+									<td>강하늘 팀장</td>
+
+									<td class="txt_red">스타벅스</td>
+									<td>21/08/04</td>
+									<td class="txt_orange">100일</td>
+									<td>900,000원</td>
+									<td>5,000원</td>
+
+									<td>2020/03/24</td>
+									<td><button class="btn_msg">메모버튼</button></td>
+									<td></td>
+								</tr>
+								<tr class="">
+									<td>123</td>
+									<td>4019</td>
+									<td>더체크프라임</td>
+									<td>신한정보통신</td>
+									<td>강하늘 팀장</td>
+
+									<td class="txt_red">스타벅스</td>
+									<td>21/08/04</td>
+									<td class="txt_orange">100일</td>
+									<td>900,000원</td>
+									<td>5,000원</td>
+
+									<td>2020/03/24</td>
+									<td><button class="btn_msg">메모버튼</button></td>
+									<td></td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</article> 
+<pre><xmp><article class="wrap_tbl"><!-- 스크롤 테이블 <article class="wrap_tbl scroll">  --> 
+	<div class="thead">
+		<table class="tbl">
+		<colgroup> 
+			<col style="width: 60px;"> 
+			<col style="width: auto;"> 
+			...
+		</colgroup>
+		<thead>
+			<tr>
+				<th><button class="ico up">번호&nbsp</button></th>
+				<th><button class="ico up">등록번호&nbsp</button></th>
+				...
+			</tr>
+		</thead>
+		</table>
+	</div>
+	<div class="tbody">
+		<table class="tbl">
+			<tbody>
+				<tr>
+					<td>123</td>
+					<td class="txt_red">4019</td>
+					...
+				</tr>
+				...
+			</tbody>
+		</table>
+	</div>
+	</article>
+</xmp></pre>
+				<h3 class="mt40">🍉 table - 공지사항/자료실 게시판</h3> 
+                <span class="noti">
+                    - t.bl_board.type1 (공지사항) / .tbl_board.type2(자료실)
+                </span>
+                <span class="noti txt_black">
+                    - 자세한 코드는 01_board/lab.html, 01_board/noti.html 파일을 참고 부탁드립니다.
+                </span>
+				<p class="mt20 mb15">.tbl_board.type1</p>
+				<table class="tbl_board type1">
+					<tr>
+						<td class="td_img">
+							<img src="https://source.unsplash.com/QAB-WJcbgJk/60x60" alt="임시 프로필 사진">
+						</td>
+						<td class="td_cont">
+							<span class="type">공지사항</span>
+							<h4><strong class="txt_point">더체크</strong>는 700만 사업주님들과 함께할 준비가 되어있습니다!</h4>
+							<p class="desc">
+								점검일시: 01월 16일 14:00 ~ 16:00시 까지 / 점검내용: 서비스 안정화 점검
+							</p>
+							<button class="btn_grean">안내</button>
+						</td>
+						<td class="td_date">
+							2020-01-16
+						</td>
+					</tr>
+					<tr>
+						<td class="td_img">
+							<img src="https://source.unsplash.com/QAB-WJcbgJk/60x60" alt="임시 프로필 사진">
+						</td>
+						<td class="td_cont">
+							<span class="type">공지사항</span>
+							<h4><strong class="txt_point">더체크</strong>는 700만 사업주님들과 함께할 준비가 되어있습니다!</h4>
+							<p class="desc">
+								점검일시: 01월 16일 14:00 ~ 16:00시 까지 / 점검내용: 서비스 안정화 점검
+							</p>
+							<button class="btn_grean">안내</button>
+						</td>
+						<td class="td_date">
+							2020-01-16
+						</td>
+					</tr>
+				</table>
+				<p class="mt40 mb15">.tbl_board.type2</p>
+				<table class="tbl_board type2">
+					<tr>
+						<td class="td_img">
+							<div class="bx_video">
+								<div class="dim">
+									<button class="btn_play">재생버튼</button>
+								</div>
+								<video poster="https://source.unsplash.com/QAB-WJcbgJk/60x60"></video>
+							</div>
+						</td>
+						<td class="td_cont">
+							<span class="type">회원가입</span>
+							<h4><strong class="txt_point">회원가입방법_여신금융협회</strong></h4>
+							<p class="desc">
+								더체크 [여신금융협회 회원가입방법] 여신금융협회란? 신용카드업, 시설대여업, 할부금융업 및
+								신기술사업금융업을 영위하고 있는 여신전문금융회사를 회원으로 하는 비영리 사단법인 간단하게 
+								더체크 [여신금융협회 회원가입방법] 여신금융협회란? 신용카드업, 시설대여업, 할부금융업 및
+								신기술사업금융업을 영위하고 있는 여신전문금융회사를 회원으로 하는 비영리 사단법인 간단하게 
+								더체크 [여신금융협회 회원가입방법] 여신금융협회란? 신용카드업, 시설대여업, 할부금융업 및
+								신기술사업금융업을 영위하고 있는 여신전문금융회사를 회원으로 하는 비영리 사단법인 간단하게 
+								더체크 [여신금융협회 회원가입방법] 여신금융협회란? 신용카드업, 시설대여업, 할부금융업 및
+								신기술사업금융업을 영위하고 있는 여신전문금융회사를 회원으로 하는 비영리 사단법인 간단하게 
+								더체크 [여신금융협회 회원가입방법] 여신금융협회란? 신용카드업, 시설대여업, 할부금융업 및
+								신기술사업금융업을 영위하고 있는 여신전문금융회사를 회원으로 하는 비영리 사단법인 간단하게 
+								더체크 [여신금융협회 회원가입방법] 여신금융협회란? 신용카드업, 시설대여업, 할부금융업 및
+								신기술사업금융업을 영위하고 있는 여신전문금융회사를 회원으로 하는 비영리 사단법인 간단하게 
+								더체크 [여신금융협회 회원가입방법] 여신금융협회란? 신용카드업, 시설대여업, 할부금융업 및
+								신기술사업금융업을 영위하고 있는 여신전문금융회사를 회원으로 하는 비영리 사단법인 간단하게 
+								더체크 [여신금융협회 회원가입방법] 여신금융협회란? 신용카드업, 시설대여업, 할부금융업 및
+							</p>
+							<p class="info"><span>작성자 : 더체크본사</span><span>작성일: 2020-01-16</span></p>
+						</td>
+					</tr>
+				</table>
+				<h3 class="mt40">🍉 paging</h3>
+				<div class="paginate mt10 mb10">
+					<button href="#" class="btn_page_prev dis">이전</button>
+					<button class="btn_page on">1</button>
+					<button class="btn_page">2</button>
+					<button class="btn_page">3</button>
+					<button class="btn_page">4</button>
+					<button class="btn_page">5</button>
+					<em>…</em>
+					<button class="btn_page">96</button>
+					<button class="btn_page">97</button>
+					<button class="btn_page">98</button>
+					<button class="btn_page">99</button>
+					<button class="btn_page">100</button>
+					<button href="#" class="btn_page_next">다음</button>
+					<div class="info">
+						<strong>항목 수</strong> <input type="number" class="ipt_page" value="20" style="width: 30px;">
+						<span class="desc">총 1207 중 1- 20</span>
+					</div>
+				</div> 
+				<div class="i_cont">
+<pre><xmp><div class="paginate">
+  <button href="#" class="btn_page_prev dis">이전</button>
+  <button class="btn_page on">1</button>
+  ...
+  <em>…</em>
+  <button class="btn_page">100</button>
+  <button href="#" class="btn_page_next">다음</button>
+  <div class="info">
+    <strong>항목 수</strong>
+    <input type="number" class="ipt_page" value="20" style="width: 30px;">
+    <span class="desc">총 1207 중 1- 20</span>
+  </div>
+</div> 
+</xmp></pre>
+				</div>
+				<h3>🍉 paging - 직은사이즈 게시판에 사용 됩니다.</h3>
+				<span>
+					.paginate.type2 ex) div class="paginate type2"
+				</span>
+				<div class="paginate type2">
+					<button href="#" class="btn_page_prev dis">이전</button>
+					<button class="btn_page on">1</button>
+					<button class="btn_page">2</button>
+					<button class="btn_page">3</button>
+					<button class="btn_page">4</button>
+					<button class="btn_page">5</button>
+					<button class="btn_page">96</button>
+					<button class="btn_page">97</button>
+					<button class="btn_page">98</button>
+					<button class="btn_page">99</button>
+					<button class="btn_page">100</button>
+					<button href="#" class="btn_page_next">다음</button>
+				</div> 
+<pre><xmp><div class="paginate type2">
+  <button href="#" class="btn_page_prev dis">이전</button>
+  <button class="btn_page on">1</button>
+  ...
+  <em>…</em>
+  <button class="btn_page">100</button>
+  <button href="#" class="btn_page_next">다음</button>
+  <div class="info">
+    <strong>항목 수</strong>
+    <input type="number" class="ipt_page" value="20" style="width: 30px;">
+    <span class="desc">총 1207 중 1- 20</span>
+  </div>
+</div> 
+</xmp></pre>
+			</div>
+		</article>
+		<article class="i_bx flex" id="i_bx4">
+			<div class="left">
+
+			</div>
+			<div class="right">
+
+			</div>
+		</article>
+	</section>
+</body>
+
+</html>
